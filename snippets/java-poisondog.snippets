@@ -1,0 +1,47 @@
+snippet sysout
+	System.out.println(${1});${2}
+snippet syserr
+	System.err.println(${1});${2}
+snippet ?
+	${1} ? ${2} : ${3};
+snippet **
+	/**
+	 * ${1}
+	 */
+snippet {}
+	{
+		${1}
+	}
+snippet ()
+	(${1})
+snippet ""
+	"${1}"
+snippet ''
+	'${1}'
+snippet ce
+	// `system("date +%Y-%m-%d")`
+	/*******************************
+	 * `Filename()`
+	 *******************************/
+	package ${1:}
+	
+	/**${2:}
+	 * @author poisondog <poisondog@gmail.com>
+	 */
+	${3:public} enum ${4:`Filename("", "untitled")`} {
+		${5}
+	}
+snippet cc
+	// `system("date +%Y-%m-%d")`
+	/*******************************
+	 * `Filename()`
+	 *******************************/
+	package ${1:}
+	
+	/**${2:}
+	 * @author poisondog <poisondog@gmail.com>
+	 */
+	${3:public} class ${4:`Filename("", "untitled")`} ${5}{${6}
+	}
+snippet todo
+	// TODO ${1:}

@@ -1,0 +1,50 @@
+snippet aae
+	Assert.assertEquals(${1},${2});${3}
+snippet aat
+	Assert.assertTrue(${1});${2}
+snippet aaf
+	Assert.assertFalse(${1});${2}
+snippet aan
+	Assert.assertNull(${1});${2}
+snippet aann
+	Assert.assertNotNull(${1});${2}
+snippet sysout
+	System.out.println(${1});${2}
+snippet syserr
+	System.err.println(${1});${2}
+snippet **
+	/**
+	 * ${1}
+	 */
+snippet {}
+	{
+		${1}
+	}
+snippet ()
+	(${1})
+snippet ""
+	"${1}"
+snippet ''
+	'${1}'
+snippet c
+	// `system("date +%Y-%m-%d")`
+	/*******************************
+	 * `Filename()`
+	 *******************************/
+	
+	/**${1:}
+	 * @author poisondog <poisondog@gmail.com>
+	 */
+	${2:public} class ${3:`Filename("", "untitled")`} ${4}
+snippet tb
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception ${1}
+snippet tt
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Test
+	public void test${1:Name}() throws Exception ${2}

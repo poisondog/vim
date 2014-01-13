@@ -1,0 +1,43 @@
+snippet ae
+	Assert.assertEquals(${1:expected}, ${2:result});${3}
+snippet at
+	Assert.assertTrue(${1});${2}
+snippet af
+	Assert.assertFalse(${1});${2}
+snippet an
+	Assert.assertNull(${1});${2}
+snippet ann
+	Assert.assertNotNull(${1});${2}
+snippet tt
+	@Test
+	public void test${1:Name}() throws Exception {
+		${2}
+	}
+snippet ct
+	// `system("date +%Y-%m-%d")`
+	/*******************************
+	 * `Filename()`
+	 *******************************/
+	package ${1:}
+	
+	import org.junit.Assert;
+	import org.junit.Before;
+	import org.junit.Test;
+	
+	/**${2:}
+	 * @author poisondog <poisondog@gmail.com>
+	 */
+	public class `Filename()` {
+
+		/**
+		 * @throws java.lang.Exception
+		 */
+		@Before
+		public void setUp() throws Exception {
+		}
+
+		@Test
+		public void test${3:App}() throws Exception {
+			Assert.assertTrue(true);
+		}
+	}
