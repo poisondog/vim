@@ -125,3 +125,12 @@ let g:JavaImpPaths = $HOME."/.vim/JavaImp/java,"
 			"\$HOME."/workspace/walton/MySkyBoxCore/src/main/java"
 let g:JavaImpDataDir = $HOME."/.vim/JavaImp"
 let g:JavaImpSortPkgSep = 0
+
+noremap <F7> :call UpdateJavaImport()<CR>
+function UpdateJavaImport()
+	if search('^import\s*') > 0
+		let names = split(getline('.'), '\.')
+		let result = strpart(names[-1], 0, strlen(names[-1])-1)
+		echom "Class name : ".result
+	endif
+endfunction
