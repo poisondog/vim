@@ -124,3 +124,4 @@ let g:JavaImpPaths = $HOME."/.vim/JavaImp/java,"
 			"\$HOME."/workspace/poisondog/poisondog.commons/src/main/java,".
 			"\$HOME."/workspace/walton/MySkyBoxCore/src/main/java"
 let g:JavaImpDataDir = $HOME."/.vim/JavaImp"
+let g:JavaImpSortPkgSep = 0
