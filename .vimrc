@@ -116,3 +116,9 @@ highlight User3 term=underline cterm=underline ctermfg=yellow
 highlight User4 term=underline cterm=underline ctermfg=white
 highlight User5 ctermfg=cyan
 highlight User6 ctermfg=white
+
+"Java Auto Import
+noremap <F5> :JI<CR>
+let g:JavaImpPaths = $HOME."/.vim/JavaImp/java,".
+			\"/home/poisondog/workspace/walton/MySkyBoxCore/src"
+let g:JavaImpDataDir = $HOME."/.vim/JavaImp"
