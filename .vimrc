@@ -145,7 +145,7 @@ function UpdateJavaImport()
 				let j = j + 1
 			endwhile
 			if inUsed == 0
-				echom "Class name : ".result
+				echom "Not used : " . result
 				call add(needToRemove, i)
 			endif
 		endif
