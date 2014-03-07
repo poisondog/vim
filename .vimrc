@@ -119,18 +119,41 @@ highlight User6 ctermfg=white
 
 "Java Auto Import
 noremap <F5> :JI<CR>
-noremap <F6> :JIS<CR>
+noremap <F6> :call UpdateJavaImport()<CR>
 let g:JavaImpPaths = $HOME."/.vim/JavaImp/java,"
 			"\$HOME."/workspace/poisondog/poisondog.commons/src/main/java,".
 			"\$HOME."/workspace/walton/MySkyBoxCore/src/main/java"
 let g:JavaImpDataDir = $HOME."/.vim/JavaImp"
 let g:JavaImpSortPkgSep = 0
 
-noremap <F7> :call UpdateJavaImport()<CR>
 function UpdateJavaImport()
-	if search('^import\s*') > 0
-		let names = split(getline('.'), '\.')
-		let result = strpart(names[-1], 0, strlen(names[-1])-1)
-		echom "Class name : ".result
-	endif
+	let needToRemove = []
+	let i = 0
+	let endLine = line("$")
+	while i <= endLine
+		let line = getline(i)
+		if stridx(line, "import ") == 0
+			let names = split(line, '\.')
+			let result = strpart(names[-1], 0, strlen(names[-1])-1)
+
+			let inUsed = 0
+			let j = 0
+			while j <= endLine
+				if search(result) != i
+					let inUsed = 1
+				endif
+				let j = j + 1
+			endwhile
+			if inUsed == 0
+				echom "Class name : ".result
+				call add(needToRemove, i)
+			endif
+		endif
+		let i = i + 1
+	endwhile
+	call reverse(needToRemove)
+	for item in needToRemove
+		execute item . "d"
+	endfor
+	:JIS
 endfunction
