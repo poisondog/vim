@@ -1,3 +1,5 @@
+FileSystemException java.nio.file.FileSystemException 
+IOException java.io.IOException 
 Mockito org.mockito.Mockito 
 URLUtils poisondog.net.URLUtils 
 List java.util.List java.awt.List 
