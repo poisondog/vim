@@ -145,7 +145,7 @@ function UpdateJavaImport()
 				let j = j + 1
 			endwhile
 			if inUsed == 0
-				echom "Not used : " . result
+				echom "Never used : " . result
 				call add(needToRemove, i)
 			endif
 		endif
