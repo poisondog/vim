@@ -135,7 +135,6 @@ function UpdateJavaImport()
 		if stridx(line, "import ") == 0
 			let names = split(line, '\.')
 			let result = strpart(names[-1], 0, strlen(names[-1])-1)
-
 			let inUsed = 0
 			let j = 0
 			while j <= endLine

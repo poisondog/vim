@@ -1,3 +1,5 @@
+FileObject org.apache.commons.vfs2.FileObject javax.tools.FileObject 
+VFS org.apache.commons.vfs2.VFS 
 File java.io.File 
 FileSystemException java.nio.file.FileSystemException 
 IOException java.io.IOException 
