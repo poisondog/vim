@@ -1,7 +1,15 @@
+FileOutputStream java.io.FileOutputStream 
+OutputStream java.io.OutputStream org.omg.CORBA_2_3.portable.OutputStream org.omg.CORBA.portable.OutputStream 
+FileType org.apache.commons.vfs2.FileType 
+FileName org.apache.commons.vfs2.FileName 
+FileSystemOptions org.apache.commons.vfs2.FileSystemOptions 
+GenericFileName org.apache.commons.vfs2.provider.GenericFileName 
+DefaultFileSystemManager org.apache.commons.vfs2.impl.DefaultFileSystemManager 
+URLFileName org.apache.commons.vfs2.provider.URLFileName 
 FileObject org.apache.commons.vfs2.FileObject javax.tools.FileObject 
 VFS org.apache.commons.vfs2.VFS 
 File java.io.File 
-FileSystemException java.nio.file.FileSystemException 
+FileSystemException org.apache.commons.vfs2.FileSystemException java.nio.file.FileSystemException 
 IOException java.io.IOException 
 Mockito org.mockito.Mockito 
 URLUtils poisondog.net.URLUtils 
