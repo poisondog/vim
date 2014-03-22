@@ -138,7 +138,7 @@ function UpdateJavaImport()
 			let inUsed = 0
 			let j = 0
 			while j <= endLine
-				if search(result) != i
+				if search('\W\?'.result.'\W\?') != i
 					let inUsed = 1
 				endif
 				let j = j + 1
