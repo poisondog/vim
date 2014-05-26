@@ -66,6 +66,7 @@ map <C-H> :tabprevious <CR>
 "map <C-K> <C-B> <CR>
 map <C-J> <C-D> <CR>
 map <C-K> <C-U> <CR>
+map zz :q <CR>
 
 "javacomplete setting
 "set omnifunc=javacomplete#Complete 
