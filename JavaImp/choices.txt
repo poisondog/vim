@@ -1,3 +1,5 @@
+LoggerFactory org.slf4j.LoggerFactory 
+Logger org.slf4j.Logger java.util.logging.Logger 
 Executors java.util.concurrent.Executors 
 Executor java.util.concurrent.Executor 
 FutureTask java.util.concurrent.FutureTask 
