@@ -2,6 +2,8 @@
 " Quick Start
 " install for this command
 "$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
+"Launch vim and run :PluginInstall to install all plugins
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
