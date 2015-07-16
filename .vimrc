@@ -39,6 +39,9 @@ Plugin 'taglist.vim'
 Plugin 'javacomplete'
 Plugin 'neocomplcache'
 Plugin 'AutoComplPop'
+Plugin 'https://github.com/eraserhd/vim-ios/'
+Plugin 'cocoa.vim'
+Plugin 'clang-complete'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
