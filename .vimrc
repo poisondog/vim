@@ -1,3 +1,8 @@
+" Vundle https://github.com/VundleVim/Vundle.vim
+" Quick Start
+" install for this command
+"$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
