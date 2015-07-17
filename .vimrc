@@ -117,6 +117,12 @@ nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 
+"Line Move
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+nnoremap <M-j> ddp
+nnoremap <M-k> ddkP
+
 "關聯搜尋
 map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **/*.java" <Bar> cw<CR>
 map <F4> :cn <CR>
@@ -124,6 +130,7 @@ map <F2> :cp <CR>
 
 "Gradle Commands
 map <F8> :!gradle test -i<CR>
+nmap <leader>gd :Gdiff<CR>
 
 "Git Commands
 map <F9> :!git status<CR>
@@ -158,8 +165,15 @@ function! GitStatus()
 	call TempTab(bytecode)
 endfunction
 
+function! GitDiff()
+	let bytecode = system("git" . " diff")
+	call TempVS(bytecode)
+endfunction
+
 function! GitCommit()
+	call inputsave()
 	let comment = input('Enter Comment: ')
+	call inputrestore()
 	let response = system("git" . " commit -am ". "\"" . comment . "\"")
 	call TempVS(response)
 endfunction
