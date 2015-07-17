@@ -42,6 +42,7 @@ Plugin 'AutoComplPop'
 Plugin 'https://github.com/eraserhd/vim-ios/'
 Plugin 'cocoa.vim'
 Plugin 'clang-complete'
+Plugin 'fugitive.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -121,14 +122,57 @@ map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **/*.java" <Bar> cw<CR>
 map <F4> :cn <CR>
 map <F2> :cp <CR>
 
+"Gradle Commands
+map <F8> :!gradle test<CR>
+
+"Git Commands
+map <F9> :!git status<CR>
+map <F10> :!git diff<CR>
+map <F12> :call GitStatus()<CR>:call GitCommit()<CR>
+
+function! TempVS(bytecode)
+	vsplit __Temp_VSplit__
+	normal! ggdG
+	setlocal filetype=tempbytecode
+	setlocal buftype=nofile
+	call append(0, split(a:bytecode, '\v\n'))
+endfunction
+function! TempSP(bytecode)
+	split __Temp_Split__
+	normal! ggdG
+	setlocal filetype=tempbytecode
+	setlocal buftype=nofile
+	call append(0, split(a:bytecode, '\v\n'))
+endfunction
+function! TempTab(bytecode)
+	tabnew __Temp_Tab__
+	normal! ggdG
+	setlocal filetype=tempbytecode
+	setlocal buftype=nofile
+	call append(0, split(a:bytecode, '\v\n'))
+endfunction
+
+function! GitStatus()
+	silent !clear
+	let bytecode = system("git" . " status")
+	call TempTab(bytecode)
+endfunction
+
+function! GitCommit()
+	let comment = input('Enter Comment: ')
+	let response = system("git" . " commit -am ". "\"" . comment . "\"")
+	call TempVS(response)
+endfunction
+
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
 map <C-H> :tabprevious <CR>
+map <C-W><C-W> :tabclose <CR>
 "map <C-J> <C-F> <CR>
 "map <C-K> <C-B> <CR>
 map <C-J> <C-D> <CR>
 map <C-K> <C-U> <CR>
-map zz :q <CR>
+map zz :quit <CR>
 
 "javacomplete setting
 "set omnifunc=javacomplete#Complete 
