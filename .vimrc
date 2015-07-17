@@ -123,7 +123,7 @@ map <F4> :cn <CR>
 map <F2> :cp <CR>
 
 "Gradle Commands
-map <F8> :!gradle test<CR>
+map <F8> :!gradle test -i<CR>
 
 "Git Commands
 map <F9> :!git status<CR>
