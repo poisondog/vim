@@ -118,8 +118,14 @@ nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 
 "Line Move
-execute "set <M-j>=\ej"
-execute "set <M-k>=\ek"
+if has('unix')
+	execute "set <M-j>=\ej"
+	execute "set <M-k>=\ek"
+endif
+if has('macunix')
+	execute "set <M-j>=∆"
+	execute "set <M-k>=˚"
+endif
 nnoremap <M-j> ddp
 nnoremap <M-k> ddkP
 
