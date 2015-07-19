@@ -34,7 +34,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'The-NERD-tree'
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
-Plugin 'snipMate'
 Plugin 'taglist.vim'
 Plugin 'javacomplete'
 Plugin 'neocomplcache'
@@ -43,6 +42,8 @@ Plugin 'https://github.com/eraserhd/vim-ios/'
 Plugin 'cocoa.vim'
 Plugin 'clang-complete'
 Plugin 'fugitive.vim'
+Plugin 'snipMate'
+let g:snippets_dir = $HOME."/.vim/snipMate/snippets"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
