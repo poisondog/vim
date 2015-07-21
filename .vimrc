@@ -144,6 +144,12 @@ map <F9> :!git status<CR>
 map <F10> :!git diff<CR>
 map <F12> :call GitStatus()<CR>:call GitCommit()<CR>
 
+"TODO Java move class function
+
+function! ReplaceString(file, oldString, newString)
+	system("find" . " -name " . a:file . "|xargs -i sed -i 's/" . a:oldString . "/" . a:newString . "/g' {}")
+endfunction
+
 function! TempVS(bytecode)
 	vsplit __Temp_VSplit__
 	normal! ggdG
