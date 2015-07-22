@@ -211,50 +211,6 @@ map zz :quit <CR>
 "set cfu=VjdeCompletionFun
 "let g:vjde_lib_path="bin:lib/*.jar:libs/*.jar:bin/classes:/usr/share/java/junit4.jar:/home/bean/workspace/android-sdk-linux/platforms/android-10/android.jar"
 
-autocmd FileType java let g:annotationSymbol = "//"
-autocmd FileType vim let g:annotationSymbol = "\""
-autocmd FileType objc let g:annotationSymbol = "//"
-autocmd FileType javascript let g:annotationSymbol = "//"
-autocmd FileType sh let g:annotationSymbol = "#"
-
-map <leader>c <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call Comment(fl, ll)<CR>
-map <leader>x <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call UnComment(fl, ll)<CR>
-
-""Function for commenting a block of Visually selected text
-function Comment(fl, ll)
-	let i=a:fl
-	while i<=a:ll
-		let cl=getline(i)
-		let cl2=g:annotationSymbol.cl
-		call setline(i, cl2)
-		let i=i+1
-	endwhile
-endfunction
-
-"Function for Un-Commenting a block of
-function UnComment(fl, ll)
-	let i=a:fl
-	while i<=a:ll
-		let cl=getline(i)
-		let cl2=substitute(cl, g:annotationSymbol, "", "")
-		call setline(i, cl2)
-		let i=i+1
-	endwhile
-endfunction
-
-"Status bar
-set laststatus=2
-set statusline=%4*%<\ %1*[%F]
-set statusline+=%4*\ %5*[%{&encoding}, " encoding
-set statusline+=%{&fileformat}%{\"\".((exists(\"+bomb\")\ &&\ &bomb)?\",BOM\":\"\").\"\"}]%m
-set statusline+=%4*%=\ %6*%y%4*\ %3*%l%4*,\ %3*%c%4*\ \<\ %2*%P%4*\ \>
-highlight User1 ctermfg=red
-highlight User2 term=underline cterm=underline ctermfg=green
-highlight User3 term=underline cterm=underline ctermfg=yellow
-highlight User4 term=underline cterm=underline ctermfg=white
-highlight User5 ctermfg=cyan
-highlight User6 ctermfg=white
-
 "Java Auto Import
 noremap <F5> :JI<CR>
 noremap <F6> :call UpdateJavaImport()<CR>
