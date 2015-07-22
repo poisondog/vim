@@ -1,5 +1,4 @@
 
-
 autocmd FileType java let g:annotationSymbol = "//"
 autocmd FileType vim let g:annotationSymbol = "\""
 autocmd FileType objc let g:annotationSymbol = "//"
@@ -8,6 +7,8 @@ autocmd FileType sh let g:annotationSymbol = "#"
 
 map <leader>c <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call Comment(fl, ll)<CR>
 map <leader>x <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call UnComment(fl, ll)<CR>
+
+"TODO create function CommentSwitch
 
 ""Function for commenting a block of Visually selected text
 function Comment(fl, ll)
