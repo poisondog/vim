@@ -143,13 +143,14 @@ noremap <F6> :call UpdateJavaImport()<CR>
 "Gradle Commands
 map <F8> :!gradle test -i<CR>
 
-nmap <leader>gd :Gdiff<CR>
+"Replace Mapping
 nmap <leader>r :call ReplaceVariable()<CR>
 
 "Git Commands
 map <F9> :!git status<CR>
 map <F10> :!git diff<CR>
 map <F12> :call GitStatus()<CR>:call GitCommit()<CR>
+nmap <leader>gd :Gdiff<CR>
 
 "TODO Java move class function
 
