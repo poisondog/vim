@@ -152,26 +152,23 @@ function! ReplaceString(file, oldString, newString)
 	system("find" . " -name " . a:file . "|xargs -i sed -i 's/" . a:oldString . "/" . a:newString . "/g' {}")
 endfunction
 
-function! TempVS(bytecode)
-	vsplit __Temp_VSplit__
+function TempWindows(bytecode)
 	normal! ggdG
 	setlocal filetype=tempbytecode
 	setlocal buftype=nofile
 	call append(0, split(a:bytecode, '\v\n'))
+endfunction
+function! TempVS(bytecode)
+	vsplit __Temp_VSplit__
+	call TempWindows(a:bytecode)
 endfunction
 function! TempSP(bytecode)
 	split __Temp_Split__
-	normal! ggdG
-	setlocal filetype=tempbytecode
-	setlocal buftype=nofile
-	call append(0, split(a:bytecode, '\v\n'))
+	call TempWindows(a:bytecode)
 endfunction
 function! TempTab(bytecode)
 	tabnew __Temp_Tab__
-	normal! ggdG
-	setlocal filetype=tempbytecode
-	setlocal buftype=nofile
-	call append(0, split(a:bytecode, '\v\n'))
+	call TempWindows(a:bytecode)
 endfunction
 
 map <C-N> :tabnew 
