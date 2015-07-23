@@ -138,6 +138,7 @@ map <F2> :cp <CR>
 
 "Gradle Commands
 map <F8> :!gradle test -i<CR>
+
 nmap <leader>gd :Gdiff<CR>
 
 "Git Commands
@@ -171,25 +172,6 @@ function! TempTab(bytecode)
 	setlocal filetype=tempbytecode
 	setlocal buftype=nofile
 	call append(0, split(a:bytecode, '\v\n'))
-endfunction
-
-function! GitStatus()
-	silent !clear
-	let bytecode = system("git" . " status")
-	call TempTab(bytecode)
-endfunction
-
-function! GitDiff()
-	let bytecode = system("git" . " diff")
-	call TempVS(bytecode)
-endfunction
-
-function! GitCommit()
-	call inputsave()
-	let comment = input('Enter Comment: ')
-	call inputrestore()
-	let response = system("git" . " commit -am ". "\"" . comment . "\"")
-	call TempVS(response)
 endfunction
 
 map <C-N> :tabnew 

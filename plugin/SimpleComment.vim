@@ -9,7 +9,7 @@ map <leader><leader> <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call Co
 map <leader>c <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call Comment(fl, ll)<CR>
 map <leader>x <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call UnComment(fl, ll)<CR>
 
-fun CommentSwitch(fl, ll)
+function CommentSwitch(fl, ll)
 	let i=a:fl
 	while i<=a:ll
 		let cl=getline(i)
@@ -21,7 +21,7 @@ fun CommentSwitch(fl, ll)
 		endif
 		let i=i+1
 	endwhile
-endf
+endfunction
 
 ""Function for commenting a block of Visually selected text
 function Comment(fl, ll)
