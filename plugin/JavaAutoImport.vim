@@ -1,7 +1,5 @@
-
 "Java Auto Import
-noremap <F5> :JI<CR>
-noremap <F6> :call UpdateJavaImport()<CR>
+
 let g:JavaImpPaths = $HOME."/.vim/JavaImp/java,"
 			"\$HOME."/workspace/poisondog/poisondog.commons/src/main/java,".
 			"\$HOME."/workspace/walton/MySkyBoxCore/src/main/java"

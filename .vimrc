@@ -128,18 +128,23 @@ nnoremap <leader>fl  :FufLine<CR>
 "	execute "set <M-j>=∆"
 "	execute "set <M-k>=˚"
 "endif
-"nnoremap <M-j> ddp
-"nnoremap <M-k> ddkP
+"vnoremap <C-j> dp
+"vnoremap <C-k> dkP
 
 "關聯搜尋
 map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **/*.java" <Bar> cw<CR>
 map <F4> :cn <CR>
 map <F2> :cp <CR>
 
+"Java Auto Import
+noremap <F5> :JI<CR>
+noremap <F6> :call UpdateJavaImport()<CR>
+
 "Gradle Commands
 map <F8> :!gradle test -i<CR>
 
 nmap <leader>gd :Gdiff<CR>
+nmap <leader>r :call ReplaceVariable()<CR>
 
 "Git Commands
 map <F9> :!git status<CR>
@@ -148,37 +153,14 @@ map <F12> :call GitStatus()<CR>:call GitCommit()<CR>
 
 "TODO Java move class function
 
-function! ReplaceString(file, oldString, newString)
-	system("find" . " -name " . a:file . "|xargs -i sed -i 's/" . a:oldString . "/" . a:newString . "/g' {}")
-endfunction
-
-function TempWindows(bytecode)
-	normal! ggdG
-	setlocal filetype=tempbytecode
-	setlocal buftype=nofile
-	call append(0, split(a:bytecode, '\v\n'))
-endfunction
-function! TempVS(bytecode)
-	vsplit __Temp_VSplit__
-	call TempWindows(a:bytecode)
-endfunction
-function! TempSP(bytecode)
-	split __Temp_Split__
-	call TempWindows(a:bytecode)
-endfunction
-function! TempTab(bytecode)
-	tabnew __Temp_Tab__
-	call TempWindows(a:bytecode)
-endfunction
-
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
 map <C-H> :tabprevious <CR>
 map <C-W><C-W> :tabclose <CR>
 "map <C-J> <C-F> <CR>
 "map <C-K> <C-B> <CR>
-map <C-J> <C-D> <CR>
-map <C-K> <C-U> <CR>
+nmap <C-J> <C-D> <CR>
+nmap <C-K> <C-U> <CR>
 map zz :quit <CR>
 
 "javacomplete setting
