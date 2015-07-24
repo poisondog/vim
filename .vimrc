@@ -142,6 +142,7 @@ noremap <F6> :call UpdateJavaImport()<CR>
 
 "Gradle Commands
 map <F8> :!gradle test -i<CR>
+nmap <leader>grr :!gradle --refresh-dependencies<CR>
 
 "Replace Mapping
 nmap <leader>r :call ReplaceVariable()<CR>
