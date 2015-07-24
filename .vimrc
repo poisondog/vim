@@ -148,8 +148,8 @@ nmap <leader>r :call ReplaceVariable()<CR>
 
 "Simple Comment
 map <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
-"map <leader>c <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call Comment(fl, ll)<CR>
-"map <leader>x <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call UnComment(fl, ll)<CR>
+"map <leader>c <Esc>:call Comment(SelectedFirstLine(), SelectedLastLine())<CR>
+"map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 
 "Git Commands
 map <F9> :!git status<CR>

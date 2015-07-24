@@ -52,7 +52,6 @@ function AddComment(line)
 	let cl=getline(a:line)
 	let cl2=g:annotationSymbol.cl
 	call setline(a:line, cl2)
-	echo matchstr(cl, "^\\s*" . g:annotationSymbol . ".*")
 endfunction
 
 function RemoveComment(line)
