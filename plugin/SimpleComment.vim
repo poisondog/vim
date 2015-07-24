@@ -1,4 +1,5 @@
 
+let g:annotationSymbol = "//"
 autocmd FileType java let g:annotationSymbol = "//"
 autocmd FileType vim let g:annotationSymbol = "\""
 autocmd FileType objc let g:annotationSymbol = "//"
