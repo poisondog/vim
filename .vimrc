@@ -146,6 +146,11 @@ map <F8> :!gradle test -i<CR>
 "Replace Mapping
 nmap <leader>r :call ReplaceVariable()<CR>
 
+"Simple Comment
+map <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
+"map <leader>c <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call Comment(fl, ll)<CR>
+"map <leader>x <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call UnComment(fl, ll)<CR>
+
 "Git Commands
 map <F9> :!git status<CR>
 map <F10> :!git diff<CR>

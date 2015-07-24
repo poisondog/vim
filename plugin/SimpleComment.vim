@@ -5,9 +5,15 @@ autocmd FileType objc let g:annotationSymbol = "//"
 autocmd FileType javascript let g:annotationSymbol = "//"
 autocmd FileType sh let g:annotationSymbol = "#"
 
-map <leader><leader> <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call CommentSwitch(fl, ll)<CR>
-map <leader>c <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call Comment(fl, ll)<CR>
-map <leader>x <Esc>`<:let fl=line(".")<CR>`>:let ll=line(".")<CR>:call UnComment(fl, ll)<CR>
+function SelectedFirstLine()
+	execute "'<"
+	return line(".")
+endfunction
+
+function SelectedLastLine()
+	execute "'>"
+	return line(".")
+endfunction
 
 function CommentSwitch(fl, ll)
 	let i=a:fl
