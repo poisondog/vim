@@ -11,5 +11,5 @@ function ReplaceWord(oldWord, newWord)
 endfunction
 
 function ReplaceString(file, oldString, newString)
-	system("find" . " -name " . a:file . "|xargs -i sed -i 's/" . a:oldString . "/" . a:newString . "/g' {}")
+	return system("find -name " . a:file . "|xargs sed -i 's/" . a:oldString . "/" . a:newString . "/g'")
 endfunction
