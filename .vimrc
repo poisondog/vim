@@ -132,7 +132,7 @@ nnoremap <leader>fl  :FufLine<CR>
 "vnoremap <C-k> dkP
 
 "關聯搜尋
-map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **/*.java" <Bar> cw<CR>
+map <F3> :call GrepForJava(expand("<cword>"))<CR>
 map <F4> :cn <CR>
 map <F2> :cp <CR>
 
