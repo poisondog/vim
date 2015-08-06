@@ -132,7 +132,7 @@ nnoremap <leader>fl  :FufLine<CR>
 "vnoremap <C-k> dkP
 
 "關聯搜尋
-map <F3> :call GrepForJava(expand("<cword>"))<CR>
+map <F3> :call GrepAuto(expand("<cword>"))<CR>
 map <F4> :cn <CR>
 map <F2> :cp <CR>
 
@@ -153,9 +153,9 @@ map <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastL
 "map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 
 "Git Commands
-map <F9> :!git status<CR>
-map <F10> :!git diff<CR>
-map <F12> :call GitStatus()<CR>:call GitCommit()<CR>
+"map <F9> :!git status<CR>
+"map <F10> :!git diff<CR>
+"map <F12> :call GitStatus()<CR>:call GitCommit()<CR>
 nmap <leader>gd :Gdiff<CR>
 
 "TODO Java move class function
@@ -169,13 +169,3 @@ map <C-W><C-W> :tabclose <CR>
 nmap <C-J> <C-D> <CR>
 nmap <C-K> <C-U> <CR>
 map zz :quit <CR>
-
-"javacomplete setting
-"set omnifunc=javacomplete#Complete 
-"set completefunc=javacomplete#CompleteParamsInfo 
-"inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
-"inoremap <buffer> <C-S-Space> <C-X><C-U><C-P> 
-
-"VJDE setting
-"set cfu=VjdeCompletionFun
-"let g:vjde_lib_path="bin:lib/*.jar:libs/*.jar:bin/classes:/usr/share/java/junit4.jar:/home/bean/workspace/android-sdk-linux/platforms/android-10/android.jar"

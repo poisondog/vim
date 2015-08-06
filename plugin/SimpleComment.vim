@@ -3,6 +3,7 @@ let g:annotationSymbol = "//"
 autocmd FileType java let g:annotationSymbol = "//"
 autocmd FileType vim let g:annotationSymbol = "\""
 autocmd FileType objc let g:annotationSymbol = "//"
+autocmd FileType objcpp let g:annotationSymbol = "//"
 autocmd FileType javascript let g:annotationSymbol = "//"
 autocmd FileType sh let g:annotationSymbol = "#"
 
