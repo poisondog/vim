@@ -128,8 +128,8 @@ nnoremap <leader>fl  :FufLine<CR>
 "	execute "set <M-j>=∆"
 "	execute "set <M-k>=˚"
 "endif
-"vnoremap <C-j> dp
-"vnoremap <C-k> dkP
+vmap J <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
+vmap K <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
 
 "關聯搜尋
 map <F3> :call GrepAuto(expand("<cword>"))<CR>
