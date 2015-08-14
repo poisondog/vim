@@ -141,6 +141,7 @@ noremap <F5> :JI<CR>
 noremap <F6> :call UpdateJavaImport()<CR>
 
 "Gradle Commands
+map <F7> :!gradle build -i<CR>
 map <F8> :!gradle test -i<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 
