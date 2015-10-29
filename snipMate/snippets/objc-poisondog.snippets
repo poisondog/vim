@@ -2,4 +2,8 @@
 snippet new
 	${1:NSObject} * ${2:foo} = [[${3:$1 alloc}] ${4:init}];${5}
 snippet debug
-	${1:DDLogVerbose}(@"%@%s", self, __func__);
+	${1:DDLogVerbose}(@"${2:%@}${3:%s}", ${4:self}, ${5:__func__});
+snippet log
+	${1:NSLog}(@"${2:%@}${3:%s}", ${4:self}, ${5:__func__});
+snippet logt
+	${1:NSLog}(@"${2:Thread: }${3:%@}", ${4:[NSThread currentThread]});
