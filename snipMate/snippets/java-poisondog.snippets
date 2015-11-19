@@ -48,3 +48,10 @@ snippet todo
 	// TODO ${1:}
 snippet new
 	${1:Object} ${2:var} = new ${3:$1}(${4:});${5:}
+snippet try
+	try {
+		${1}
+	} catch(${2:Exception} ${3:e}) {
+		${4:$3}.printStackTrace();
+	}
+
