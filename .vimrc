@@ -119,7 +119,7 @@ nmap <leader>t :TlistToggle<CR>
 nmap <leader>s :TlistSessionSave tag.list.session<CR>
 nmap <leader>l :TlistSessionLoad tag.list.session<CR>
 nmap <leader>u :TlistUpdate<CR>
-nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .java"<CR>
+nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
 nmap z] <C-]>
 nmap z[ :pop<CR>
 
