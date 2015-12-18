@@ -145,6 +145,7 @@ nmap <leader>grr :!gradle --refresh-dependencies<CR>
 
 "Replace Mapping
 nmap <leader>r :call ReplaceVariable()<CR>
+nmap <leader>R :call ReplaceStringOnJava()<CR>
 
 "Simple Comment
 map <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
