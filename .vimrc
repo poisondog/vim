@@ -35,6 +35,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'The-NERD-tree'
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
 Plugin 'taglist.vim'
+"Eclim
+"Plugin 'https://github.com/dansomething/vim-eclim.git'
+"YouCompleteMe
+Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 Plugin 'javacomplete'
 Plugin 'neocomplcache'
 Plugin 'AutoComplPop'
@@ -74,13 +78,12 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType java set omnifunc=javacomplete#Complete
 autocmd FileType java setlocal completefunc=javacomplete#CompleteParamsInfo
-autocmd FileType java setlocal tags=./tags
+autocmd FileType java setlocal tags=./tags,tags;$HOME
 let g:Tlist_Ctags_Cmd = "/usr/bin/ctags"
 
 set list
 set listchars=tab:→-,trail:-
 
-"這個檔案的雙引號 (") 是註解
 set hlsearch            "高亮度反白
 set backspace=2         "可隨時用倒退鍵刪除
 
@@ -110,25 +113,19 @@ syntax on
 "set nocompatible
 
 nmap <leader>e :NERDTreeToggle<CR>
+
+"taglist setting
 nmap <leader>t :TlistToggle<CR>
 nmap <leader>s :TlistSessionSave tag.list.session<CR>
 nmap <leader>l :TlistSessionLoad tag.list.session<CR>
 nmap <leader>u :TlistUpdate<CR>
-nmap <leader>a :TlistAddFilesRecursive 
+nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .java"<CR>
 
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 
 "Line Move
-"if has('unix')
-"	execute "set <M-j>=\ej"
-"	execute "set <M-k>=\ek"
-"endif
-"if has('macunix')
-"	execute "set <M-j>=∆"
-"	execute "set <M-k>=˚"
-"endif
 vmap J <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
 vmap K <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
 
@@ -151,8 +148,8 @@ nmap <leader>r :call ReplaceVariable()<CR>
 
 "Simple Comment
 map <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
-"map <leader>c <Esc>:call Comment(SelectedFirstLine(), SelectedLastLine())<CR>
-"map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
+map <leader>c <Esc>:call Comment(SelectedFirstLine(), SelectedLastLine())<CR>
+map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 
 "Git Commands
 "map <F9> :!git status<CR>
