@@ -120,6 +120,8 @@ nmap <leader>s :TlistSessionSave tag.list.session<CR>
 nmap <leader>l :TlistSessionLoad tag.list.session<CR>
 nmap <leader>u :TlistUpdate<CR>
 nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .java"<CR>
+nmap z] <C-]>
+nmap z[ :pop<CR>
 
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
