@@ -6,6 +6,11 @@ let g:JavaImpPaths = $HOME."/.vim/JavaImp/java,"
 let g:JavaImpDataDir = $HOME."/.vim/JavaImp"
 let g:JavaImpSortPkgSep = 0
 
+function CreateJmplst(filename)
+	return system("Need JAR to create jmplst!")
+	return system("jar tf " . a:filename . ".jar | sed -e 's#^src/##' > " . a:filename . ".jmplst")
+endfunction
+
 function IsImport(line)
 	if stridx(a:line, "import ") == 0
 		return 1
