@@ -38,7 +38,9 @@ Plugin 'taglist.vim'
 "Eclim
 "Plugin 'https://github.com/dansomething/vim-eclim.git'
 "YouCompleteMe
-Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+"Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+"No more :set paste!
+Plugin 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 Plugin 'javacomplete'
 Plugin 'neocomplcache'
 Plugin 'AutoComplPop'
