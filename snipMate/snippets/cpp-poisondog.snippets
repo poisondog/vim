@@ -1,0 +1,18 @@
+# Header File Sample
+snippet ch
+	#ifndef $1_H
+	#define $1_H
+	class ${1:`Filename()`} {
+		private:
+			${2};
+		public:
+			${3};
+	};
+	#endif
+# C++ File Sample
+snippet ccpp
+	#include "$1.h"
+
+	${1:`Filename()`}::$1(${2}) {
+		${3}
+	}
