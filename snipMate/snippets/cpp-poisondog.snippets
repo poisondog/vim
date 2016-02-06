@@ -2,17 +2,42 @@
 snippet ch
 	#ifndef $1_H
 	#define $1_H
+	#endif
 	class ${1:`Filename()`} {
 		private:
-			${2};
+			${2}
 		public:
-			${3};
+			${3}
 	};
-	#endif
 # C++ File Sample
-snippet ccpp
+snippet ccc
 	#include "$1.h"
 
 	${1:`Filename()`}::$1(${2}) {
 		${3}
+	}
+# Mission Header File
+snippet cmh
+	#ifndef $1_H
+	#define $1_H
+	#endif
+
+	#ifndef Mission_H
+	#include "Mission.h"
+	#endif
+
+	class ${1:`Filename()`} : public Mission {
+		public:
+			$1();
+			const void* execute(const void* input);
+	};
+# Mission C++ File Sample
+snippet cmcc
+	#include "$1.h"
+
+	${1:`Filename()`}::$1(${2}) {
+		${3}
+	}
+	const void * $1::execute(const void * input) {
+		return input;
 	}
