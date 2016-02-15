@@ -130,8 +130,8 @@ nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 
 "Line Move
-vmap J <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
-vmap K <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
+vmap <C-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
+vmap <C-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
 
 "關聯搜尋
 map <F3> :call GrepAuto(expand("<cword>"))<CR>
