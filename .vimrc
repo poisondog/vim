@@ -40,6 +40,8 @@ Plugin 'taglist.vim'
 "YouCompleteMe
 "Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 "No more :set paste!
+"shellasync.vim plugin for asynchronously executing shell commands in vim
+Plugin 'https://github.com/troydm/shellasync.vim.git'
 Plugin 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 Plugin 'javacomplete'
 Plugin 'neocomplcache'
@@ -144,8 +146,7 @@ noremap <F6> :call UpdateJavaImport()<CR>
 
 "Gradle Commands
 map <F7> :!gradle build -i<CR>
-map <F8> :!gradle test -i<CR>
-map <F9> :!./gradlew build -i<CR>
+map <F8> :Shell ./gradlew test -i<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 
 "Replace Mapping
@@ -160,7 +161,8 @@ map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 "Git Commands
 "map <F9> :!git status<CR>
 "map <F10> :!git diff<CR>
-nmap <F12> :call GradleTest()<CR>:Gstatus<CR>:call GitCommit()<CR>
+nmap <F9> :Gstatus<CR>:call GitCommit()<CR>
+nmap <F10> :call GitPush()<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gstatus<CR>:call GitCommit()<CR>

@@ -1,5 +1,6 @@
 function GradleTestInfo()
-	return system("./gradlew test -i")
+"	return system("./gradlew test -i")
+	return call Shell("./gradlew test -i")
 endfunction
 
 function GradleTest()

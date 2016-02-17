@@ -16,6 +16,15 @@ function GitCommit()
 	call TempVS(response)
 endfunction
 
+function GitPush()
+	call inputsave()
+	let host = input('Enter Host: ')
+	let branch = input('Enter Branch: ')
+	call inputrestore()
+	let response = GitPushCommand(host, branch)
+	call TempTab(response)
+endfunction
+
 function GitAddCommand(parameter)
 	return system("git add " . a:parameter)
 endfunction
@@ -37,7 +46,7 @@ function GitDiffCommand()
 endfunction
 
 function GitPushCommand(host, branch)
-	return system("git push " . host . " " . branch)
+	return system("git push " . a:host . " " . a:branch)
 endfunction
 
 function GitCommitCommand(comment)
