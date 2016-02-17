@@ -162,6 +162,8 @@ map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 "map <F10> :!git diff<CR>
 map <F12> :!./gradlew test -i<CR>:call GitStatus()<CR>:call GitCommit()<CR>
 nmap <leader>gd :Gdiff<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :Gstatus<CR>:call GitCommit()<CR>
 
 "TODO Java move class function
 
