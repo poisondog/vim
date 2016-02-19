@@ -28,8 +28,7 @@ snippet ce
 	/**${2:}
 	 * @author poisondog <poisondog@gmail.com>
 	 */
-	${3:public} enum ${4:`Filename("", "untitled")`} {
-		${5}
+	${3:public} enum ${4:`Filename("", "untitled")`} {${5}
 	}
 snippet ch
 	/*******************************
@@ -53,8 +52,7 @@ snippet foe
 snippet new
 	${1:Object} ${2:var} = new ${3:$1}(${4:});${5:}
 snippet try
-	try {
-		${1}
+	try {${1}
 	} catch(${2:Exception} ${3:e}) {
 		${4:$3}.printStackTrace();
 	}
@@ -62,12 +60,10 @@ snippet con
 	/**
 	 * Constructor
 	 */
-	${1:public} ${2:`Filename()`}(${3}) {
-		${4}
+	${1:public} ${2:`Filename()`}(${3}) {${4}
 	}
 snippet fin
 	@Override
 	protected void finalize() {
-		super.finalize();
-		${1}
+		super.finalize();${1}
 	}
