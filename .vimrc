@@ -35,14 +35,16 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'The-NERD-tree'
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
 Plugin 'taglist.vim'
-"Eclim
+" Eclim
 "Plugin 'https://github.com/dansomething/vim-eclim.git'
-"YouCompleteMe
+" YouCompleteMe
 "Plugin 'https://github.com/Valloric/YouCompleteMe.git'
-"No more :set paste!
-"shellasync.vim plugin for asynchronously executing shell commands in vim
-Plugin 'https://github.com/troydm/shellasync.vim.git'
+" No more :set paste!
 Plugin 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
+" shellasync.vim plugin for asynchronously executing shell commands in vim
+Plugin 'https://github.com/troydm/shellasync.vim.git'
+" Gradle Syntax Highlighting
+Plugin 'vim-gradle'
 Plugin 'javacomplete'
 Plugin 'neocomplcache'
 Plugin 'AutoComplPop'
