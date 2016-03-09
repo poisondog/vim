@@ -1,10 +1,4 @@
 " Vundle https://github.com/VundleVim/Vundle.vim
-" Quick Start
-" install for this command
-"$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"
-"Launch vim and run :PluginInstall to install all plugins
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -15,46 +9,55 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
+" ============ My Plugin ============
 Plugin 'The-NERD-tree'
+
+" Syntax checking hacks for vim
+"Plugin 'scrooloose/syntastic'
+
+" Java Import Tool
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
 Plugin 'taglist.vim'
-" Eclim
-"Plugin 'https://github.com/dansomething/vim-eclim.git'
-" YouCompleteMe
-"Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+
 " No more :set paste!
 Plugin 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
+
 " shellasync.vim plugin for asynchronously executing shell commands in vim
 Plugin 'https://github.com/troydm/shellasync.vim.git'
+
 " Gradle Syntax Highlighting
 Plugin 'vim-gradle'
+
+" Auto Complete
+"Plugin 'Valloric/YouCompleteMe.git'
 Plugin 'javacomplete'
 Plugin 'neocomplcache'
 Plugin 'AutoComplPop'
+
+" iOS Tool
 Plugin 'https://github.com/eraserhd/vim-ios/'
 Plugin 'https://github.com/keith/swift.vim.git'
 Plugin 'cocoa.vim'
 Plugin 'clang-complete'
+
+" Git Plugin Tool
 Plugin 'fugitive.vim'
+
+" Snippets
 Plugin 'snipMate'
 let g:snippets_dir = $HOME."/.vim/snipMate/snippets"
+
+Plugin 'tpope/vim-surround'
+Plugin 'elzr/vim-json'
+" Bottom Status Bar
+"Plugin 'vim-airline/vim-airline'
+
+" Color Schemes
+"Plugin 'tomasr/molokai'
+"Plugin 'flazz/vim-colorschemes'
+" ===================================
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,13 +67,13 @@ filetype plugin indent on    " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+" ============ End Vundle Setting ============
 
 "execute pathogen#infect()
 " filetype on
@@ -112,7 +115,6 @@ set bg=dark
 syntax on
 "Dictionary Completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
-"set nocompatible
 
 nmap <leader>e :NERDTreeToggle<CR>
 "taglist setting
