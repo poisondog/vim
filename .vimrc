@@ -89,37 +89,32 @@ let g:Tlist_Ctags_Cmd = "/usr/bin/ctags"
 
 set list
 set listchars=tab:→-,trail:-
-
-set hlsearch            "高亮度反白
-set backspace=2         "可隨時用倒退鍵刪除
-
+"高亮度反白
+set hlsearch
+"可隨時用倒退鍵刪除
+set backspace=2
 "智能對齊
 set smartindent
 "自動對齊，使用上一行的對齊方式
 set autoindent
-
 "設置自動縮進
 set ai
-
 set sm
-
 "可顯示最後一行的狀態
 set ruler
-set showmode            "左下角那一行的狀態
-
+"左下角那一行的狀態
+set showmode
 "顯示行號
 set nu
-
 "底色色調
 set bg=dark
-
 "語法檢驗，顏色顯示
 syntax on
-
+"Dictionary Completion
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 "set nocompatible
 
 nmap <leader>e :NERDTreeToggle<CR>
-
 "taglist setting
 nmap <leader>t :TlistToggle<CR>
 nmap <leader>s :TlistSessionSave tag.list.session<CR>
@@ -128,38 +123,30 @@ nmap <leader>u :TlistUpdate<CR>
 nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
 nmap z] <C-]>
 nmap z[ :pop<CR>
-
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
-
 "Line Move
 vmap <C-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
 vmap <C-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
-
 "關聯搜尋
 map <F3> :call GrepAuto(expand("<cword>"))<CR>
 map <F4> :cn <CR>
 map <F2> :cp <CR>
-
 "Java Auto Import
 noremap <F5> :JI<CR>
 noremap <F6> :call UpdateJavaImport()<CR>
-
 "Gradle Commands
 map <F7> :!gradle build -i<CR>
 map <F8> :!./gradlew test -i<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
-
 "Replace Mapping
 nmap <leader>r :call ReplaceVariable()<CR>
 nmap <leader>R :call ReplaceStringOnJava()<CR>
-
 "Simple Comment
 map <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
 map <leader>c <Esc>:call Comment(SelectedFirstLine(), SelectedLastLine())<CR>
 map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
-
 "Git Commands
 "map <F9> :!git status<CR>
 "map <F10> :!git diff<CR>
@@ -168,9 +155,7 @@ nmap <F10> :call GitPush()<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gstatus<CR>:call GitCommit()<CR>
-
 "TODO Java move class function
-
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
 map <C-H> :tabprevious <CR>
