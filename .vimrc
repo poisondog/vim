@@ -139,7 +139,7 @@ map <F2> :cp <CR>
 noremap <F5> :JI<CR>
 noremap <F6> :call UpdateJavaImport()<CR>
 "Gradle Commands
-map <F7> :!gradle build -i<CR>
+map <F7> :!./gradlew build -i<CR>
 map <F8> :!./gradlew test -i<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 "Replace Mapping
