@@ -37,9 +37,9 @@ Plugin 'neocomplcache'
 Plugin 'AutoComplPop'
 
 " iOS Tool
-Plugin 'https://github.com/eraserhd/vim-ios/'
+Plugin 'eraserhd/vim-ios'
 Plugin 'https://github.com/keith/swift.vim.git'
-Plugin 'cocoa.vim'
+Plugin 'msanders/cocoa.vim'
 Plugin 'clang-complete'
 
 " Git Plugin Tool
