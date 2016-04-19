@@ -3,6 +3,11 @@ snippet ch
 	#ifndef $1_H
 	#define $1_H
 	#endif
+
+	/**
+	 * @author poisondog <poisondog@gmail.com>
+	 * @since `system("date +%Y-%m-%d")`
+	 */
 	class ${1:`Filename()`} {
 		private:
 			${2}
@@ -10,14 +15,18 @@ snippet ch
 			${3}
 	};
 # C++ File Sample
-snippet ccc
+snippet cc
 	#include "$1.h"
 
+	/**
+	 * @author poisondog <poisondog@gmail.com>
+	 * @since `system("date +%Y-%m-%d")`
+	 */
 	${1:`Filename()`}::$1(${2}) {
 		${3}
 	}
 # Mission Header File
-snippet cmh
+snippet chm
 	#ifndef $1_H
 	#define $1_H
 	#endif
@@ -26,15 +35,23 @@ snippet cmh
 	#include "Mission.h"
 	#endif
 
+	/**
+	 * @author poisondog <poisondog@gmail.com>
+	 * @since `system("date +%Y-%m-%d")`
+	 */
 	class ${1:`Filename()`} : public Mission {
 		public:
 			$1();
 			const void* execute(const void* input);
 	};
 # Mission C++ File Sample
-snippet cmcc
+snippet ccm
 	#include "$1.h"
 
+	/**
+	 * @author poisondog <poisondog@gmail.com>
+	 * @since `system("date +%Y-%m-%d")`
+	 */
 	${1:`Filename()`}::$1(${2}) {
 		${3}
 	}
