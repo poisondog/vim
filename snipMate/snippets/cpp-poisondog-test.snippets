@@ -5,13 +5,13 @@ snippet tt
 snippet ct
 	#include "gtest/gtest.h"
 
-	namespace {
-		class ${1:`Filename()`} : public ::testing::Test {
+	namespace ${1:package} {
+		class ${2:`Filename()`} : public ::testing::Test {
 		protected:
-			$1() {
+			$2() {
 				// You can do set-up work for each test here.
 			}
-			virtual ~$1() {
+			virtual ~$2() {
 				// You can do clean-up work that doesn't throw exceptions here.
 			}
 			// If the constructor and destructor are not enough for setting up
@@ -25,8 +25,8 @@ snippet ct
 				// before the destructor).
 			}
 		};
-		TEST($1, ${2:TestName}) {
-			ASSERT_TRUE(true);${3}
+		TEST($2, ${3:TestName}) {
+			${4}
 		}
 	}
 snippet ae
