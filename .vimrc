@@ -161,9 +161,10 @@ nmap <leader>gc :Gstatus<CR>:call GitCommit()<CR>
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
 map <C-H> :tabprevious <CR>
-map <C-W><C-W> :tabclose <CR>
+map <C-W><C-W> :quit <CR>
+"map <C-W><C-W> :tabclose <CR>
 "map <C-J> <C-F> <CR>
 "map <C-K> <C-B> <CR>
 nmap <C-J> <C-D> <CR>
 nmap <C-K> <C-U> <CR>
-map zz :quit <CR>
+"map zz :quit <CR>
