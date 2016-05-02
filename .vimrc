@@ -168,3 +168,4 @@ map <C-W><C-W> :quit <CR>
 nmap <C-J> <C-D> <CR>
 nmap <C-K> <C-U> <CR>
 "map zz :quit <CR>
+nmap zm zz
