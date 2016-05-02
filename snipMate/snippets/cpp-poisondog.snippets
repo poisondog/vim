@@ -1,34 +1,38 @@
 # Header File Sample
 snippet ch
-	#ifndef $1_H
-	#define $1_H
+	#ifndef $2_H
+	#define $2_H
 	#endif
 
 	/**
-	 * @author poisondog <poisondog@gmail.com>
+	 * @author Adam Huang <poisondog@gmail.com>
 	 * @since `system("date +%Y-%m-%d")`
 	 */
-	class ${1:`Filename()`} {
-		private:
-			${2}
-		public:
-			${3}
-	};
+	namespace ${1:package} {
+		class ${2:`Filename()`} {
+			private:
+				${3}
+			public:
+				${4}
+		};
+	}
 # C++ File Sample
 snippet cc
-	#include "$1.h"
+	#include "$2.h"
 
 	/**
-	 * @author poisondog <poisondog@gmail.com>
+	 * @author Adam Huang <poisondog@gmail.com>
 	 * @since `system("date +%Y-%m-%d")`
 	 */
-	${1:`Filename()`}::$1(${2}) {
-		${3}
+	namespace ${1:package} {
+		${2:`Filename()`}::$2(${3}) {
+			${4}
+		}
 	}
 # Mission Header File
 snippet chm
-	#ifndef $1_H
-	#define $1_H
+	#ifndef $2_H
+	#define $2_H
 	#endif
 
 	#ifndef Mission_H
@@ -36,29 +40,41 @@ snippet chm
 	#endif
 
 	/**
-	 * @author poisondog <poisondog@gmail.com>
+	 * @author Adam Huang <poisondog@gmail.com>
 	 * @since `system("date +%Y-%m-%d")`
 	 */
-	class ${1:`Filename()`} : public Mission {
-		public:
-			$1();
-			const void* execute(const void* input);
-	};
+	namespace ${1:package} {
+		class ${2:`Filename()`} : public Mission {
+			public:
+				$2();
+				const void* execute(const void* input);
+		};
+	}
 # Mission C++ File Sample
 snippet ccm
-	#include "$1.h"
+	#include "$2.h"
 
 	/**
-	 * @author poisondog <poisondog@gmail.com>
+	 * @author Adam Huang <poisondog@gmail.com>
 	 * @since `system("date +%Y-%m-%d")`
 	 */
-	${1:`Filename()`}::$1(${2}) {
-		${3}
-	}
-	const void * $1::execute(const void * input) {
-		return input;
+	namespace ${1:package} {
+		${2:`Filename()`}::$2(${3}) {
+			${4}
+		}
+		const void * $2::execute(const void * input) {
+			return input;
+		}
 	}
 # For Loop
 snippet fo
 	for (int ${1:i} = ${2:0}; $1 ${3:<} ${4:length}; $1${5:++}) {${6}
 	}
+snippet ifi
+	#ifndef $1_H
+	#include "${1:Header}.h"
+	#endif${2}
+snippet new
+	Pointer<${1:Object}> ${2:var} = new ${3:$1}(${4:});${5:}
+snippet sysout
+	printf("${1:%s}\n"${2});${3}
