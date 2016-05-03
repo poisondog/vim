@@ -152,11 +152,13 @@ map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 "Git Commands
 "map <F9> :!git status<CR>
 "map <F10> :!git diff<CR>
-nmap <F9> :Gstatus<CR>:call GitCommit()<CR>
-nmap <F10> :call GitPush()<CR>
+"nmap <F9> :Gstatus<CR>:call GitCommit()<CR>
+"nmap <F10> :call GitPush()<CR>
+nmap <leader>ga :Git add 
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :Gstatus<CR>:call GitCommit()<CR>
+nmap <leader>gp :call GitPush()<CR>
 "TODO Java move class function
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
