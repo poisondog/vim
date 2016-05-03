@@ -13,7 +13,7 @@ function GitCommit()
 	let comment = input('Enter Comment: ')
 	call inputrestore()
 	let response = GitCommitCommand(comment)
-	call TempVS(response)
+	call TempTab(response)
 endfunction
 
 function GitPush()
