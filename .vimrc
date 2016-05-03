@@ -158,7 +158,7 @@ nmap <leader>ga :Git add
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :call GitCommit()<CR>
-nmap <leader>gp :call GitPush()<CR>
+nmap <leader>gh :call GitPush()<CR>
 "TODO Java move class function
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
