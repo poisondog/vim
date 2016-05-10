@@ -48,7 +48,7 @@ snippet chm
 			public:
 				$2();
 				const Pointer<$4> execute(const Pointer<$3> input);
-		};
+		};${5}
 	}
 # Mission C++ File Sample
 snippet ccm
@@ -62,7 +62,7 @@ snippet ccm
 		${2:`Filename()`}::$2(${3}) {
 			${4}
 		}
-		const void * $2::execute(const void * input) {
+		const Pointer<${6:T}> $2::execute(const Pointer<${5:S}> input) {${7}
 			return input;
 		}
 	}
