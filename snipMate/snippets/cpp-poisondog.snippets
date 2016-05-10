@@ -44,10 +44,10 @@ snippet chm
 	 * @since `system("date +%Y-%m-%d")`
 	 */
 	namespace ${1:package} {
-		class ${2:`Filename()`} : public Mission {
+		class ${2:`Filename()`} : public Mission<${3:S}, ${4:T}> {
 			public:
 				$2();
-				const void* execute(const void* input);
+				const Pointer<$4> execute(const Pointer<$3> input);
 		};
 	}
 # Mission C++ File Sample
