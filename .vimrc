@@ -125,6 +125,9 @@ nmap <leader>u :TlistUpdate<CR>
 nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
 nmap z] <C-]>
 nmap z[ :pop<CR>
+nmap zv :vs<CR><C-]>
+nmap zl <C-W>l
+nmap zh <C-W>l
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
