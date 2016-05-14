@@ -127,7 +127,7 @@ nmap z] <C-]>
 nmap z[ :pop<CR>
 nmap zv :vs<CR><C-]>
 nmap zl <C-W>l
-nmap zh <C-W>l
+nmap zh <C-W>h
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
