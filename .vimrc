@@ -159,7 +159,7 @@ map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 "nmap <F10> :call GitPush()<CR>
 nmap <leader>ga :Git add 
 nmap <leader>gd :Gdiff<CR>
-nmap <leader>gs :Gstatus<CR>
+nmap <leader>gs :call GitStatus()<CR>
 nmap <leader>gc :call GitCommit()<CR>
 nmap <leader>gh :call GitPush()<CR>
 "TODO Java move class function
