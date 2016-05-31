@@ -1,6 +1,6 @@
 snippet tt
-	TEST(${1:`Filename()`}, ${2:TestName}) {
-		ASSERT_TRUE(true);${3}
+	TEST(`Filename()`, ${1:TestName}) {${2}
+		ASSERT_TRUE(true);
 	}
 snippet ct
 	#include "gtest/gtest.h"
