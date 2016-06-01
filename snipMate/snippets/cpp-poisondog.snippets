@@ -4,16 +4,20 @@ snippet ch
 	#define $2_H
 	#endif
 
+	#ifndef $4_H
+	#define $4_H
+	#endif
+
 	/**
 	 * @author Adam Huang <poisondog@gmail.com>
 	 * @since `system("date +%Y-%m-%d")`
 	 */
 	namespace ${1:package} {
-		class ${2:`Filename()`} {
+		class ${2:`Filename()`} : ${3:public} ${4:Object} {
 			private:
-				${3}
+				${5}
 			public:
-				${4}
+				${6}
 		};
 	}
 # C++ File Sample
