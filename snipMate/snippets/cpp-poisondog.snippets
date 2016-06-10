@@ -4,16 +4,20 @@ snippet ch
 	#define $2_H
 	#endif
 
+	#ifndef $4_H
+	#include "$4.h"
+	#endif
+
 	/**
 	 * @author Adam Huang <poisondog@gmail.com>
 	 * @since `system("date +%Y-%m-%d")`
 	 */
 	namespace ${1:package} {
-		class ${2:`Filename()`} {
+		class ${2:`Filename()`} : ${3:public} ${4:Object} {
 			private:
-				${3}
+				${5}
 			public:
-				${4}
+				$2(${6});
 		};
 	}
 # C++ File Sample
@@ -44,10 +48,10 @@ snippet chm
 	 * @since `system("date +%Y-%m-%d")`
 	 */
 	namespace ${1:package} {
-		class ${2:`Filename()`} : public Mission<${3:S}, ${4:T}> {
+		class ${2:`Filename()`} : public Mission<${3:S}> {
 			public:
 				$2();
-				const Pointer<$4> execute(const Pointer<$3> input);
+				Pointer<Object> execute(Pointer<$3> input);
 		};${5}
 	}
 # Mission C++ File Sample
@@ -62,7 +66,7 @@ snippet ccm
 		${2:`Filename()`}::$2(${3}) {
 			${4}
 		}
-		const Pointer<${6:T}> $2::execute(const Pointer<${5:S}> input) {${7}
+		Pointer<Object> $2::execute(Pointer<${5:S}> input) {${7}
 			return input;${7}
 		}
 	}
