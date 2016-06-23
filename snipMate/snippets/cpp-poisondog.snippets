@@ -82,3 +82,11 @@ snippet new
 	Pointer<${1:Object}> ${2:var} = new ${3:$1}(${4:});${5:}
 snippet sysout
 	printf("${1:%s}\n"${2});${3}
+# For Objective-C
+snippet ochm
+	#import <Foundation/Foundation.h>
+	#import "$3.h"
+
+	@interface ${1:`Filename()`} : ${2:NSObject}<${3:Mission}>
+	-(${4:NSObject} *) execute:(${5:NSObject} *)${6:input};
+	@end

@@ -38,7 +38,7 @@ snippet ct
 	@end
 
 	@implementation `Filename()`
-	- (void)test${3:Case} {
-		XCTAssertTrue(true);
+	- (void)test${1:Case} {
+		${2:XCTAssertTrue(true)};${3}
 	}
 	@end
