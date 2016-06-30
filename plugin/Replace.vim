@@ -21,3 +21,12 @@ function ReplaceStringOnJava()
 	call inputrestore()
 	return system("find -name *.java |xargs sed -i 's/" . oldString . "/" . newString . "/g'")
 endfunction
+
+function ReplaceStringOn()
+	call inputsave()
+	let fileString = input('Enter File Type: ')
+	let oldString = input('Enter Old String: ')
+	let newString = input('Enter New String: ')
+	call inputrestore()
+	return system("find -name *." . fileString . " |xargs sed -i 's/" . oldString . "/" . newString . "/g'")
+endfunction
