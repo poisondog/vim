@@ -14,3 +14,11 @@ snippet foe
 	for (${1:Class} *${2:some$1} in ${3:array}) {
 		${4}
 	}
+snippet occm
+	#import "$1.h"
+
+	@implementation ${1:`Filename()`}
+	-(${2:NSObject} *) execute:(${3:NSObject} *)${4:input} {
+		return $4;
+	}
+	@end
