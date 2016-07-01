@@ -24,7 +24,7 @@ endfunction
 
 function ReplaceStringOn()
 	call inputsave()
-	let fileString = input('Enter File Type: ')
+	let fileString = input('Enter Filename Extension: ')
 	let oldString = input('Enter Old String: ')
 	let newString = input('Enter New String: ')
 	call inputrestore()
