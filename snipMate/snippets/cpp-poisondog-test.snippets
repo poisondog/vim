@@ -33,5 +33,7 @@ snippet ae
 	EXPECT_EQ(${1:except}, ${2:actual});${3}
 snippet aed
 	EXPECT_DOUBLE_EQ(${1:except}, ${2:actual});${3}
+snippet an
+	EXPECT_NEAR(${1:except}, ${2:actual}, ${3:pow(10, -6)});${4}
 snippet at
 	ASSERT_TRUE(${1});${2}
