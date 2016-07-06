@@ -51,7 +51,7 @@ snippet chm
 		class ${2:`Filename()`} : public Mission<${3:S}> {
 			public:
 				$2();
-				Pointer<Object> execute(Pointer<$3> input);
+				${4:Object}* execute($3* input);
 		};${5}
 	}
 # Mission C++ File Sample
@@ -66,8 +66,8 @@ snippet ccm
 		${2:`Filename()`}::$2(${3}) {
 			${4}
 		}
-		Pointer<Object> $2::execute(Pointer<${5:S}> input) {${7}
-			return input;${7}
+		${6:Object}* $2::execute(${5:S}* input) {${7}
+			return input;
 		}
 	}
 # For Loop
