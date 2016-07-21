@@ -45,6 +45,9 @@ Plugin 'clang-complete'
 " Git Plugin Tool
 Plugin 'fugitive.vim'
 
+" Generate setter and getter
+"Plugin 'https://github.com/Dinduks/vim-java-get-set.git'
+
 " Snippets
 Plugin 'snipMate'
 let g:snippets_dir = $HOME."/.vim/snipMate/snippets"
