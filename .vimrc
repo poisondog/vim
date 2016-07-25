@@ -136,8 +136,10 @@ nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 "Line Move
-vmap <C-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
-vmap <C-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
+execute "set <M-J>=\ej"
+execute "set <M-K>=\ek"
+vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
+vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
 "關聯搜尋
 map <F3> :call GrepAuto(expand("<cword>"))<CR>
 map <F4> :cn <CR>
