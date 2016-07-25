@@ -136,6 +136,7 @@ nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 "Line Move
+set timeout ttimeoutlen=50
 execute "set <M-J>=\ej"
 execute "set <M-K>=\ek"
 vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
