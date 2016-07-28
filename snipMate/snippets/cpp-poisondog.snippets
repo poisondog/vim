@@ -2,7 +2,6 @@
 snippet ch
 	#ifndef $2_H
 	#define $2_H
-	#endif
 
 	#ifndef $4_H
 	#include "$4.h"
@@ -20,6 +19,7 @@ snippet ch
 				$2(${6});
 		};
 	}
+	#endif
 # C++ File Sample
 snippet cc
 	#include "$2.h"
@@ -37,7 +37,6 @@ snippet cc
 snippet chm
 	#ifndef $2_H
 	#define $2_H
-	#endif
 
 	#ifndef Mission_H
 	#include "Mission.h"
@@ -54,6 +53,7 @@ snippet chm
 				${4:Object}* execute($3* input);
 		};${5}
 	}
+	#endif
 # Mission C++ File Sample
 snippet ccm
 	#include "$2.h"
