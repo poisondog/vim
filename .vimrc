@@ -48,9 +48,20 @@ Plugin 'fugitive.vim'
 " Generate setter and getter
 "Plugin 'https://github.com/Dinduks/vim-java-get-set.git'
 
-" Snippets
+" snipMate
 Plugin 'snipMate'
-let g:snippets_dir = $HOME."/.vim/snipMate/snippets"
+let g:snippets_dir = $HOME."/.vim/snippets"
+
+" UltiSnips
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
+"" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsSnippetDirectories=$HOME."/.vim/UltiSnips"
 
 Plugin 'tpope/vim-surround'
 Plugin 'elzr/vim-json'
