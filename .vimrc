@@ -140,7 +140,7 @@ nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
 nmap z] <C-]>
 nmap z[ :pop<CR>
 nmap zv :vs<CR><C-]>
-nmap zt :tab split<CR><C-]>
+nmap z; :tab split<CR><C-]>
 nmap zl <C-W>l
 nmap zh <C-W>h
 nnoremap <leader>ff  :FufFile<CR>
