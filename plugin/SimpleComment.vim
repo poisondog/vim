@@ -7,6 +7,7 @@ autocmd FileType objcpp let g:annotationSymbol = "//"
 autocmd FileType javascript let g:annotationSymbol = "//"
 autocmd FileType gradle let g:annotationSymbol = "//"
 autocmd FileType cpp let g:annotationSymbol = "//"
+autocmd FileType swift let g:annotationSymbol = "//"
 autocmd FileType cmake let g:annotationSymbol = "#"
 
 "TODO add xml comment
