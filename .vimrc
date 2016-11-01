@@ -46,7 +46,7 @@ Plugin 'clang-complete'
 Plugin 'fugitive.vim'
 
 " Generate setter and getter
-"Plugin 'https://github.com/Dinduks/vim-java-get-set.git'
+Plugin 'https://github.com/Dinduks/vim-java-get-set.git'
 
 " snipMate
 Plugin 'snipMate'
@@ -133,7 +133,7 @@ set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 nmap <leader>e :NERDTreeToggle<CR>
 "taglist setting
 nmap <leader>t :TlistToggle<CR>
-nmap <leader>s :TlistSessionSave tag.list.session<CR>
+"nmap <leader>s :TlistSessionSave tag.list.session<CR>
 nmap <leader>l :TlistSessionLoad tag.list.session<CR>
 nmap <leader>u :TlistUpdate<CR>
 nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
