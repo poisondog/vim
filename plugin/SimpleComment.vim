@@ -12,16 +12,6 @@ autocmd FileType cmake let g:annotationSymbol = "#"
 
 "TODO add xml comment
 
-function SelectedFirstLine()
-	execute "'<"
-	return line(".")
-endfunction
-
-function SelectedLastLine()
-	execute "'>"
-	return line(".")
-endfunction
-
 function CommentSwitch(fl, ll)
 	let i=a:fl
 	while i<=a:ll

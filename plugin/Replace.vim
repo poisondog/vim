@@ -1,4 +1,3 @@
-
 function ReplaceVariable()
 	call inputsave()
 	let newVar = input('Enter New Variable: ')
@@ -11,6 +10,18 @@ function ReplaceVariableCurrentEnd()
 	let newVar = input('Enter New Variable: ')
 	call inputrestore()
 	call ReplaceWordFromCurrentEnd(expand("<cword>"), newVar)
+endfunction
+
+function ReplaceSelected()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	let oldVar = GetSelection()
+	call ReplaceWordWithEscape(oldVar, newVar)
+endfunction
+
+function ReplaceWordWithEscape(oldWord, newWord)
+	execute "%s/" . EscapeVim(a:oldWord) . "/" . a:newWord . "/gc"
 endfunction
 
 function ReplaceWord(oldWord, newWord)
