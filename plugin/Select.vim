@@ -17,6 +17,20 @@ function SelectedLastLine()
 	return line(".")
 endfunction
 
+"function CommentSwitch(fl, ll)
+"	let i=a:fl
+"	while i<=a:ll
+"		let cl=getline(i)
+"		let commentLine = matchstr(cl, "^\\s*\\S+\\s*")
+"		if commentLine != ""
+"			call RemoveComment(i)
+"		else
+"			call AddComment(i)
+"		endif
+"		let i=i+1
+"	endwhile
+"endfunction
+
 function EscapeVim(input)
 	return escape(a:input, ' \/.*~[]')
 endfunction
