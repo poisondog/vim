@@ -16,11 +16,10 @@ function SearchLines()
 "		echom EscapeVim(ReplaceSpaceBefore(line))
 		let result .=  '\_s*'
 		let result .= EscapeVim(ReplaceSpaceBefore(line))
-"		result = join([result, EscapeVim(ReplaceSpaceBefore(line))], '\_s*')
+"		let result = join([result, EscapeVim(ReplaceSpaceBefore(line))], '\_s*')
 		let i=i+1
 	endwhile
-	let @/ = result
-	execute "normal /" . result . "\<CR>"
+	call Search(result)
 endfunction
 
 function ReplaceSpaceBefore(input)
@@ -29,8 +28,10 @@ endfunction
 
 function SearchWordWithEscape(selected)
 	let temp = substitute(EscapeVim(a:selected), "^\\s*", "","")
-	let @/ = temp
-"	call search(temp)
-"	echom substitute(temp, "^\\s*", "","")
-	execute "normal /" . temp . "\<CR>"
+	call Search(temp)
+endfunction
+
+function Search(input)
+	let @/ = a:input
+	execute "normal /" . a:input . "\<CR>"
 endfunction
