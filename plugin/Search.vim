@@ -7,16 +7,16 @@ endfunction
 function SearchLines()
 	let first = SelectedFirstLine()
 	let last = SelectedLastLine()
-	let result = ""
-	let i=first
-	while i<=last
-		let line=getline(i)
+	let result = '\_^'
+	let i = first
+	while i <= last
+		let line = getline(i)
 "		echom line
 "		echom ReplaceSpaceBefore(line)
 "		echom EscapeVim(ReplaceSpaceBefore(line))
-"		result .= EscapeVim(ReplaceSpaceBefore(line))
-"		result .=  "\_s*"
-		result = join([result, EscapeVim(ReplaceSpaceBefore(line))], "\n")
+		let result .=  '\_s*'
+		let result .= EscapeVim(ReplaceSpaceBefore(line))
+"		result = join([result, EscapeVim(ReplaceSpaceBefore(line))], '\_s*')
 		let i=i+1
 	endwhile
 	let @/ = result
