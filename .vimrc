@@ -166,8 +166,8 @@ map <F12> :call GrepTodo()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 "Replace Mapping
 "vnoremap // y/<C-R>"<CR>
-vnoremap n :call SearchLines()<CR>
-vnoremap <leader>f :call SearchSelected()<CR>
+vnoremap n :call SearchSelected()<CR>
+"vnoremap <leader>f :call SearchSelected()<CR>
 vnoremap <leader>r :call ReplaceSelected()<CR>
 nmap <leader>r :call ReplaceVariable()<CR>
 nmap <leader>cr :call ReplaceVariableCurrentEnd()<CR>

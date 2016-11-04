@@ -1,7 +1,14 @@
 
-function SearchSelected()
-	let selected = GetSelection()
-	call SearchWordWithEscape(selected)
+function SearchSelected() range
+"	let first = SelectedFirstLine()
+"	let last = SelectedLastLine()
+	if a:firstline == a:lastline
+		let selected = GetSelection()
+		call SearchWordWithEscape(selected)
+	else
+		call SearchLines();
+	endif
+	echom "SearchSelected"
 endfunction
 
 function SearchLines()
@@ -27,7 +34,8 @@ function ReplaceSpaceBefore(input)
 endfunction
 
 function SearchWordWithEscape(selected)
-	let temp = substitute(EscapeVim(a:selected), "^\\s*", "","")
+	echom "selected: " . a:selected
+	let temp = EscapeVim(ReplaceSpaceBefore(a:selected))
 	call Search(temp)
 endfunction
 
