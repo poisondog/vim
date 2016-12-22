@@ -31,5 +31,5 @@ function SelectedLines()
 endfunction
 
 function EscapeVim(input)
-	return escape(a:input, ' \/.*~[]')
+	return escape(a:input, ' \/.*~[]"')
 endfunction
