@@ -163,6 +163,7 @@ noremap <F6> :call UpdateJavaImport()<CR>
 "map <F7> :!./gradlew build -i --daemon --parallel --offline<CR>
 map <F7> :!./gradlew build -i --daemon --parallel<CR>
 map <F8> :!./gradlew test -i<CR>
+map <F9> :FindFile <cword>Test*<CR>
 map <F12> :call GrepTodo()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 "Replace Mapping
