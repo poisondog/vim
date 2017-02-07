@@ -2,6 +2,7 @@
 function SearchSelected() range
 "	let first = SelectedFirstLine()
 "	let last = SelectedLastLine()
+
 	if a:firstline == a:lastline
 		let selected = GetSelection()
 		call SearchWordWithEscape(selected)
@@ -9,6 +10,20 @@ function SearchSelected() range
 		call SearchLines();
 	endif
 	echom "SearchSelected"
+endfunction
+
+function Show() range
+	let column_num      = virtcol('.')
+	let target_pattern  = '\%' . column_num . 'v.'
+	let target_line_num = search(target_pattern . '*\S', 'bnW')
+
+	echom column_num
+	echom target_pattern
+	echom target_line_num
+
+	if !target_line_num
+		return ""
+	else
 endfunction
 
 function SearchLines()
