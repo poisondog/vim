@@ -46,7 +46,8 @@ Plugin 'clang-complete'
 Plugin 'fugitive.vim'
 
 " vim-python-pep8-indent
-"Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'vim-scripts/indentpython.vim'
 
 " Generate setter and getter
 Plugin 'https://github.com/Dinduks/vim-java-get-set.git'
