@@ -12,6 +12,8 @@ nmap zv :vs<CR><C-]>
 nmap z; :tab split<CR><C-]>
 nmap zl <C-W>l
 nmap zh <C-W>h
+nmap zu :call JumpToTest()<CR>
+nmap zo :call JumpToOrigin()<CR>
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
