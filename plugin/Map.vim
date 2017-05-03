@@ -17,6 +17,7 @@ nmap zo :call JumpToOrigin()<CR>
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
+nnoremap <leader>cjt  :call CreateJavaTestFile()<CR>
 "Line Move
 set timeout ttimeoutlen=50
 execute "set <M-J>=\ej"
@@ -47,9 +48,9 @@ nmap <leader>r :call ReplaceVariable()<CR>
 nmap <leader>cr :call ReplaceVariableCurrentEnd()<CR>
 nmap <leader>R :call ReplaceStringOn()<CR>
 "Simple Comment
-map <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
-map <leader>c <Esc>:call Comment(SelectedFirstLine(), SelectedLastLine())<CR>
-map <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
+vnoremap <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
+vnoremap <leader>c <Esc>:call Comment(SelectedFirstLine(), SelectedLastLine())<CR>
+vnoremap <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
 "Git Commands
 "map <F9> :!git status<CR>
 "map <F10> :!git diff<CR>

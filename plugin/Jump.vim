@@ -5,5 +5,5 @@ function JumpToTest()
 endfunction
 
 function JumpToOrigin()
-	execute "tag " . substitute(GetCurrentWord(), "Test", "", "")
+	execute "tag " . StringReplace(GetCurrentWord(), "Test", "")
 endfunction

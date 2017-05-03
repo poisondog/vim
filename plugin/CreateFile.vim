@@ -1,13 +1,15 @@
 
-" TODO 建構自動產生測試原始檔的函式
-function CreateTestFile(filepath)
-	let newfilepath = a:filepath . @%
-	echo newfilepath
+function CreateFile(filepath)
+	execute "tabnew " . a:filepath
+endfunction
+
+function CreateJavaTestFile()
+	let newfilepath = StringReplace(StringReplace(GetCurrentFilePath(), "^src/main", "src/test"), "\\.java$", "Test\\.java")
 	call CreateFile(newfilepath)
 endfunction
 
-function CreateFile(filepath)
-	system("touch " . a:filepath)
-	open a:filepath
+function CreateJavaFile()
+	let newfilepath = StringReplace(GetParentPath(), "^src/test", "src/main") . GetCurrentWord() . ".java"
+	call CreateFile(newfilepath)
 endfunction
 
