@@ -1,6 +1,6 @@
 " find files and populate the quickfix list
 
-fun! FindFiles(filename)
+function FindFiles(filename)
 	let error_file = tempname()
 	silent exe '!find . -name "'.a:filename.'" | xargs file | sed "s/:/:1:/" > '.error_file
 	set errorformat=%f:%l:%m
@@ -8,5 +8,5 @@ fun! FindFiles(filename)
 	exe "cfile ". error_file
 	copen
 	call delete(error_file)
-endfun
+endfunction
 command! -nargs=1 FindFile call FindFiles(<q-args>)
