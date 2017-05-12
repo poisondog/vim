@@ -18,6 +18,8 @@ nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 nnoremap <leader>cjt  :call CreateJavaTestFile()<CR>
+"Delete file
+nnoremap <leader>fd :call delete(GetCurrentFilePath())<CR>
 "Line Move
 set timeout ttimeoutlen=50
 execute "set <M-J>=\ej"
