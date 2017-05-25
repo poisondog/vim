@@ -7,3 +7,10 @@ function Build()
 	copen
 endfunction
 
+function Test()
+	set makeprg=./gradlew\ test\ -q
+	silent make
+	tabnew
+	copen
+endfunction
+
