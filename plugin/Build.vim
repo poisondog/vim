@@ -8,7 +8,7 @@ function Build()
 endfunction
 
 function Test()
-	set makeprg=./gradlew\ test
+	set makeprg=./gradlew\ test\ -q
 	silent make
 	tabnew
 	copen
