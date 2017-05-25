@@ -36,7 +36,8 @@ noremap <F6> :call UpdateJavaImport()<CR>
 "Gradle Commands
 "map <F7> :!./gradlew build -i --daemon --parallel --offline<CR>
 map <F7> :!./gradlew build -i --daemon --parallel<CR>
-map <F8> :call Test()<CR>
+map <F8> :!./gradlew test -i<CR>
+map <C-F8> :call Test()<CR>
 map <F9> :FindFile <cword>.*<CR>
 map <F12> :call GrepTodo()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
