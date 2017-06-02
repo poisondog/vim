@@ -28,7 +28,9 @@ set ruler
 "左下角那一行的狀態
 set showmode
 "顯示行號
-set nu
+set number
+"相對行號
+set relativenumber
 "底色色調
 set bg=dark
 "語法檢驗，顏色顯示
