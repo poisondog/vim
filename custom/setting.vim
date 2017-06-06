@@ -37,4 +37,3 @@ set bg=dark
 syntax on
 "Dictionary Completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
-

@@ -14,6 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 " ============ My Plugin ============
 " Tree File Browser
 Plugin 'The-NERD-tree'
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
 
 " Syntax checking hacks for vim
 "Plugin 'scrooloose/syntastic'
