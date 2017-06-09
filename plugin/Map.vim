@@ -12,12 +12,11 @@ nmap zv :vs<CR><C-]>
 nmap z; :tab split<CR><C-]>
 nmap zl <C-W>l
 nmap zh <C-W>h
-nmap zu :tab split<CR>:call JumpToTest()<CR>
+nmap zu :call CreateJavaTestFile()<CR>
 nmap zo :tab split<CR>call JumpToOrigin()<CR>
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
-nnoremap <leader>cjt  :call CreateJavaTestFile()<CR>
 "Delete file
 nnoremap <leader>fd :call delete(GetCurrentFilePath())<CR>
 "Line Move
