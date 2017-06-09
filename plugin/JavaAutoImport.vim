@@ -37,6 +37,25 @@ function GetImports()
 	return imports
 endfunction
 
+function GetDuplicateImports()
+	let imports = []
+	let needDelete = []
+	let i = 0
+	let endLine = line("$")
+	while i <= endLine
+		let line = getline(i)
+		if IsImport(line)
+			if index(imports, line) < 0
+				call add(imports, line)
+			else
+				call add(needDelete, i)
+			endif
+		endif
+		let i = i + 1
+	endwhile
+	return needDelete
+endfunction
+
 function InUsed(classline)
 	let class = GetClassSimpleName(getline(a:classline))
 	let j = 0
@@ -50,6 +69,7 @@ function InUsed(classline)
 endfunction
 
 function UpdateJavaImport()
+	call DeleteLines(GetDuplicateImports())
 	let needToRemove = []
 	for i in GetImports()
 		let result = GetClassSimpleName(getline(i))
@@ -58,9 +78,14 @@ function UpdateJavaImport()
 			call add(needToRemove, i)
 		endif
 	endfor
-	call reverse(needToRemove)
-	for item in needToRemove
+	call DeleteLines(needToRemove)
+	:JIS
+endfunction
+
+function DeleteLines(lines)
+	call sort(a:lines)
+	call reverse(a:lines)
+	for item in a:lines
 		execute item . "d"
 	endfor
-	:JIS
 endfunction
