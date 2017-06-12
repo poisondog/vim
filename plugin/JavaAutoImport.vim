@@ -68,8 +68,7 @@ function InUsed(classline)
 	return 0
 endfunction
 
-function UpdateJavaImport()
-	call DeleteLines(GetDuplicateImports())
+function GetNeverUseImports()
 	let needToRemove = []
 	for i in GetImports()
 		let result = GetClassSimpleName(getline(i))
@@ -78,12 +77,16 @@ function UpdateJavaImport()
 			call add(needToRemove, i)
 		endif
 	endfor
-	call DeleteLines(needToRemove)
+	return needToRemove
+endfunction
+
+function UpdateJavaImport()
+	call DeleteLines(GetDuplicateImports())
+	call DeleteLines(GetNeverUseImports())
 	:JIS
 endfunction
 
 function DeleteLines(lines)
-	call sort(a:lines)
 	call reverse(a:lines)
 	for item in a:lines
 		execute item . "d"
