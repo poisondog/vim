@@ -8,6 +8,7 @@ function CreateJavaTestFile()
 endfunction
 
 function CreateJavaFile()
-	call CreateFile(StringReplace(GetParentPath(), "^src/test", "src/main") . GetCurrentWord() . ".java")
+"	call CreateFile(StringReplace(GetParentPath(), "^src/test", "src/main") . GetCurrentWord() . ".java")
+	call CreateFile(StringReplace(StringReplace(GetCurrentFilePath(), "^src/test", "src/main"), "\\Test.java$", "\\.java"))
 endfunction
 

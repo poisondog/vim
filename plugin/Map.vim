@@ -13,7 +13,7 @@ nmap z; :tab split<CR><C-]>
 nmap zl <C-W>l
 nmap zh <C-W>h
 nmap zu :call CreateJavaTestFile()<CR>
-nmap zo :tab split<CR>call JumpToOrigin()<CR>
+nmap zo :call CreateJavaFile()<CR>
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
