@@ -1,5 +1,8 @@
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal noexpandtab
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
