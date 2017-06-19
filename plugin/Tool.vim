@@ -15,6 +15,10 @@ function GetParentPath()
 	return expand('%:p:h') . '/'
 endfunction
 
+function GetCurrentFileName()
+	return expand('%:t:r')
+endfunction
+
 function GetCurrentFileExtension()
 	return expand('%:e')
 endfunction
