@@ -44,12 +44,12 @@ Plugin 'vim-gradle'
 " Auto Complete for path
 Plugin 'neocomplcache'
 Plugin 'AutoComplPop'
-" Python Auto Complete
-Plugin 'davidhalter/jedi-vim'
 
 " Python pep8 indent
 "Plugin 'Vimjas/vim-python-pep8-indent'
 "Plugin 'vim-scripts/indentpython.vim'
+" Python Auto Complete
+"Plugin 'davidhalter/jedi-vim'
 
 " iOS Tool
 Plugin 'eraserhd/vim-ios'

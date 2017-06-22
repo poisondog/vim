@@ -75,3 +75,8 @@ nmap <C-J> <C-D> <CR>
 nmap <C-K> <C-U> <CR>
 "map zz :quit <CR>
 nmap <Space> zz
+" copy to buffer
+vmap <C-c> :w! ~/.vimbuffer<CR>
+nmap <C-c> :.w! ~/.vimbuffer<CR>
+" paste from buffer
+map <C-p> :r ~/.vimbuffer<CR>
