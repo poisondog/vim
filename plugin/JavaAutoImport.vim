@@ -73,7 +73,6 @@ function GetNeverUseImports()
 	for i in GetImports()
 		let result = GetClassSimpleName(getline(i))
 		if InUsed(i) == 0
-			echom "Never used : " . result
 			call add(needToRemove, i)
 		endif
 	endfor
