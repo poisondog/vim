@@ -52,3 +52,8 @@ endfunction
 function GitCommitCommand(comment)
 	return system("git commit -am \"" . a:comment . "\"")
 endfunction
+
+function GitUntrack(comment)
+	return system("git rm -r --cached " . a:comment . "")
+endfunction
+
