@@ -5,6 +5,13 @@ function ReplaceVariable()
 	call ReplaceWord(expand("<cword>"), newVar)
 endfunction
 
+function ReplaceVariableWithoutConfirm()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	call ReplaceWordWithoutConfirm(expand("<cword>"), newVar)
+endfunction
+
 function ReplaceVariableCurrentEnd()
 	call inputsave()
 	let newVar = input('Enter New Variable: ')
@@ -26,6 +33,10 @@ endfunction
 
 function ReplaceWord(oldWord, newWord)
 	execute "%s/\\<" . a:oldWord . "\\>/" . a:newWord . "/gc"
+endfunction
+
+function ReplaceWordWithoutConfirm(oldWord, newWord)
+	execute "%s/\\<" . a:oldWord . "\\>/" . a:newWord . "/g"
 endfunction
 
 function ReplaceWordFromCurrentEnd(oldWord, newWord)

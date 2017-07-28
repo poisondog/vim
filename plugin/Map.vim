@@ -25,6 +25,7 @@ execute "set <M-J>=\ej"
 execute "set <M-K>=\ek"
 vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
 vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
+nmap <M-K> :call SelectCurrentWord()<CR>
 "關聯搜尋
 map <F3> :call GrepAuto(expand("<cword>"))<CR>
 map <F4> :cn <CR>
@@ -48,6 +49,7 @@ vnoremap n :call SearchSelected()<CR>
 vnoremap <leader>r :call ReplaceSelected()<CR>
 nmap <leader>r :call ReplaceVariable()<CR>
 nmap <leader>cr :call ReplaceVariableCurrentEnd()<CR>
+nmap <leader>yr :call ReplaceVariableWithoutConfirm()<CR>
 nmap <leader>R :call ReplaceStringOn()<CR>
 "Simple Comment
 vnoremap <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>

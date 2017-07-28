@@ -12,6 +12,10 @@ function SelectedFirstLine()
 	return line(".")
 endfunction
 
+function SelectCurrentWord()
+	execute "normal bve"
+endfunction
+
 function SelectedLastLine()
 	execute "'>"
 	return line(".")
