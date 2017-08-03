@@ -18,7 +18,7 @@ nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 "Delete file
-nnoremap <leader>fd :call delete(GetCurrentFilePath())<CR>
+nnoremap <leader>fddd :call delete(GetCurrentFilePath())<CR>
 "Line Move
 set timeout ttimeoutlen=50
 execute "set <M-J>=\ej"
