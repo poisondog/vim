@@ -6,6 +6,7 @@ nmap <leader>t :TlistToggle<CR>
 nmap <leader>l :TlistSessionLoad tag.list.session<CR>
 nmap <leader>u :TlistUpdate<CR>
 nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
+nnoremap * *``
 nmap zj <C-]>
 nmap zk :pop<CR>
 nmap z. :vs<CR><C-]>
