@@ -27,6 +27,8 @@ snippet ce
 	 */
 	${3:public} enum ${4:`Filename("", "untitled")`} {${5}
 	}
+snippet si
+	@since `system("date +%Y-%m-%d")`
 snippet ch
 	/*******************************
 	 * Class Name : `Filename()`
@@ -65,3 +67,9 @@ snippet fin
 	protected void finalize() {
 		super.finalize();${1}
 	}
+snippet li
+	Log.i(${1});${2}
+snippet ld
+	Log.d(${1});${2}
+snippet lv
+	Log.v(${1});${2}
