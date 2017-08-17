@@ -13,7 +13,7 @@ function SelectedFirstLine()
 endfunction
 
 function SelectCurrentWord()
-	execute "normal bve"
+	execute "normal viw"
 endfunction
 
 function SelectedLastLine()
