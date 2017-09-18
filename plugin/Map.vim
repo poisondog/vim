@@ -35,11 +35,14 @@ map <F2> :cp <CR>
 "Java Auto Import
 noremap <F5> :JI<CR>
 noremap <F6> :call UpdateJavaImport()<CR>
-"Gradle Commands
-"map <F7> :!./gradlew build -i --daemon --parallel --offline<CR>
-map <F7> :!./gradlew build -i --daemon --parallel<CR>
-map <F8> :!./gradlew test -i<CR>
+
+"Build Commands
+map <F7> :call BuildAllJava()<CR>
+map <F8> :call TestAllJava()<CR>
+autocmd FileType cpp map <F7> :call BuildCMake()<CR>
+"map <F8> :!./gradlew test -i<CR>
 "map <F8> :call GradleTestPackage()<CR>
+
 map <F9> :FindFile <cword>.*<CR>
 map <F12> :call GrepTodo()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>

@@ -23,3 +23,16 @@ function TestOnPackage()
 	copen
 endfunction
 
+function BuildAllJava()
+	execute "!./gradlew build -i --daemon --parallel"
+endfunction
+
+function TestAllJava()
+	execute "!./gradlew test -i"
+endfunction
+
+function BuildCMake()
+	execute "!cmake -Bbuild -H."
+	execute "!make --directory=build"
+endfunction
+
