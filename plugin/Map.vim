@@ -39,11 +39,14 @@ noremap <F6> :call UpdateJavaImport()<CR>
 "Build Commands
 map <F7> :call BuildAllJava()<CR>
 map <F8> :call TestAllJava()<CR>
-autocmd FileType cpp map <F7> :call BuildCMake()<CR>
+let builderIndex = 0
+map <F9> :let builderIndex = builderIndex + 1<CR>:call SwitchBuilder(builderIndex)<CR>
+"autocmd FileType cpp map <F7> :call BuildCMake()<CR>
+"autocmd FileType cpp map <F8> :call TestX64CC()<CR>
 "map <F8> :!./gradlew test -i<CR>
 "map <F8> :call GradleTestPackage()<CR>
 
-map <F9> :FindFile <cword>.*<CR>
+"map <F9> :FindFile <cword>.*<CR>
 map <F12> :call GrepTodo()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 nmap <leader>rr :so $MYVIMRC<CR>

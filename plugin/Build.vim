@@ -36,3 +36,23 @@ function BuildCMake()
 	execute "!make --directory=build"
 endfunction
 
+function TestX64CC()
+	execute "!build/platforms/x64/runTest"
+endfunction
+
+function ApplyCpp()
+	map <F7> :call BuildCMake()<CR>
+	map <F8> :call TestX64CC()<CR>
+	echo "apply Cpp builder"
+endfunction
+
+function ApplyJava()
+	map <F7> :call BuildAllJava()<CR>
+	map <F8> :call TestAllJava()<CR>
+	echo "apply Java builder"
+endfunction
+
+function SwitchBuilder(index)
+	let funcs = [function("ApplyJava"), function("ApplyCpp")]
+	call funcs[a:index % len(funcs)]()
+endfunction
