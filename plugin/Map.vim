@@ -90,4 +90,4 @@ nmap <Space> zz
 vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
 " paste from buffer
-map <C-p> :r ~/.vimbuffer<CR>
+map <C-v> :r ~/.vimbuffer<CR>
