@@ -34,6 +34,7 @@ endfunction
 function BuildCMake()
 	execute "!cmake -Bbuild -H."
 	execute "!make --directory=build"
+	execute "!make install --directory=build"
 endfunction
 
 function TestX64CC()
