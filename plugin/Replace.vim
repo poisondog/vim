@@ -48,6 +48,11 @@ function ReplaceString(file, oldString, newString)
 	return system("find -name " . a:file . "|xargs sed -i 's/" . a:oldString . "/" . a:newString . "/g'")
 endfunction
 
+function ReplaceTab(length)
+	execute "retab! " . a:length
+	execute "set ts=8"
+endfunction
+
 function ReplaceStringOnJava()
 	call inputsave()
 	let oldString = input('Enter Old String: ')

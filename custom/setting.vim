@@ -1,8 +1,9 @@
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python setlocal noexpandtab
-"autocmd FileType python setlocal tabstop=8
-"autocmd FileType python setlocal shiftwidth=8
+autocmd FileType python setlocal tabstop=8
+autocmd FileType python setlocal shiftwidth=8
+autocmd FileType python setlocal softtabstop=8
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -40,4 +41,11 @@ set bg=dark
 syntax on
 "Dictionary Completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+
+"set showmatch
+"set smarttab
+
+"set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+"set termencoding=utf-8
+"set encoding=utf-8
 
