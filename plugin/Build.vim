@@ -41,6 +41,14 @@ function TestX64CC()
 	execute "!build/platforms/x64/runTest"
 endfunction
 
+function BuildAllPython()
+	execute "!python3 setup.py build"
+endfunction
+
+function TestAllPython()
+	execute "!python3 setup.py test"
+endfunction
+
 function ApplyCpp()
 	map <F7> :call BuildCMake()<CR>
 	map <F8> :call TestX64CC()<CR>
@@ -53,7 +61,13 @@ function ApplyJava()
 	echo "apply Java builder"
 endfunction
 
+function ApplyPython()
+	map <F7> :call BuildAllPython()<CR>
+	map <F8> :call TestAllPython()<CR>
+	echo "apply Python builder"
+endfunction
+
 function SwitchBuilder(index)
-	let funcs = [function("ApplyJava"), function("ApplyCpp")]
+	let funcs = [function("ApplyJava"), function("ApplyCpp"), function("ApplyPython")]
 	call funcs[a:index % len(funcs)]()
 endfunction
