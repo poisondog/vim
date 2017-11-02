@@ -3,9 +3,18 @@ snippet if
 	if ${1:True}:
 		${2}
 
-snippet ae
-	self.assertEqual(${1:expected}, ${2:result})${3}
+snippet ei
+	elif ${1}:
+		${2:pass}
+
+snippet el
+	else:
+		${1:pass}
 
 snippet for
 	for ${1:i} in range(${2:0}, ${3:size}, ${4:inc}):
 		${5:# code...}
+
+snippet ae
+	self.assertEqual(${1:expected}, ${2:result})${3}
+
