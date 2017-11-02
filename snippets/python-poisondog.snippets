@@ -21,3 +21,18 @@ snippet ae
 snippet tt
 	def test${1:Sample}(self):
 		${2:pass}
+
+snippet ct
+	from .test_setting import *
+	from mockito import mock, verify
+
+	class ${1:Target}Test(unittest.TestCase):
+		def setUp(self):
+			${2:pass}
+		def tearDown(self):
+			${3:pass}
+		def test${4:Sample}(self):
+			${5:pass}
+
+	if __name__ == '__main__':
+		unittest.main()
