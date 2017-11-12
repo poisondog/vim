@@ -4,6 +4,7 @@ autocmd FileType python setlocal noexpandtab
 autocmd FileType python setlocal tabstop=8
 autocmd FileType python setlocal shiftwidth=8
 autocmd FileType python setlocal softtabstop=8
+autocmd FileType python setlocal foldmethod=indent
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS

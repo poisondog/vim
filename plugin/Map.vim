@@ -12,8 +12,10 @@ nmap zk :pop<CR>
 nmap z. :vs<CR><C-]>
 nmap z, :sp<CR><C-]>
 nmap z; :tab split<CR><C-]>
-nmap zl <C-W>l
-nmap zh <C-W>h
+"nmap zl <C-W>l
+"nmap zh <C-W>h
+nnoremap zl zr
+nnoremap zh zm
 nmap zu :call CreateJavaTestFile()<CR>
 nmap zo :call CreateJavaFile()<CR>
 nnoremap <leader>ff  :FufFile<CR>
@@ -86,6 +88,7 @@ nmap <C-J> <C-D> <CR>
 nmap <C-K> <C-U> <CR>
 "map zz :quit <CR>
 nmap <Space> zz
+nmap <leader>z za
 " copy to buffer
 vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
