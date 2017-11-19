@@ -1,30 +1,22 @@
-
 snippet if
 	if ${1:True}:
 		${2}
-
 snippet ei
 	elif ${1}:
 		${2:pass}
-
 snippet el
 	else:
 		${1:pass}
-
 snippet for
 	for ${1:i} in range(${2:0}, ${3:size}, ${4:inc}):
 		${5:# code...}
-
 snippet ae
 	self.assertEqual(${1:expected}, ${2:result})${3}
-
 snippet at
 	self.assertTrue(${1:expected})${2}
-
 snippet tt
 	def test${1:Sample}(self):
 		${2:pass}
-
 snippet ct
 	from .test_setting import *
 	from mockito import mock, verify
