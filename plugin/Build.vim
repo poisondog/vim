@@ -49,6 +49,10 @@ function TestAllPython()
 	execute "!python3 setup.py test"
 endfunction
 
+function InstallAllPython()
+	execute "!python3 setup.py install --user"
+endfunction
+
 function ApplyCpp()
 	map <F7> :call BuildCMake()<CR>
 	map <F8> :call TestX64CC()<CR>
@@ -62,7 +66,7 @@ function ApplyJava()
 endfunction
 
 function ApplyPython()
-	map <F7> :call BuildAllPython()<CR>
+	map <F7> :call InstallAllPython()<CR>
 	map <F8> :call TestAllPython()<CR>
 	echo "apply Python builder"
 endfunction
