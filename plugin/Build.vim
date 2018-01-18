@@ -24,7 +24,8 @@ function TestOnPackage()
 endfunction
 
 function BuildAllJava()
-	execute "!./gradlew build -i --daemon --parallel"
+"	execute '!./gradlew build -i --daemon --parallel'
+	execute '!./gradlew build -i'
 endfunction
 
 function TestAllJava()
