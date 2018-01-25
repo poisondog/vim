@@ -70,6 +70,7 @@ vnoremap <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())
 "map <F10> :!git diff<CR>
 "nmap <F9> :Gstatus<CR>:call GitCommit()<CR>
 "nmap <F10> :call GitPush()<CR>
+nmap <F10> :call PasteToggle()<CR>
 nmap <leader>ga :Git add 
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gs :call GitStatus()<CR>

@@ -22,3 +22,7 @@ endfunction
 function GetCurrentFileExtension()
 	return expand('%:e')
 endfunction
+
+function PasteToggle()
+	set invpaste paste?
+endfunction
