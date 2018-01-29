@@ -25,6 +25,8 @@ set backspace=2
 set smartindent
 "自動對齊，使用上一行的對齊方式
 set autoindent
+"自動存檔
+set autowriteall
 "設置自動縮進
 set ai
 set sm
@@ -49,4 +51,3 @@ set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 "set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 "set termencoding=utf-8
 "set encoding=utf-8
-
