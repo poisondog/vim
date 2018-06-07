@@ -115,8 +115,8 @@ nmap <C-c> :.w! ~/.vimbuffer<CR>
 map <C-v> :r ~/.vimbuffer<CR>
 
 "Faster type
-inoremap {<CR> {<CR>}<Esc>ko
-inoremap " ""<Esc>i
-inoremap ( ()<Esc>i
-inoremap ' ''<Esc>i
-inoremap [ []<Esc>i
+"inoremap {<CR> {<CR>}<Esc>ko
+"inoremap " ""<Esc>i
+"inoremap ( ()<Esc>i
+"inoremap ' ''<Esc>i
+"inoremap [ []<Esc>i
