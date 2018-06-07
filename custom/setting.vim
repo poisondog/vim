@@ -45,6 +45,14 @@ syntax on
 "Dictionary Completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
+"colorscheme default
+"colorscheme torte
+"colorscheme koehler
+"colorscheme darkblue
+"colorscheme desert
+"colorscheme shine
+"colorscheme ron
+
 "set showmatch
 "set smarttab
 

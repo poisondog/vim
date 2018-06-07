@@ -1,12 +1,18 @@
-
+"NERDTree
 nmap <leader>e :NERDTreeToggle<CR>
 "taglist setting
 nmap <leader>t :TlistToggle<CR>
 "nmap <leader>s :TlistSessionSave tag.list.session<CR>
 nmap <leader>l :TlistSessionLoad tag.list.session<CR>
 nmap <leader>u :TlistUpdate<CR>
+
+"create ctags
 nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
+
+"keep search not jump to next
 nnoremap * *``
+
+"browser source code
 nmap zj <C-]>
 nmap zk :pop<CR>
 nmap z. :vs<CR><C-]>
@@ -18,11 +24,15 @@ nnoremap zl zr
 nnoremap zh zm
 nmap zu :call CreateJavaTestFile()<CR>
 nmap zo :call CreateJavaFile()<CR>
+
+"Buffer
 nnoremap <leader>ff  :FufFile<CR>
 nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
+
 "Delete file
 nnoremap <leader>fddd :call delete(GetCurrentFilePath())<CR>
+
 "Line Move
 set timeout ttimeoutlen=50
 execute "set <M-J>=\ej"
@@ -30,19 +40,22 @@ execute "set <M-K>=\ek"
 vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
 vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
 nmap <M-K> :call SelectCurrentWord()<CR>
+
 "關聯搜尋
 map <F3> :call GrepAuto(expand("<cword>"))<CR>
 map <F4> :cn <CR>
 map <F2> :cp <CR>
+
 "Java Auto Import
-noremap <F5> :JI<CR>
-noremap <F6> :call UpdateJavaImport()<CR>
+nnoremap <F5> :JI<CR>
+nnoremap <F6> :call UpdateJavaImport()<CR>
 
 "Build Commands
-map <F7> :call BuildAllJava()<CR>
-map <F8> :call TestAllJava()<CR>
+nnoremap <F7> :call BuildAllJava()<CR>
+nnoremap <F8> :call TestAllJava()<CR>
 let builderIndex = 0
 map <F9> :let builderIndex = builderIndex + 1<CR>:call SwitchBuilder(builderIndex)<CR>
+nnoremap <leader><F8> :echo 'Current time is ' . strftime('%c')<CR>
 "autocmd FileType cpp map <F7> :call BuildCMake()<CR>
 "autocmd FileType cpp map <F8> :call TestX64CC()<CR>
 "map <F8> :!./gradlew test -i<CR>
@@ -52,6 +65,7 @@ map <F9> :let builderIndex = builderIndex + 1<CR>:call SwitchBuilder(builderInde
 map <F12> :call GrepTodo()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 nmap <leader>rr :so $MYVIMRC<CR>
+
 "Replace Mapping
 "vnoremap // y/<C-R>"<CR>
 vnoremap n :call SearchSelected()<CR>
@@ -61,10 +75,12 @@ nmap <leader>r :call ReplaceVariable()<CR>
 nmap <leader>cr :call ReplaceVariableCurrentEnd()<CR>
 nmap <leader>yr :call ReplaceVariableWithoutConfirm()<CR>
 nmap <leader>R :call ReplaceStringOn()<CR>
+
 "Simple Comment
 vnoremap <leader><leader> <Esc>:call CommentSwitch(SelectedFirstLine(), SelectedLastLine())<CR>
 vnoremap <leader>c <Esc>:call Comment(SelectedFirstLine(), SelectedLastLine())<CR>
 vnoremap <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())<CR>
+
 "Git Commands
 "map <F9> :!git status<CR>
 "map <F10> :!git diff<CR>
@@ -77,6 +93,7 @@ nmap <leader>gs :call GitStatus()<CR>
 nmap <leader>gc :call GitCommit()<CR>
 nmap <leader>gh :call GitPush()<CR>
 nmap <leader>gu :call GitUntrack(GetCurrentFilePath())<CR>
+
 "TODO Java move class function
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
@@ -90,8 +107,16 @@ nmap <C-K> <C-U> <CR>
 "map zz :quit <CR>
 nmap <Space> zz
 nmap <leader>z za
+
 " copy to buffer
 vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
 " paste from buffer
 map <C-v> :r ~/.vimbuffer<CR>
+
+"Faster type
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap " ""<Esc>i
+inoremap ( ()<Esc>i
+inoremap ' ''<Esc>i
+inoremap [ []<Esc>i
