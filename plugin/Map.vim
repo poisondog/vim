@@ -50,9 +50,10 @@ map <F2> :cp <CR>
 nnoremap <F5> :JI<CR>
 nnoremap <F6> :call UpdateJavaImport()<CR>
 
+call ApplyJava()
 "Build Commands
-nnoremap <F7> :call BuildAllJava()<CR>
-nnoremap <F8> :call TestAllJava()<CR>
+"nnoremap <F7> :call BuildAllJava()<CR>
+"nnoremap <F8> :call TestAllJava()<CR>
 let builderIndex = 0
 map <F9> :let builderIndex = builderIndex + 1<CR>:call SwitchBuilder(builderIndex)<CR>
 nnoremap <leader><F8> :echo 'Current time is ' . strftime('%c')<CR>
@@ -98,15 +99,15 @@ nmap <leader>gu :call GitUntrack(GetCurrentFilePath())<CR>
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
 map <C-H> :tabprevious <CR>
-nmap <BS> :quit <CR>
+nnoremap <BS> :quit <CR>
 "map <C-W><C-W> :tabclose <CR>
 "map <C-J> <C-F> <CR>
 "map <C-K> <C-B> <CR>
 nmap <C-J> <C-D> <CR>
 nmap <C-K> <C-U> <CR>
 "map zz :quit <CR>
-nmap <Space> zz
-nmap <leader>z za
+nnoremap <Space> zz
+nnoremap <leader>z za
 
 " copy to buffer
 vmap <C-c> :w! ~/.vimbuffer<CR>

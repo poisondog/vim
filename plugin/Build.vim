@@ -16,11 +16,12 @@ endfunction
 
 function TestOnPackage()
 	let name = GetPackageName()
-	let command = "./gradlew\ test\ -i\ --tests\ " . name . ".*Test"
-	tabnew
-	set makeprg=command
-	silent make
-	copen
+	let command = "!./gradlew\ test\ -i\ --tests\ " . name . ".*Test"
+	execute command
+"	tabnew
+"	set makeprg=command
+"	silent make
+"	copen
 endfunction
 
 function BuildAllJava()
@@ -55,20 +56,21 @@ function InstallAllPython()
 endfunction
 
 function ApplyCpp()
-	map <F7> :call BuildCMake()<CR>
-	map <F8> :call TestX64CC()<CR>
+	nnoremap <F7> :call BuildCMake()<CR>
+	nnoremap <F8> :call TestX64CC()<CR>
 	echo "apply Cpp builder"
 endfunction
 
 function ApplyJava()
-	map <F7> :call BuildAllJava()<CR>
-	map <F8> :call TestAllJava()<CR>
+	nnoremap <F7> :call BuildAllJava()<CR>
+	nnoremap <F8> :call TestAllJava()<CR>
+	nnoremap <leader>tp :call TestOnPackage()<CR>
 	echo "apply Java builder"
 endfunction
 
 function ApplyPython()
-	map <F7> :call InstallAllPython()<CR>
-	map <F8> :call TestAllPython()<CR>
+	nnoremap <F7> :call InstallAllPython()<CR>
+	nnoremap <F8> :call TestAllPython()<CR>
 	echo "apply Python builder"
 endfunction
 
