@@ -14,6 +14,16 @@ function Test()
 	copen
 endfunction
 
+function TestOnClass()
+	let name = GetClassName()
+	let command = "!./gradlew\ test\ -i\ --tests\ " . name
+	execute command
+"	tabnew
+"	set makeprg=command
+"	silent make
+"	copen
+endfunction
+
 function TestOnPackage()
 	let name = GetPackageName()
 	let command = "!./gradlew\ test\ -i\ --tests\ " . name . ".*Test"
@@ -65,6 +75,7 @@ function ApplyJava()
 	nnoremap <F7> :call BuildAllJava()<CR>
 	nnoremap <F8> :call TestAllJava()<CR>
 	nnoremap <leader>tp :call TestOnPackage()<CR>
+	nnoremap <leader>tt :call TestOnClass()<CR>
 	echo "apply Java builder"
 endfunction
 
