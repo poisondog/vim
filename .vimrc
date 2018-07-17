@@ -39,6 +39,9 @@ Plugin 'https://github.com/troydm/shellasync.vim.git'
 " Gradle Syntax Highlighting
 Plugin 'vim-gradle'
 
+" Groovy indent
+Plugin 'groovyindent'
+
 " Auto Complete
 "Plugin 'Valloric/YouCompleteMe.git'
 " Auto Complete for path
