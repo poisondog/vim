@@ -44,7 +44,7 @@ set bg=dark
 "語法檢驗，顏色顯示
 syntax on
 "不分大小寫搜尋
-set ic
+set smartcase
 "Dictionary Completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
