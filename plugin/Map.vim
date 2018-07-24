@@ -64,7 +64,7 @@ nnoremap <leader><F8> :echo 'Current time is ' . strftime('%c')<CR>
 
 "map <F9> :FindFile <cword>.*<CR>
 map <F12> :call GrepTodo()<CR>
-nnoremap <leader>s :call GrepSearch()<CR>
+nnoremap <leader>ss :call GrepSearch()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 nmap <leader>rr :so $MYVIMRC<CR>
 
