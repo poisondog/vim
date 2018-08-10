@@ -62,7 +62,7 @@ function TestAllPython()
 endfunction
 
 function InstallAllPython()
-	execute "!python3 setup.py install --user"
+	execute "!python3 setup.py install --user --prefix="
 endfunction
 
 function ApplyCpp()
