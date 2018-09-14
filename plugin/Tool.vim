@@ -11,6 +11,10 @@ function GetCurrentFilePath()
 	return expand('%')
 endfunction
 
+function GetFullCurrentFilePath()
+	return expand('%:p')
+endfunction
+
 function GetParentPath()
 	return expand('%:p:h') . '/'
 endfunction

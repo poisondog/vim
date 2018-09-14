@@ -22,3 +22,7 @@ function IsPackage(line)
 	return 0
 endfunction
 
+function PathToPackage()
+	let s = GetFullCurrentFilePath()
+	echo s
+endfunction
