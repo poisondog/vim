@@ -48,6 +48,12 @@ set smartcase
 "Dictionary Completion
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
+" yank to clipboard with Mac
+"set clipboard=unnamed
+" yank to clipboard with Linux
+set clipboard=unnamedplus
+
+
 "colorscheme default
 "colorscheme torte
 "colorscheme koehler
