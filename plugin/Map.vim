@@ -109,6 +109,7 @@ nmap <C-K> <C-U> <CR>
 "map zz :quit <CR>
 nnoremap <Space> zz
 nnoremap <leader>z za
+nnoremap <leader>w :w<CR>
 
 " copy to buffer
 vmap <C-c> :w! ~/.vimbuffer<CR>
