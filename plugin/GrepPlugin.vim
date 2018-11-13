@@ -30,6 +30,6 @@ endfunction
 function GrepSearch()
 	call inputsave()
 	let name = input('Search: ')
-	call Grep(name, g:allFileTarget)
+	call Grep(name, g:fileTarget)
 	call inputrestore()
 endfunction
