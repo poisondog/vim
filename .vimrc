@@ -109,3 +109,4 @@ filetype plugin indent on    " required
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 runtime custom/setting.vim
 runtime custom/tabColor.vim
+runtime custom/plugin.vim

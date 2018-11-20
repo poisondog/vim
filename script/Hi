@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "HiHi"
+exit 0

@@ -1,5 +1,6 @@
 #!/bin/bash
-dir="JavaImp/java"
+dir="${HOME}/.vim/JavaImp/java"
+cd ${dir}
 
 if [ "${dir}" == "" -o ! -d "${dir}" ]; then
 	echo "The ${dir} is NOT exist in your vim system."
@@ -16,3 +17,5 @@ do
 		rm ${dir}/${filename}.${extension}
 	fi
 done
+echo "Parse OK!"
+exit 0
