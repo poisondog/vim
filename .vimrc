@@ -34,11 +34,15 @@ Plugin 'fugitive.vim'
 Plugin 'snipMate'
 let g:snippets_dir = $HOME."/.vim/snippets"
 
-" json syntax highlighting
+" Json syntax highlighting
 Plugin 'elzr/vim-json'
 
 " Java Auto Import
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
+
+" Java Auto Complete
+Plugin 'javacomplete'
+autocmd FileType java set omnifunc=javacomplete#Complete
 
 " ===================================
 
