@@ -66,6 +66,9 @@ Plugin 'fugitive.vim'
 " Generate setter and getter
 Plugin 'https://github.com/Dinduks/vim-java-get-set.git'
 
+" CtrlP for search file
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " snipMate
 Plugin 'snipMate'
 let g:snippets_dir = $HOME."/.vim/snippets"
@@ -106,7 +109,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 " ============ End Vundle Setting ============
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 runtime custom/setting.vim
 runtime custom/tabColor.vim
 runtime custom/plugin.vim
