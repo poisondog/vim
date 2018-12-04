@@ -10,8 +10,6 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType java setlocal completefunc=javacomplete#CompleteParamsInfo
-autocmd FileType java setlocal tags=./tags,tags;$HOME
 let g:Tlist_Ctags_Cmd = "/usr/bin/ctags"
 
 "顯示空白字元
