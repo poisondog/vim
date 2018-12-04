@@ -37,6 +37,9 @@ let g:snippets_dir = $HOME."/.vim/snippets"
 " Json syntax highlighting
 Plugin 'elzr/vim-json'
 
+" Java Auto Import
+Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
+
 " Java Auto Complete
 Plugin 'artur-shaik/vim-javacomplete2'
 autocmd FileType java setlocal omnifunc=javacomplete#Complete

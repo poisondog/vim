@@ -47,11 +47,11 @@ map <F4> :cn <CR>
 map <F2> :cp <CR>
 
 "Java Auto Import
-"nnoremap <F5> :JI<CR>
-"nnoremap <F6> :call UpdateJavaImport()<CR>
+nnoremap <F5> :JI<CR>
+nnoremap <F6> :call UpdateJavaImport()<CR>
 
 "Java Auto Complete 2
-nmap <F5> <Plug>(JavaComplete-Imports-AddMissing)
+"nmap <F5> <Plug>(JavaComplete-Imports-AddMissing)
 
 call ApplyJava()
 "Build Commands
