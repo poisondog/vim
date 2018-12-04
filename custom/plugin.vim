@@ -1,9 +1,9 @@
 
-function RunScript(filename)
+function! RunScript(filename)
 	execute "!/home/poisondog/.vim/script/" . a:filename
 endfunction
 
-function Update()
+function! Update()
 	call RunScript("CreateJmplst")
 endfunction
 

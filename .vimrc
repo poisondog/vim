@@ -1,4 +1,3 @@
-" Vundle https://github.com/VundleVim/Vundle.vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -19,79 +18,24 @@ let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
 
-" Syntax checking hacks for vim
-"Plugin 'scrooloose/syntastic'
-
-" Java Import Tool
-Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
-Plugin 'taglist.vim'
-
-" Java Auto Complete
-Plugin 'javacomplete'
-autocmd FileType java set omnifunc=javacomplete#Complete
-
 " No more :set paste!
 Plugin 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 
-" shellasync.vim plugin for asynchronously executing shell commands in vim
-Plugin 'https://github.com/troydm/shellasync.vim.git'
+" CtrlP for search file
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Gradle Syntax Highlighting
 Plugin 'vim-gradle'
 
-" Groovy indent
-Plugin 'groovyindent'
-
-" Auto Complete
-"Plugin 'Valloric/YouCompleteMe.git'
-" Auto Complete for path
-Plugin 'neocomplcache'
-Plugin 'AutoComplPop'
-
-" Python pep8 indent
-"Plugin 'Vimjas/vim-python-pep8-indent'
-"Plugin 'vim-scripts/indentpython.vim'
-" Python Auto Complete
-"Plugin 'davidhalter/jedi-vim'
-
-" iOS Tool
-Plugin 'eraserhd/vim-ios'
-Plugin 'https://github.com/keith/swift.vim.git'
-Plugin 'msanders/cocoa.vim'
-Plugin 'clang-complete'
-
 " Git Plugin Tool
 Plugin 'fugitive.vim'
-
-" Generate setter and getter
-Plugin 'https://github.com/Dinduks/vim-java-get-set.git'
-
-" CtrlP for search file
-Plugin 'ctrlpvim/ctrlp.vim'
 
 " snipMate
 Plugin 'snipMate'
 let g:snippets_dir = $HOME."/.vim/snippets"
 
-" UltiSnips
-"Plugin 'SirVer/ultisnips'
-"Plugin 'honza/vim-snippets'
-"" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"" If you want :UltiSnipsEdit to split your window.
-"let g:UltiSnipsEditSplit="vertical"
-"let g:UltiSnipsSnippetDirectories=$HOME."/.vim/UltiSnips"
-
-Plugin 'tpope/vim-surround'
+" json syntax highlighting
 Plugin 'elzr/vim-json'
-" Bottom Status Bar
-"Plugin 'vim-airline/vim-airline'
-
-" Color Schemes
-"Plugin 'tomasr/molokai'
-"Plugin 'flazz/vim-colorschemes'
 " ===================================
 
 " All of your Plugins must be added before the following line
