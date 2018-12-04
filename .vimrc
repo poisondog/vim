@@ -38,7 +38,7 @@ let g:snippets_dir = $HOME."/.vim/snippets"
 Plugin 'elzr/vim-json'
 
 " Java Auto Import
-Plugin 'vim-scripts/JavaImp.vim--Lee.git'
+Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
 
 " ===================================
 
