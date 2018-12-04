@@ -37,13 +37,10 @@ let g:snippets_dir = $HOME."/.vim/snippets"
 " Json syntax highlighting
 Plugin 'elzr/vim-json'
 
-" Java Auto Import
-Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
-
 " Java Auto Complete
-Plugin 'javacomplete'
-autocmd FileType java set omnifunc=javacomplete#Complete
-
+Plugin 'artur-shaik/vim-javacomplete2'
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+let g:JavaComplete_EnableDefaultMappings = 0
 " ===================================
 
 " All of your Plugins must be added before the following line
