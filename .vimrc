@@ -36,6 +36,10 @@ let g:snippets_dir = $HOME."/.vim/snippets"
 
 " json syntax highlighting
 Plugin 'elzr/vim-json'
+
+" Java Auto Import
+Plugin 'vim-scripts/JavaImp.vim--Lee.git'
+
 " ===================================
 
 " All of your Plugins must be added before the following line
