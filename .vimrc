@@ -40,6 +40,9 @@ Plugin 'elzr/vim-json'
 " Auto pop complete menu
 Plugin 'AutoComplPop'
 
+" Surround Tools
+Plugin 'tpope/vim-surround'
+
 " Java Auto Import
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
 
