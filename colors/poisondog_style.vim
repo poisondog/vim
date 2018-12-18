@@ -16,7 +16,8 @@ let g:colors_name = "rainbow_neon_modified"
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
 "hi PMenuSbar -- no settings --
-hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
+"hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
+hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
 "hi CTagsImport -- no settings --
 "hi CTagsGlobalVariable -- no settings --
 "hi SpellRare -- no settings --
