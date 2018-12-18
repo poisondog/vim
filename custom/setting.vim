@@ -59,7 +59,7 @@ set clipboard=unnamedplus
 "colorscheme desert
 "colorscheme shine
 "colorscheme ron
-colorscheme solarized
+"colorscheme solarized
 
 "set showmatch
 "set smarttab
