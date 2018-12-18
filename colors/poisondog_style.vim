@@ -94,7 +94,8 @@ hi Tag guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cte
 hi String guifg=#d1764b guibg=NONE guisp=NONE gui=NONE ctermfg=173 ctermbg=NONE cterm=NONE
 hi PMenuThumb guifg=NONE guibg=#707070 guisp=#707070 gui=NONE ctermfg=NONE ctermbg=242 cterm=NONE
 hi Repeat guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
-hi Directory guifg=#c8c8ff guibg=NONE guisp=NONE gui=NONE ctermfg=189 ctermbg=NONE cterm=NONE
+"hi Directory guifg=#c8c8ff guibg=NONE guisp=NONE gui=NONE ctermfg=189 ctermbg=NONE cterm=NONE
+hi Directory guifg=#FF0000 guibg=NONE guisp=NONE gui=NONE ctermfg=red ctermbg=NONE cterm=NONE
 hi Structure guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi Macro guifg=#ffa8ff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE cterm=NONE
 hi Underlined guifg=#f0f0f0 guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
