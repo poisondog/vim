@@ -60,6 +60,7 @@ set clipboard=unnamedplus
 "colorscheme shine
 "colorscheme ron
 "colorscheme solarized
+colorscheme rainbow_neon
 
 "set showmatch
 "set smarttab
