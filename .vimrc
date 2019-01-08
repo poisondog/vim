@@ -52,6 +52,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:JavaComplete_EnableDefaultMappings = 0
 let g:JavaComplete_LibsPath = $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
 let $CLASSPATH= $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
+
 " ===================================
 
 " All of your Plugins must be added before the following line
