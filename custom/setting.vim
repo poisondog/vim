@@ -69,4 +69,5 @@ colorscheme poisondog_style
 "set termencoding=utf-8
 "set encoding=utf-8
 
+" http://vim.wikia.com/wiki/Single_tags_file_for_a_source_tree
 "set tags=tags;
