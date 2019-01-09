@@ -21,6 +21,9 @@ autocmd FileType nerdtree setlocal relativenumber
 " No more :set paste!
 Plugin 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 
+" Bottom status line
+Plugin 'vim-airline/vim-airline'
+
 " CtrlP for search file
 Plugin 'ctrlpvim/ctrlp.vim'
 
