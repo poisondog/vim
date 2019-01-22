@@ -58,9 +58,8 @@ set clipboard=unnamedplus
 "colorscheme darkblue
 "colorscheme desert
 "colorscheme shine
-"colorscheme ron
-"colorscheme solarized
-colorscheme poisondog_style
+colorscheme ron
+"colorscheme poisondog_style
 
 "set showmatch
 "set smarttab
