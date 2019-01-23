@@ -83,7 +83,7 @@ hi PreProc guifg=#ffa8ff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE
 hi Visual guifg=#b0ffb0 guibg=#008000 guisp=#008000 gui=NONE ctermfg=157 ctermbg=2 cterm=NONE
 hi MoreMsg guifg=#70ffc0 guibg=#8040ff guisp=#8040ff gui=NONE ctermfg=85 ctermbg=13 cterm=NONE
 hi VertSplit guifg=#707070 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=242 ctermbg=251 cterm=NONE
-hi Exception guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
+hi Exception guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=220 ctermbg=NONE cterm=NONE
 hi Keyword guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi Type guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi DiffChange guifg=#e03870 guibg=#601830 guisp=#601830 gui=NONE ctermfg=168 ctermbg=52 cterm=NONE

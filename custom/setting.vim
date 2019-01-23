@@ -59,7 +59,7 @@ set clipboard=unnamedplus
 "colorscheme desert
 "colorscheme shine
 "colorscheme ron
-"colorscheme poisondog_style
+colorscheme poisondog_style
 
 "set showmatch
 "set smarttab
