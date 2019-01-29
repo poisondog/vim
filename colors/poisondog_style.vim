@@ -59,7 +59,7 @@ hi Conditional guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=N
 hi StorageClass guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi Todo guifg=#ff80d0 guibg=NONE guisp=NONE gui=NONE ctermfg=212 ctermbg=NONE cterm=NONE
 hi Special guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
-hi LineNr guifg=#707070 guibg=NONE guisp=NONE gui=NONE ctermfg=242 ctermbg=NONE cterm=NONE
+hi LineNr guifg=#707070 guibg=NONE guisp=NONE gui=NONE ctermfg=207 ctermbg=NONE cterm=NONE
 hi StatusLine guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
 hi Label guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi PMenuSel guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
