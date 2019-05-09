@@ -1,6 +1,10 @@
 META-INF/
 META-INF/MANIFEST.MF
 poisondog/
+poisondog/search/
+poisondog/search/BinarySearch$1.class
+poisondog/search/Type.class
+poisondog/search/BinarySearch.class
 poisondog/json/
 poisondog/json/JsonFactory.class
 poisondog/json/Json.class
@@ -65,6 +69,7 @@ poisondog/net/udp/DatagramResponse.class
 poisondog/net/udp/SendMission.class
 poisondog/net/udp/DatagramParameter.class
 poisondog/net/udp/ReceiveMission.class
+poisondog/net/UrlUtils.class
 poisondog/net/AsyncServerMission$1.class
 poisondog/net/ServerMission$RequestThread.class
 poisondog/net/UploadMission.class
@@ -117,9 +122,12 @@ poisondog/util/LastList.class
 poisondog/util/StringIndex.class
 poisondog/util/GetYearString.class
 poisondog/util/EqualsChecker.class
+poisondog/util/UniqueLast.class
 poisondog/util/GetCommand.class
 poisondog/util/ConsoleEnvironment$1.class
+poisondog/util/Version.class
 poisondog/util/GetTempPath.class
+poisondog/util/Local.class
 poisondog/util/TimerMission$MissionTimerTask.class
 poisondog/util/ConsoleEnvironment$3.class
 poisondog/util/GetParameters.class
@@ -197,6 +205,9 @@ poisondog/commons/vfs/FileComparator.class
 poisondog/commons/vfs/DecoratedFileObject.class
 poisondog/commons/HashFunction.class
 poisondog/commons/Config.class
+poisondog/telegram/
+poisondog/telegram/GetUpdates.class
+poisondog/telegram/SendMessage.class
 poisondog/datasource/
 poisondog/datasource/DataSource.class
 poisondog/command/
@@ -286,6 +297,7 @@ poisondog/math/Center.class
 poisondog/math/GradientDescent.class
 poisondog/math/FeatureScaling.class
 poisondog/math/Distance.class
+poisondog/math/CalculateAngle.class
 poisondog/io/
 poisondog/io/DataToObject.class
 poisondog/io/FileToObject.class
@@ -301,12 +313,16 @@ poisondog/io/ReadLine.class
 poisondog/io/StepListener.class
 poisondog/io/GetAbsolutePath.class
 poisondog/io/TransmissionRate.class
+poisondog/io/CreateRandomFile.class
 poisondog/io/ReadData.class
 poisondog/io/ObjectToFile.class
 poisondog/io/ReadWrite.class
 poisondog/io/GetTempFolder.class
+poisondog/io/ObjectToLocal.class
 poisondog/io/ObjectToFile$Parameter.class
+poisondog/io/IDataToObject.class
 poisondog/io/CopyRunnable.class
+poisondog/io/SendRecv.class
 poisondog/io/Accumulation.class
 poisondog/io/ReadJson.class
 poisondog/io/CopyTask.class
