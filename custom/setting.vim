@@ -44,7 +44,7 @@ syntax on
 "不分大小寫搜尋
 set smartcase
 "Dictionary Completion
-set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+"set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
 " yank to clipboard with Mac
 "set clipboard=unnamed
