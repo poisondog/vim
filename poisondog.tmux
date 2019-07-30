@@ -7,7 +7,7 @@ unbind C-b
 bind C-a send-prefix
 
 unbind %
-bind | split-window -h
+bind \ split-window -h
 bind - split-window -v
 
 unbind M-l
