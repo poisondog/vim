@@ -114,6 +114,8 @@ nnoremap <Space> zz
 nnoremap <leader>z za
 nnoremap <leader>w :w<CR>
 
+" map Visual Block to <leader>v
+nnoremap <leader>v <C-v>
 " copy to buffer
 vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
