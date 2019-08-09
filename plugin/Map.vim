@@ -113,6 +113,7 @@ nmap <C-K> <C-U> <CR>
 nnoremap <Space> zz
 nnoremap <leader>z za
 nnoremap <leader>w :w<CR>
+nnoremap <CR> :w<CR>
 
 " map Visual Block to <leader>v
 nnoremap <leader>v <C-v>
