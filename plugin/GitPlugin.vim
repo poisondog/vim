@@ -21,8 +21,9 @@ function GitPush()
 	let host = input('Enter Host: ')
 	let branch = input('Enter Branch: ')
 	call inputrestore()
-	let response = GitPushCommand(host, branch)
-	call TempTab(response)
+"	let response = GitPushCommand(host, branch)
+"	call TempTab(response)
+	execute "!git push " . host . " " . branch
 endfunction
 
 function GitAddCommand(parameter)
