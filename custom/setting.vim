@@ -51,7 +51,6 @@ set smartcase
 " yank to clipboard with Linux
 set clipboard=unnamedplus
 
-
 "colorscheme default
 "colorscheme torte
 "colorscheme koehler
