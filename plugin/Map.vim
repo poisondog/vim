@@ -119,11 +119,9 @@ nnoremap <CR> :w<CR>
 " map Visual Block to <leader>v
 nnoremap <leader>v <C-v>
 " copy to buffer
-vmap y :w! ~/.vimbuffer<CR>
 vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
 " paste from buffer
-nmap p :r ~/.vimbuffer<CR>
 map <C-v> :r ~/.vimbuffer<CR>
 
 "Faster type
