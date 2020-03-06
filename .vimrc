@@ -46,6 +46,9 @@ Plugin 'AutoComplPop'
 " Surround Tools
 Plugin 'tpope/vim-surround'
 
+" Swift
+Plugin 'keith/swift.vim'
+
 " Java Auto Import
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
 
