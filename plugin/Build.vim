@@ -65,6 +65,14 @@ function InstallAllPython()
 	execute "!python3 setup.py install --user --prefix="
 endfunction
 
+function BuildAllSwift()
+	execute "!swift build"
+endfunction
+
+function TestAllSwift()
+	execute "!swift test"
+endfunction
+
 function ApplyCpp()
 	nnoremap <F7> :call BuildCMake()<CR>
 	nnoremap <F8> :call TestX64CC()<CR>
@@ -85,7 +93,13 @@ function ApplyPython()
 	echo "apply Python builder"
 endfunction
 
+function ApplySwift()
+	nnoremap <F7> :call BuildAllSwift()<CR>
+	nnoremap <F8> :call TestAllSwift()<CR>
+	echo "apply Swift builder"
+endfunction
+
 function SwitchBuilder(index)
-	let funcs = [function("ApplyJava"), function("ApplyCpp"), function("ApplyPython")]
+	let funcs = [function("ApplyJava"), function("ApplyCpp"), function("ApplyPython"), function("ApplySwift")]
 	call funcs[a:index % len(funcs)]()
 endfunction
