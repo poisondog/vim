@@ -18,7 +18,7 @@ let g:Tlist_Ctags_Cmd = "/usr/bin/ctags"
 "顯示空白字元
 set list
 "設定字元取代tab及空白
-set listchars=tab:→-,trail:-
+set listchars=tab:→→,trail:-
 "高亮度反白
 set hlsearch
 "可隨時用倒退鍵刪除

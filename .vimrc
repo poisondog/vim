@@ -25,7 +25,7 @@ Plugin 'https://github.com/ConradIrwin/vim-bracketed-paste.git'
 Plugin 'vim-airline/vim-airline'
 
 " CtrlP for search file
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlp.vim'
 
 " Gradle Syntax Highlighting
 Plugin 'vim-gradle'
