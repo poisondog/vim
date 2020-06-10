@@ -30,3 +30,10 @@ endfunction
 function PasteToggle()
 	set invpaste paste?
 endfunction
+
+function GiveSpace()
+	execute '%s/\s*=\s*/ = /g'
+	execute '%s/=\s*=/==/g'
+	execute '%s/,\s*/, /g'
+endfunction
+
