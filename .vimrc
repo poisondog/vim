@@ -63,6 +63,9 @@ let $CLASSPATH= $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
 " :XtermColorTable call color method
 Plugin 'guns/xterm-color-table.vim'
 
+" kotlin Highlight
+Plugin 'udalov/kotlin-vim'
+
 " ===================================
 
 " All of your Plugins must be added before the following line
