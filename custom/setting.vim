@@ -52,7 +52,22 @@ set smartcase
 " yank to clipboard with Mac
 "set clipboard=unnamed
 " yank to clipboard with Linux
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
+if has("gui_running")
+	if has("gui_gtk2") || has("gui_gtk3")
+		" Linux GUI
+		set clipboard=unnamedplus
+	elseif has("gui_win32")
+		" Win32/64 GVim
+	elseif has("gui_macvim")
+		" MacVim
+		set clipboard=unnamed
+	else
+		echo "Unknown GUI system!!!!"
+	endif
+else
+	" Terminal vim
+endif
 
 "colorscheme default
 "colorscheme torte
