@@ -10,6 +10,7 @@ autocmd FileType cpp let g:annotationSymbol = "//"
 autocmd FileType swift let g:annotationSymbol = "//"
 autocmd FileType cs let g:annotationSymbol = "//"
 autocmd FileType cmake let g:annotationSymbol = "#"
+autocmd FileType kotlin let g:annotationSymbol = "//"
 
 "TODO add xml comment
 
