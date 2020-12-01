@@ -27,6 +27,14 @@ function ReplaceSelected()
 	call ReplaceWordWithEscape(oldVar, newVar)
 endfunction
 
+function ReplaceSelectedWithoutConfirm()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	let oldVar = EscapeVim(GetSelection())
+	execute "%s/" . oldVar . "/" . newVar . "/g"
+endfunction
+
 function ReplaceWordWithEscape(oldWord, newWord)
 	execute "%s/" . EscapeVim(a:oldWord) . "/" . a:newWord . "/gc"
 endfunction

@@ -76,6 +76,7 @@ nmap <leader>rr :so $MYVIMRC<CR>
 vnoremap n :call SearchSelected()<CR>
 "vnoremap <leader>f :call SearchSelected()<CR>
 vnoremap <leader>r :call ReplaceSelected()<CR>
+vnoremap <leader>yr :call ReplaceSelectedWithoutConfirm()<CR>
 nmap <leader>r :call ReplaceVariable()<CR>
 nmap <leader>cr :call ReplaceVariableCurrentEnd()<CR>
 nmap <leader>yr :call ReplaceVariableWithoutConfirm()<CR>
