@@ -1,7 +1,6 @@
 JavaImp/JavaImp.txt
 JavaImp/choices.txt
 .netrwhist
-#bundle/*
-bundle/Vundle.vim
+bundle/*
 *.swp
 *.swo
