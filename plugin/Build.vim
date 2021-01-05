@@ -84,7 +84,7 @@ function ApplyJava()
 	nnoremap <F8> :call TestAllJava()<CR>
 	nnoremap <leader>tp :call TestOnPackage()<CR>
 	nnoremap <leader>tt :call TestOnClass()<CR>
-	echo "apply Java builder"
+	"echo "apply Java builder"
 endfunction
 
 function ApplyPython()
