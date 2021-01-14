@@ -6,6 +6,7 @@ RUN git clone https://github.com/poisondog/vim.git /root/.vim
 RUN git clone https://github.com/VundleVim/Vundle.vim.git /root/.vim/bundle/Vundle.vim
 RUN cd /root/
 RUN ln -s /root/.vim/.vimrc /root/.vimrc
+RUN ln -s /root/.vim/.tmux.conf /root/.tmux.conf
 RUN vim +PluginInstall +qall
 RUN cp /root/.vim/Reflection.class /root/
 
