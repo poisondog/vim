@@ -1,10 +1,10 @@
 "NERDTree
 nmap <leader>e :NERDTreeToggle<CR>
 "taglist setting
-nmap <leader>t :TlistToggle<CR>
-"nmap <leader>s :TlistSessionSave tag.list.session<CR>
-nmap <leader>l :TlistSessionLoad tag.list.session<CR>
-nmap <leader>u :TlistUpdate<CR>
+nmap <leader>tt :TlistToggle<CR>
+nmap <leader>tss :TlistSessionSave tag.list.session<CR>
+nmap <leader>tsl :TlistSessionLoad tag.list.session<CR>
+nmap <leader>tu :TlistUpdate<CR>
 
 "create ctags
 nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
@@ -33,19 +33,6 @@ nnoremap <leader>fl  :FufLine<CR>
 "Delete file
 nnoremap <leader>fddd :call delete(GetCurrentFilePath())<CR>
 
-"Line Move
-set timeout ttimeoutlen=50
-execute "set <M-J>=\ej"
-execute "set <M-K>=\ek"
-vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
-vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
-nmap <M-K> :call SelectCurrentWord()<CR>
-
-"關聯搜尋
-map <F3> :call GrepAuto(expand("<cword>"))<CR>
-map <F4> :cn <CR>
-map <F2> :cp <CR>
-
 "Java Auto Import
 nnoremap <F5> :JI<CR>
 nnoremap <F6> :call UpdateJavaImport()<CR>
@@ -65,9 +52,18 @@ nnoremap <leader><F8> :echo 'Current time is ' . strftime('%c')<CR>
 "map <F8> :!./gradlew test -i<CR>
 "map <F8> :call GradleTestPackage()<CR>
 
+"Search Context
+nnoremap <M-J> <Esc>:cnext <CR>
+nnoremap <M-K> <Esc>:cprev<CR>
+nnoremap <leader>ss :call GrepSearch()<CR>
+nnoremap <leader>st :call GrepTodo()<CR>
+nnoremap <leader>sc :call GrepAuto(expand("<cword>"))<CR>
+map <F3> :call GrepAuto(expand("<cword>"))<CR>
+map <F4> :cn <CR>
+map <F2> :cp <CR>
+
 "map <F9> :FindFile <cword>.*<CR>
 map <F12> :call GrepTodo()<CR>
-nnoremap <leader>ss :call GrepSearch()<CR>
 nmap <leader>grr :!gradle --refresh-dependencies<CR>
 nmap <leader>rr :so $MYVIMRC<CR>
 
@@ -124,6 +120,14 @@ vmap <C-c> :w! ~/.vimbuffer<CR>
 nmap <C-c> :.w! ~/.vimbuffer<CR>
 " paste from buffer
 map <C-v> :r ~/.vimbuffer<CR>
+
+"Line Move
+"set timeout ttimeoutlen=50
+"execute "set <M-J>=\ej"
+"execute "set <M-K>=\ek"
+"vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
+"vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
+"nmap <M-K> :call SelectCurrentWord()<CR>
 
 "Faster type
 inoremap {}<Tab> {<CR>}<Esc>ko
