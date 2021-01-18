@@ -23,7 +23,8 @@ function GrepAuto(word)
 endfunction
 
 function Grep(word, file)
-	execute "vimgrep /" . a:word . "/j " . a:file
+"	execute "vimgrep /" . a:word . "/j " . a:file
+	execute "silent grep! \"" . a:word . "\""
 	execute "cw"
 endfunction
 
