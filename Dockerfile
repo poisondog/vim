@@ -1,7 +1,11 @@
 FROM debian:stable
 MAINTAINER Adam
 
-RUN apt-get update && apt-get -y install locales vim vim-gtk3 ctags openjdk-11-jre openjdk-11-jdk git gradle maven tmux curl net-tools silversearcher-ag
+RUN apt-get update
+#Install openJDK
+RUN apt-get -y install openjdk-11-jre openjdk-11-jdk
+#Install vim environment
+RUN apt-get -y install locales vim vim-gtk3 ctags git gradle maven tmux curl net-tools silversearcher-ag
 RUN git clone https://github.com/poisondog/vim.git /root/.vim
 RUN git clone https://github.com/VundleVim/Vundle.vim.git /root/.vim/bundle/Vundle.vim
 RUN cd /root/
