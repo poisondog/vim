@@ -53,8 +53,6 @@ nnoremap <leader><F8> :echo 'Current time is ' . strftime('%c')<CR>
 "map <F8> :call GradleTestPackage()<CR>
 
 "Search Context
-nnoremap <M-J> <Esc>:cnext <CR>
-nnoremap <M-K> <Esc>:cprev<CR>
 nnoremap <leader>ss :call GrepSearch()<CR>
 nnoremap <leader>st :call GrepTodo()<CR>
 nnoremap <leader>sc :call GrepAuto(expand("<cword>"))<CR>
@@ -122,12 +120,14 @@ nmap <C-c> :.w! ~/.vimbuffer<CR>
 map <C-v> :r ~/.vimbuffer<CR>
 
 "Line Move
-"set timeout ttimeoutlen=50
-"execute "set <M-J>=\ej"
-"execute "set <M-K>=\ek"
+set timeout ttimeoutlen=50
+execute "set <M-J>=\ej"
+execute "set <M-K>=\ek"
 "vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
 "vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
 "nmap <M-K> :call SelectCurrentWord()<CR>
+nnoremap <M-J> <Esc>:cnext <CR>
+nnoremap <M-K> <Esc>:cprev<CR>
 
 "Faster type
 inoremap {}<Tab> {<CR>}<Esc>ko
