@@ -46,6 +46,8 @@ set bg=dark
 syntax on
 "不分大小寫搜尋
 set smartcase
+"Auto folding method
+setlocal foldmethod=syntax
 "Dictionary Completion
 "set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
