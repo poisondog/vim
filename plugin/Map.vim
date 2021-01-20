@@ -114,6 +114,16 @@ nnoremap <leader><F8> :echo 'Current time is ' . strftime('%c')<CR>
 "map <F8> :!./gradlew test -i<CR>
 "map <F8> :call GradleTestPackage()<CR>
 
+"Line Move
+set timeout ttimeoutlen=50
+execute "set <M-J>=\ej"
+execute "set <M-K>=\ek"
+"vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
+"vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
+"nmap <M-K> :call SelectCurrentWord()<CR>
+nnoremap <M-J> <Esc>:cnext <CR>
+nnoremap <M-K> <Esc>:cprev<CR>
+
 "====================================================================
 
 "taglist setting
@@ -133,13 +143,3 @@ nnoremap <leader>fl  :FufLine<CR>
 "map <F9> :FindFile <cword>.*<CR>
 
 "TODO Java move class function
-
-"Line Move
-set timeout ttimeoutlen=50
-execute "set <M-J>=\ej"
-execute "set <M-K>=\ek"
-"vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
-"vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
-"nmap <M-K> :call SelectCurrentWord()<CR>
-nnoremap <M-J> <Esc>:cnext <CR>
-nnoremap <M-K> <Esc>:cprev<CR>
