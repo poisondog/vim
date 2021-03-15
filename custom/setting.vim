@@ -51,6 +51,9 @@ set foldmethod=syntax
 "Dictionary Completion
 "set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
+set wildmenu wildmode=full
+"set wildchar=<Tab> wildcharm=<C-Z>
+
 " yank to clipboard with Mac
 "set clipboard=unnamed
 " yank to clipboard with Linux
@@ -89,6 +92,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 "colorscheme desert
 "colorscheme shine
 "colorscheme ron
+"colorscheme molokai
 colorscheme poisondog_style
 
 "set showmatch
