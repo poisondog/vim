@@ -75,3 +75,11 @@ snippet ld
 	Log.d(${1});${2}
 snippet lv
 	Log.v(${1});${2}
+snippet get
+	${1:public} ${2:String} get${3:Value}() {
+		return ${4:value};
+	}
+snippet set
+	${1:public} void set${2:Value}(${3:String} ${4:value}) {
+		this.$4 = $4;
+	}
