@@ -1,0 +1,12 @@
+META-INF/
+META-INF/MANIFEST.MF
+META-INF/services/
+META-INF/services/org.xmlpull.v1.XmlPullParserFactory
+XPP3_1.1.4c_MIN_VERSION
+org/
+org/xmlpull/
+org/xmlpull/mxp1/
+org/xmlpull/mxp1/MXParser.class
+org/xmlpull/v1/
+org/xmlpull/v1/XmlPullParser.class
+org/xmlpull/v1/XmlPullParserException.class

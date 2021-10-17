@@ -1,0 +1,16 @@
+META-INF/
+META-INF/MANIFEST.MF
+javax/
+javax/annotation/
+javax/annotation/security/
+javax/annotation/Generated.class
+javax/annotation/PostConstruct.class
+javax/annotation/PreDestroy.class
+javax/annotation/Resource$AuthenticationType.class
+javax/annotation/Resource.class
+javax/annotation/Resources.class
+javax/annotation/security/DeclareRoles.class
+javax/annotation/security/DenyAll.class
+javax/annotation/security/PermitAll.class
+javax/annotation/security/RolesAllowed.class
+javax/annotation/security/RunAs.class

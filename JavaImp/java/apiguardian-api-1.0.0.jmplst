@@ -1,0 +1,7 @@
+META-INF/
+META-INF/MANIFEST.MF
+org/
+org/apiguardian/
+org/apiguardian/api/
+org/apiguardian/api/API$Status.class
+org/apiguardian/api/API.class

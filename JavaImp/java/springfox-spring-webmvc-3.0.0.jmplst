@@ -1,0 +1,17 @@
+META-INF/
+META-INF/MANIFEST.MF
+springfox/
+springfox/documentation/
+springfox/documentation/spring/
+springfox/documentation/spring/web/
+springfox/documentation/spring/web/WebMvcNameValueExpressionWrapper.class
+springfox/documentation/spring/web/WebMvcRequestMappingInfoWrapper.class
+springfox/documentation/spring/web/WebMvcPatternsRequestConditionWrapper.class
+springfox/documentation/spring/web/OnNotServletBasedWebApplication.class
+springfox/documentation/spring/web/plugins/
+springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class
+springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class
+springfox/documentation/spring/web/OnServletBasedWebApplication.class
+springfox/documentation/spring/web/WebMvcObjectMapperConfigurer.class
+springfox/documentation/spring/web/WebMvcRequestHandler.class
+.gitkeep

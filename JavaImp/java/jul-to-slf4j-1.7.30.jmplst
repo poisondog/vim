@@ -1,0 +1,11 @@
+META-INF/
+META-INF/MANIFEST.MF
+org/
+org/slf4j/
+org/slf4j/bridge/
+org/slf4j/bridge/SLF4JBridgeHandler.class
+META-INF/maven/
+META-INF/maven/org.slf4j/
+META-INF/maven/org.slf4j/jul-to-slf4j/
+META-INF/maven/org.slf4j/jul-to-slf4j/pom.xml
+META-INF/maven/org.slf4j/jul-to-slf4j/pom.properties

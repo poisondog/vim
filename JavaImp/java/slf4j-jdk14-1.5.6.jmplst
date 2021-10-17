@@ -1,0 +1,15 @@
+META-INF/
+META-INF/MANIFEST.MF
+org/
+org/slf4j/
+org/slf4j/impl/
+org/slf4j/impl/JDK14LoggerAdapter.class
+org/slf4j/impl/JDK14LoggerFactory.class
+org/slf4j/impl/StaticLoggerBinder.class
+org/slf4j/impl/StaticMarkerBinder.class
+org/slf4j/impl/StaticMDCBinder.class
+META-INF/maven/
+META-INF/maven/org.slf4j/
+META-INF/maven/org.slf4j/slf4j-jdk14/
+META-INF/maven/org.slf4j/slf4j-jdk14/pom.xml
+META-INF/maven/org.slf4j/slf4j-jdk14/pom.properties

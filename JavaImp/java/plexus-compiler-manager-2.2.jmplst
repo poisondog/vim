@@ -1,0 +1,17 @@
+META-INF/
+META-INF/MANIFEST.MF
+META-INF/plexus/
+org/
+org/codehaus/
+org/codehaus/plexus/
+org/codehaus/plexus/compiler/
+org/codehaus/plexus/compiler/manager/
+META-INF/plexus/components.xml
+org/codehaus/plexus/compiler/manager/CompilerManager.class
+org/codehaus/plexus/compiler/manager/DefaultCompilerManager.class
+org/codehaus/plexus/compiler/manager/NoSuchCompilerException.class
+META-INF/maven/
+META-INF/maven/org.codehaus.plexus/
+META-INF/maven/org.codehaus.plexus/plexus-compiler-manager/
+META-INF/maven/org.codehaus.plexus/plexus-compiler-manager/pom.xml
+META-INF/maven/org.codehaus.plexus/plexus-compiler-manager/pom.properties

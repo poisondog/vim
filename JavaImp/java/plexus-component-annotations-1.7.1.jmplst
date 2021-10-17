@@ -1,0 +1,15 @@
+META-INF/
+META-INF/MANIFEST.MF
+org/
+org/codehaus/
+org/codehaus/plexus/
+org/codehaus/plexus/component/
+org/codehaus/plexus/component/annotations/
+org/codehaus/plexus/component/annotations/Component.class
+org/codehaus/plexus/component/annotations/Configuration.class
+org/codehaus/plexus/component/annotations/Requirement.class
+META-INF/maven/
+META-INF/maven/org.codehaus.plexus/
+META-INF/maven/org.codehaus.plexus/plexus-component-annotations/
+META-INF/maven/org.codehaus.plexus/plexus-component-annotations/pom.xml
+META-INF/maven/org.codehaus.plexus/plexus-component-annotations/pom.properties

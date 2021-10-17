@@ -1,0 +1,17 @@
+META-INF/MANIFEST.MF
+META-INF/
+org/
+org/springframework/
+org/springframework/plugin/
+org/springframework/plugin/metadata/
+META-INF/maven/
+META-INF/maven/org.springframework.plugin/
+META-INF/maven/org.springframework.plugin/spring-plugin-metadata/
+META-INF/notice.txt
+META-INF/maven/org.springframework.plugin/spring-plugin-metadata/pom.properties
+META-INF/license.txt
+org/springframework/plugin/metadata/AbstractMetadataBasedPlugin.class
+org/springframework/plugin/metadata/SimplePluginMetadata.class
+org/springframework/plugin/metadata/PluginMetadata.class
+META-INF/maven/org.springframework.plugin/spring-plugin-metadata/pom.xml
+org/springframework/plugin/metadata/MetadataProvider.class

@@ -1,0 +1,8 @@
+META-INF/
+META-INF/MANIFEST.MF
+org/
+org/reactivestreams/
+org/reactivestreams/Processor.class
+org/reactivestreams/Publisher.class
+org/reactivestreams/Subscriber.class
+org/reactivestreams/Subscription.class

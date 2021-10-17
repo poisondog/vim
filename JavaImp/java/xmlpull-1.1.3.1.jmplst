@@ -1,0 +1,10 @@
+META-INF/
+META-INF/MANIFEST.MF
+org/
+org/xmlpull/
+org/xmlpull/v1/
+XMLPULL_1_1_3_1_VERSION
+org/xmlpull/v1/XmlPullParser.class
+org/xmlpull/v1/XmlPullParserException.class
+org/xmlpull/v1/XmlPullParserFactory.class
+org/xmlpull/v1/XmlSerializer.class

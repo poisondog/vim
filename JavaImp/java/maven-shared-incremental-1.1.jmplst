@@ -1,0 +1,17 @@
+META-INF/
+META-INF/MANIFEST.MF
+org/
+org/apache/
+org/apache/maven/
+org/apache/maven/shared/
+org/apache/maven/shared/incremental/
+META-INF/DEPENDENCIES
+META-INF/LICENSE
+META-INF/NOTICE
+org/apache/maven/shared/incremental/IncrementalBuildHelper.class
+org/apache/maven/shared/incremental/IncrementalBuildHelperRequest.class
+META-INF/maven/
+META-INF/maven/org.apache.maven.shared/
+META-INF/maven/org.apache.maven.shared/maven-shared-incremental/
+META-INF/maven/org.apache.maven.shared/maven-shared-incremental/pom.xml
+META-INF/maven/org.apache.maven.shared/maven-shared-incremental/pom.properties

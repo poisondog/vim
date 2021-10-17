@@ -1,0 +1,13 @@
+META-INF/
+META-INF/MANIFEST.MF
+META-INF/maven/
+META-INF/maven/nz.net.ultraq.thymeleaf/
+META-INF/maven/nz.net.ultraq.thymeleaf/thymeleaf-expression-processor/
+META-INF/maven/nz.net.ultraq.thymeleaf/thymeleaf-expression-processor/pom.properties
+META-INF/maven/nz.net.ultraq.thymeleaf/thymeleaf-expression-processor/pom.xml
+nz/
+nz/net/
+nz/net/ultraq/
+nz/net/ultraq/thymeleaf/
+nz/net/ultraq/thymeleaf/expressions/
+nz/net/ultraq/thymeleaf/expressions/ExpressionProcessor.class
