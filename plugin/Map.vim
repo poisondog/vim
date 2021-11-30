@@ -41,6 +41,7 @@ nnoremap zl zr
 nnoremap zh zm
 nmap zu :call CreateJavaTestFile()<CR>
 nmap zo :call CreateJavaFile()<CR>
+nnoremap - za
 
 "Delete file
 nnoremap <leader>fddd :call delete(GetCurrentFilePath())<CR>

@@ -49,6 +49,10 @@ syntax on
 set smartcase
 "Auto folding method
 "set foldmethod=syntax
+set foldmethod=indent
+set foldlevel=20
+"set foldlevelstart=1
+"set foldnestmax=2
 "Dictionary Completion
 "set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
