@@ -16,6 +16,7 @@ nmap <C-K> <C-U> <CR>
 "map <C-J> <C-F> <CR>
 "map <C-K> <C-B> <CR>
 nnoremap <Space> zz
+vnoremap <Space> zz
 map <C-N> :tabnew 
 map <C-L> :tabnext <CR>
 map <C-H> :tabprevious <CR>
