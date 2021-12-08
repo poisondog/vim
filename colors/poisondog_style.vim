@@ -63,7 +63,7 @@ hi LineNr guifg=#707070 guibg=NONE guisp=NONE gui=NONE ctermfg=207 ctermbg=NONE 
 hi StatusLine guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
 hi Label guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi PMenuSel guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
-hi Search guifg=#ffffa8 guibg=#808000 guisp=#808000 gui=NONE ctermfg=229 ctermbg=3 cterm=NONE
+hi Search guifg=#ffffa8 guibg=#808000 guisp=#808000 gui=NONE ctermfg=229 ctermbg=Red cterm=NONE
 hi Delimiter guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi Statement guifg=#dcdc78 guibg=NONE guisp=NONE gui=NONE ctermfg=186 ctermbg=NONE cterm=NONE
 hi Comment guifg=#4c74b0 guibg=NONE guisp=NONE gui=bold,italic ctermfg=67 ctermbg=NONE cterm=bold
