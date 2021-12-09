@@ -83,3 +83,14 @@ snippet set
 	${1:public} void set${2:Value}(${3:String} ${4:value}) {
 		this.$4 = $4;
 	}
+snippet regex
+	${1:private} void ${2:filter}(String ${3:content}) {
+		final String regex = "${4:\\s*\"code\"\\s*:\\s*(\\d*)}";
+		final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
+		final Matcher matcher = pattern.matcher($3);
+		while (matcher.find()) {
+			System.out.println("Full match: " + matcher.group(0));
+			System.out.println("match 1: " + matcher.group(1));
+			${5}
+		}
+	}
