@@ -42,6 +42,7 @@ Plugin 'elzr/vim-json'
 
 " Auto pop complete menu
 Plugin 'AutoComplPop'
+"Plugin 'ycm-core/YouCompleteMe'
 
 " Surround Tools
 Plugin 'tpope/vim-surround'
