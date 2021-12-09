@@ -85,7 +85,7 @@ snippet set
 	}
 snippet regex
 	${1:private} void ${2:filter}(String ${3:content}) {
-		final String regex = "${4:\\s*\"code\"\\s*:\\s*(\\d*)}";
+		final String regex = "${4:(\\s)(.)(\\w)(\\d).?\\4\\3\\2\\1}";
 		final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
 		final Matcher matcher = pattern.matcher($3);
 		while (matcher.find()) {
