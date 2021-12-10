@@ -95,4 +95,12 @@ snippet regex
 		}
 	}
 snippet ymd
-	"yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+	SimpleDateFormat sdf = new SimpleDateFormat();
+	sdf.applyPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+	String result = sdf.format(time);
+snippet json
+	ObjectMapper mapper = new ObjectMapper();
+	String json = mapper.writeValueAsString(${1:object});
+	${2:Object} another = mapper.readValue(json, $2.class);
+	JsonNode root = mapper.readTree(json);${3}
+	System.out.println(root.at("/all/1").asInt());
