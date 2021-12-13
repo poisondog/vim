@@ -24,6 +24,11 @@ function TestOnClass()
 "	copen
 endfunction
 
+function TestOnMethod()
+	let command = "!./gradlew\ test\ -i\ --tests\ " . GetClassName() . "." . FindCurrentJavaFunction()
+	execute command
+endfunction
+
 function TestOnPackage()
 	let name = GetPackageName()
 	let command = "!./gradlew\ test\ -i\ --tests\ " . name . ".*Test"

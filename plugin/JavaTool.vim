@@ -22,6 +22,21 @@ function IsPackage(line)
 	return 0
 endfunction
 
+function FindCurrentJavaFunction()
+	let endLine = line(".")
+	let i = endLine
+	while i > 0
+		let line = getline(i)
+		let command = "python ~/.vim/script/findJavaFunction.py '" . line . "'"
+"		execute command
+		let aresult = system(command)
+		let i = i - 1
+		if len(aresult) != 0
+			return aresult
+		endif
+	endwhile
+endfunction
+
 function PathToPackage()
 	let s = GetFullCurrentFilePath()
 	echo s

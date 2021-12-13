@@ -1,4 +1,6 @@
+"常用函式
 
+"取得目前的文字
 function GetCurrentWord()
 	return expand("<cword>")
 endfunction
@@ -31,10 +33,16 @@ function PasteToggle()
 	set invpaste paste?
 endfunction
 
+" 給予符號空間
 function GiveSpace()
 	execute '%s/\s*=\s*/ = /g'
 	execute '%s/=\s*=/==/g'
 	execute '%s/,\s*/, /g'
 	execute '%s/\s*$//g'
+endfunction
+
+" 取得目前的行號
+function GetCurrentLine()
+	return line(".")
 endfunction
 
