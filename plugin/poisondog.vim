@@ -232,6 +232,12 @@ function GradleTestPackage()
 	execute "!./gradlew test -i --tests " . name . ".*Test"
 endfunction
 
+function TestTemp()
+"	execute "silent grep! \"TODO\""
+	execute "!git status"
+	execute "cw"
+endfunction
+
 " ================================================== "
 " ================================================== "
 " ================================================== "
