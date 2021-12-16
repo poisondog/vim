@@ -82,6 +82,12 @@ function TempTab(bytecode)
 	call TempWindows(a:bytecode)
 endfunction
 
+" 在 quickfix 中開啟 buffer list
+function QuickBuffer()
+	call setqflist(map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), '{"bufnr": v:val}'))
+	copen
+endfunction
+
 " ================================================== "
 
 " Java: 判斷輸入內容是否為 package 開頭
