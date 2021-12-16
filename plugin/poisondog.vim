@@ -192,7 +192,7 @@ function TestAllJava()
 	execute "!./gradlew test -i"
 endfunction
 
-" TODO: 待研究
+" Gradle: 使用 gradlew 建置專案，並且將錯誤列於 quickfix 中
 function Build()
 	tabnew
 	set makeprg=./gradlew\ build\ -q
@@ -200,10 +200,10 @@ function Build()
 	copen
 endfunction
 
-" TODO: 待研究
+" Gradle: 使用 gradlew 執行所有單元測試，並且將錯誤列於 quickfix 中
 function Test()
 	tabnew
-	set makeprg=./gradlew\ test\ -q
+	set makeprg=./gradlew\ test\ -i
 	silent make
 	copen
 endfunction
@@ -239,6 +239,15 @@ function TestTemp()
 endfunction
 
 " ================================================== "
+" Maven: 使用 mvn 建置專案，並且將錯誤列於 quickfix 中
+function MavenBuild()
+	tabnew
+	set makeprg=mvn\ clean\ package\ -q
+	set errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
+	silent make
+	copen
+endfunction
+
 " ================================================== "
 " ================================================== "
 " ================================================== "
