@@ -1,7 +1,7 @@
 import re
 import sys
 
-regex = r"^\s*(private|public|protected).*\s(\S+)\s*\(.*\)\s*{\s*$"
+regex = r"^\s*(private|public|protected).*\s(\S+)\s*\(.*\).*{\s*$"
 
 for line in sys.argv:
 	matches = re.finditer(regex, line, re.MULTILINE)
