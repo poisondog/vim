@@ -9,7 +9,7 @@ map <F12> :call GrepTodo()<CR>
 vnoremap n :call SearchSelected()<CR>
 
 "NERDTree
-nmap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 "Navigation
 nnoremap <C-J> <C-D> <CR>
 nnoremap <C-K> <C-U> <CR>
@@ -28,19 +28,19 @@ nnoremap <CR> :w<CR>
 nnoremap * *``
 
 "create ctags
-nmap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
+nnoremap <leader>a :!ctags -R -h ".h .c .hpp .cpp .m .java"<CR>
 "browser source code
-nmap zj <C-]>
-nmap zk :pop<CR>
-nmap z. :vs<CR><C-]>
-nmap z, :sp<CR><C-]>
-nmap z; :tab split<CR><C-]>
-"nmap zl <C-W>l
-"nmap zh <C-W>h
+nnoremap zj <C-]>
+nnoremap zk :pop<CR>
+nnoremap z. :vs<CR><C-]>
+nnoremap z, :sp<CR><C-]>
+nnoremap z; :tab split<CR><C-]>
+"nnoremap zl <C-W>l
+"nnoremap zh <C-W>h
 nnoremap zl zr
 nnoremap zh zm
-nmap zu :call CreateJavaTestFile()<CR>
-nmap zo :call CreateJavaFile()<CR>
+nnoremap zu :call CreateJavaTestFile()<CR>
+nnoremap zo :call CreateJavaFile()<CR>
 nnoremap - za
 
 "Delete file
@@ -58,29 +58,29 @@ vnoremap <leader>x <Esc>:call UnComment(SelectedFirstLine(), SelectedLastLine())
 "Git Commands
 "map <F9> :!git status<CR>
 "map <F10> :!git diff<CR>
-"nmap <F9> :Gstatus<CR>:call GitCommit()<CR>
-"nmap <F10> :call GitPush()<CR>
-nmap <leader>ga :Git add 
-nmap <leader>gd :Gdiff<CR>
-nmap <leader>gs :call GitStatus()<CR>
-nmap <leader>gc :call GitCommit()<CR>
-nmap <leader>gh :call GitPush()<CR>
-nmap <leader>gl :call GitPull()<CR>
-nmap <leader>gu :call GitUntrack(GetCurrentFilePath())<CR>
+"nnoremap <F9> :Gstatus<CR>:call GitCommit()<CR>
+"nnoremap <F10> :call GitPush()<CR>
+nnoremap <leader>ga :Git add 
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gs :call GitStatus()<CR>
+nnoremap <leader>gc :call GitCommit()<CR>
+nnoremap <leader>gh :call GitPush()<CR>
+nnoremap <leader>gl :call GitPull()<CR>
+nnoremap <leader>gu :call GitUntrack(GetCurrentFilePath())<CR>
 
 "refresh for vim or gradle dependencies
-nmap <leader>grr :!gradle --refresh-dependencies<CR>
-nmap <leader>rr :so $MYVIMRC<CR>
+nnoremap <leader>grr :!gradle --refresh-dependencies<CR>
+nnoremap <leader>rr :so $MYVIMRC<CR>
 
 " Copy and Paste
 " map Visual Block to <leader>v
 nnoremap <leader>v <C-v>
 " copy to buffer
 vmap <C-c> :w! ~/.vimbuffer<CR>
-nmap <C-c> :.w! ~/.vimbuffer<CR>
+nnoremap <C-c> :.w! ~/.vimbuffer<CR>
 " paste from buffer
 map <C-v> :r ~/.vimbuffer<CR>
-nmap <F10> :call PasteToggle()<CR>
+nnoremap <F10> :call PasteToggle()<CR>
 nnoremap <leader>b :ls<CR>:b
 
 "Replace Mapping
@@ -88,10 +88,10 @@ nnoremap <leader>b :ls<CR>:b
 "vnoremap <leader>f :call SearchSelected()<CR>
 vnoremap <leader>r :call ReplaceSelected()<CR>
 vnoremap <leader>yr :call ReplaceSelectedWithoutConfirm()<CR>
-nmap <leader>r :call ReplaceVariable()<CR>
-nmap <leader>cr :call ReplaceVariableCurrentEnd()<CR>
-nmap <leader>yr :call ReplaceVariableWithoutConfirm()<CR>
-nmap <leader>R :call ReplaceStringOn()<CR>
+nnoremap <leader>r :call ReplaceVariable()<CR>
+nnoremap <leader>cr :call ReplaceVariableCurrentEnd()<CR>
+nnoremap <leader>yr :call ReplaceVariableWithoutConfirm()<CR>
+nnoremap <leader>R :call ReplaceStringOn()<CR>
 
 "Faster type
 inoremap {}<Tab> {<CR>}<Esc>ko
@@ -123,17 +123,17 @@ execute "set <M-J>=\ej"
 execute "set <M-K>=\ek"
 "vmap <M-J> <Esc>:call MoveLineDown(SelectedFirstLine(), SelectedLastLine())<CR>
 "vmap <M-K> <Esc>:call MoveLineUp(SelectedFirstLine(), SelectedLastLine())<CR>
-"nmap <M-K> :call SelectCurrentWord()<CR>
+"nnoremap <M-K> :call SelectCurrentWord()<CR>
 nnoremap <M-J> <Esc>:cnext <CR>
 nnoremap <M-K> <Esc>:cprev<CR>
 
 "====================================================================
 
 "taglist setting
-nmap <leader>tt :TlistToggle<CR>
-nmap <leader>tss :TlistSessionSave tag.list.session<CR>
-nmap <leader>tsl :TlistSessionLoad tag.list.session<CR>
-nmap <leader>tu :TlistUpdate<CR>
+nnoremap <leader>tt :TlistToggle<CR>
+nnoremap <leader>tss :TlistSessionSave tag.list.session<CR>
+nnoremap <leader>tsl :TlistSessionLoad tag.list.session<CR>
+nnoremap <leader>tu :TlistUpdate<CR>
 
 "Buffer
 nnoremap <leader>ff  :FufFile<CR>
@@ -141,7 +141,7 @@ nnoremap <leader>fb  :FufBuffer<CR>
 nnoremap <leader>fl  :FufLine<CR>
 
 "Java Auto Complete 2
-"nmap <F5> <Plug>(JavaComplete-Imports-AddMissing)
+"nnoremap <F5> <Plug>(JavaComplete-Imports-AddMissing)
 
 "map <F9> :FindFile <cword>.*<CR>
 
