@@ -11,8 +11,8 @@ vnoremap n :call SearchSelected()<CR>
 "NERDTree
 nmap <leader>e :NERDTreeToggle<CR>
 "Navigation
-nmap <C-J> <C-D> <CR>
-nmap <C-K> <C-U> <CR>
+nnoremap <C-J> <C-D> <CR>
+nnoremap <C-K> <C-U> <CR>
 "map <C-J> <C-F> <CR>
 "map <C-K> <C-B> <CR>
 nnoremap <Space> zz
