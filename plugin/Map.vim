@@ -86,11 +86,12 @@ nnoremap <leader>b :ls<CR>:b
 "Replace Mapping
 "vnoremap // y/<C-R>"<CR>
 "vnoremap <leader>f :call SearchSelected()<CR>
-vnoremap <leader>r :call ReplaceSelected()<CR>
-vnoremap <leader>yr :call ReplaceSelectedWithoutConfirm()<CR>
-nnoremap <leader>r :call ReplaceVariable()<CR>
-nnoremap <leader>cr :call ReplaceVariableCurrentEnd()<CR>
-nnoremap <leader>yr :call ReplaceVariableWithoutConfirm()<CR>
+vnoremap <leader>r :call ReplaceSelectedConfirm()<CR>
+vnoremap <leader>yr :call ReplaceSelected()<CR>
+vnoremap <leader>cr :call ReplaceSelectedFromHere()<CR>
+nnoremap <leader>r :call ReplaceVariableConfirm()<CR>
+nnoremap <leader>yr :call ReplaceVariable()<CR>
+nnoremap <leader>cr :call ReplaceVariableFromHere()<CR>
 nnoremap <leader>R :call ReplaceStringOn()<CR>
 
 "Faster type

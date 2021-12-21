@@ -88,6 +88,121 @@ function QuickBuffer()
 	copen
 endfunction
 
+" find files and populate the quickfix list
+" 尋找檔案並顯示於 quickfix 中
+function FindFiles(filename)
+	let error_file = tempname()
+	silent exe '!find . -name "'.a:filename.'" | xargs file | sed "s/:/:1:/" > '.error_file
+	set errorformat=%f:%l:%m
+	tabnew
+	exe "cfile ". error_file
+	copen
+	call delete(error_file)
+endfunction
+command! -nargs=1 FindFile call FindFiles(<q-args>)
+
+" 從目前行號向下執行取代命令
+function ReplaceWordFromCurrentEnd(oldWord, newWord)
+	let cl=line(".")
+	execute cl . ",$s/\\<" . a:oldWord . "\\>/" . a:newWord . "/gc"
+endfunction
+
+" 取代文字，每個取代都需要確認
+function ReplaceWordConfirm(oldWord, newWord)
+	execute "%s/\\<" . a:oldWord . "\\>/" . a:newWord . "/gc"
+endfunction
+
+" 即刻取代文字
+function ReplaceWord(oldWord, newWord)
+	execute "%s/\\<" . a:oldWord . "\\>/" . a:newWord . "/g"
+endfunction
+
+" 根據檔案去執行取代動作
+function ReplaceString(file, oldString, newString)
+	return system("find -name " . a:file . "|xargs sed -i 's/" . a:oldString . "/" . a:newString . "/g'")
+endfunction
+
+" 原始字串處理跳脫字元後執行取代
+function ReplaceWordWithEscape(oldWord, newWord)
+	execute "%s/" . EscapeVim(a:oldWord) . "/" . a:newWord . "/gc"
+endfunction
+
+" 取代游標所在的變數，需每個變數做確認
+function ReplaceVariableConfirm()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	call ReplaceWordConfirm(expand("<cword>"), newVar)
+endfunction
+
+" 取代游標所在的變數
+function ReplaceVariable()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	call ReplaceWord(expand("<cword>"), newVar)
+endfunction
+
+" 取代游標所在的變數，從游標所在行號向下搜尋
+function ReplaceVariableFromHere()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	call ReplaceWordFromCurrentEnd(expand("<cword>"), newVar)
+endfunction
+
+" 取代游標選擇的範圍，需每個符合部分做確認
+function ReplaceSelectedConfirm()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	let oldVar = GetSelection()
+	call ReplaceWordWithEscape(oldVar, newVar)
+endfunction
+
+" 取代游標選擇的範圍
+function ReplaceSelected()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	let oldVar = EscapeVim(GetSelection())
+	execute "%s/" . oldVar . "/" . newVar . "/g"
+endfunction
+
+" 取代游標選擇的範圍，從游標所在行號向下搜尋
+function ReplaceSelectedFromHere()
+	call inputsave()
+	let newVar = input('Enter New Variable: ')
+	call inputrestore()
+	let oldVar = GetSelection()
+	call ReplaceWordFromCurrentEnd(oldVar, newVar)
+endfunction
+
+" 取代所有 Java 檔案的指定字串，使用者需要輸入舊字串、新字串
+function ReplaceStringOnJava()
+	call inputsave()
+	let oldString = input('Enter Old String: ')
+	let newString = input('Enter New String: ')
+	call inputrestore()
+	return system("find -name *.java |xargs sed -i 's/" . oldString . "/" . newString . "/g'")
+endfunction
+
+" 取代指定字串，使用者需要輸入副檔名、舊字串、新字串
+function ReplaceStringOn()
+	call inputsave()
+	let fileString = input('Enter Filename Extension: ')
+	let oldString = input('Enter Old String: ')
+	let newString = input('Enter New String: ')
+	call inputrestore()
+	return system("find -name *." . fileString . " |xargs sed -i 's/" . oldString . "/" . newString . "/g'")
+endfunction
+
+" TODO 待確認
+function ReplaceTab(length)
+	execute "retab! " . a:length
+	execute "set ts=8"
+endfunction
+
 " ================================================== "
 
 " Java: 判斷輸入內容是否為 package 開頭

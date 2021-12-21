@@ -2,7 +2,6 @@
 function SearchSelected() range
 "	let first = SelectedFirstLine()
 "	let last = SelectedLastLine()
-
 	if a:firstline == a:lastline
 		let selected = GetSelection()
 		call SearchWordWithEscape(selected)
