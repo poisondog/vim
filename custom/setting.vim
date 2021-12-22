@@ -90,16 +90,6 @@ if executable('ag')
 endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-"colorscheme default
-"colorscheme torte
-"colorscheme koehler
-"colorscheme darkblue
-"colorscheme desert
-"colorscheme shine
-"colorscheme ron
-"colorscheme molokai
-colorscheme poisondog_style
-
 "set showmatch
 "set smarttab
 

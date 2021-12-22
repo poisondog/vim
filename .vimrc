@@ -27,18 +27,12 @@ Plugin 'vim-airline/vim-airline'
 " CtrlP for search file
 Plugin 'ctrlp.vim'
 
-" Gradle Syntax Highlighting
-Plugin 'vim-gradle'
-
 " Git Plugin Tool
 Plugin 'fugitive.vim'
 
 " snipMate
 Plugin 'snipMate'
 let g:snippets_dir = $HOME."/.vim/snippets"
-
-" Json syntax highlighting
-Plugin 'elzr/vim-json'
 
 " Auto pop complete menu
 Plugin 'AutoComplPop'
@@ -63,6 +57,12 @@ let $CLASSPATH= $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
 " Vim Color
 " :XtermColorTable call color method
 Plugin 'guns/xterm-color-table.vim'
+
+" Gradle Syntax Highlighting
+Plugin 'vim-gradle'
+
+" Json syntax highlighting
+Plugin 'elzr/vim-json'
 
 " kotlin Highlight
 Plugin 'udalov/kotlin-vim'

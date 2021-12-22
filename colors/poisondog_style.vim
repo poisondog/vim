@@ -11,8 +11,7 @@ endif
 set t_Co=256
 let g:colors_name = "poisondog_style"
 
-"hi SignColumn -- no settings --
-"hi TabLineSel -- no settings --
+"hi SignColumn guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
 "hi PMenuSbar -- no settings --
@@ -25,7 +24,11 @@ hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg
 "hi Float -- no settings --
 "hi CursorLine -- no settings --
 "hi Union -- no settings --
-"hi TabLineFill -- no settings --
+"hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+"hi TabLine ctermfg=Blue ctermbg=Yellow
+"hi TabLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi TabLineSel ctermfg=Red ctermbg=Yellow
+hi TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=None ctermbg=Blue cterm=NONE
 "hi CursorColumn -- no settings --
 "hi EnumerationName -- no settings --
 "hi SpellCap -- no settings --
@@ -35,7 +38,6 @@ hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg
 "hi LocalVariable -- no settings --
 "hi SpellBad -- no settings --
 "hi CTagsClass -- no settings --
-"hi TabLine -- no settings --
 "hi clear -- no settings --
 "hi texmath -- no settings --
 hi IncSearch guifg=#80ffff guibg=#0060c0 guisp=#0060c0 gui=NONE ctermfg=123 ctermbg=4 cterm=NONE

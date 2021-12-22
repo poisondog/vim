@@ -374,3 +374,14 @@ endfunction
 " ================================================== "
 " ================================================== "
 " ================================================== "
+" 設定編輯器顏色設定
+"colorscheme default
+"colorscheme torte
+"colorscheme koehler
+"colorscheme darkblue
+"colorscheme desert
+"colorscheme shine
+"colorscheme ron
+"colorscheme molokai
+colorscheme poisondog_style
+
