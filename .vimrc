@@ -34,10 +34,6 @@ Plugin 'fugitive.vim'
 Plugin 'snipMate'
 let g:snippets_dir = $HOME."/.vim/snippets"
 
-" Auto pop complete menu
-Plugin 'AutoComplPop'
-"Plugin 'ycm-core/YouCompleteMe'
-
 " Surround Tools
 Plugin 'tpope/vim-surround'
 
@@ -47,12 +43,15 @@ Plugin 'keith/swift.vim'
 " Java Auto Import
 Plugin 'https://github.com/vim-scripts/JavaImp.vim--Lee.git'
 
+" Auto pop complete menu
+"Plugin 'AutoComplPop'
+"Plugin 'ycm-core/YouCompleteMe'
+
 " Java Auto Complete
-Plugin 'artur-shaik/vim-javacomplete2'
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-let g:JavaComplete_EnableDefaultMappings = 0
-let g:JavaComplete_LibsPath = $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
-let $CLASSPATH= $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
+"Plugin 'artur-shaik/vim-javacomplete2'
+"let g:JavaComplete_EnableDefaultMappings = 0
+"let g:JavaComplete_LibsPath = $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
+"let $CLASSPATH= $HOME."/usr/android-sdk-linux/platforms/android-28/android.jar"
 
 " Vim Color
 " :XtermColorTable call color method

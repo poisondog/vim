@@ -1,3 +1,4 @@
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python setlocal noexpandtab
