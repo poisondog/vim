@@ -17,7 +17,8 @@ nnoremap <C-K> <C-U> <CR>
 "map <C-K> <C-B> <CR>
 nnoremap <Space> zz
 vnoremap <Space> zz
-map <C-N> :tabnew <C-R>=GetParentPath()<CR>
+nnoremap <C-N> :tabnew 
+nnoremap <leader>n :tabnew <C-R>=GetParentPath()<CR>
 map <C-L> :tabnext <CR>
 map <C-H> :tabprevious <CR>
 "map <C-W><C-W> :tabclose <CR>
