@@ -14,7 +14,6 @@ let g:colors_name = "poisondog_style"
 "hi SignColumn guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
-"hi PMenuSbar -- no settings --
 "hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
 hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
 "hi CTagsImport -- no settings --
@@ -64,7 +63,10 @@ hi Special guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE
 hi LineNr guifg=#707070 guibg=NONE guisp=NONE gui=NONE ctermfg=207 ctermbg=NONE cterm=NONE
 hi StatusLine guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
 hi Label guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
+hi PMenuSbar guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi PMenuSel guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
+hi PMenu guifg=#707070 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=242 ctermbg=251 cterm=NONE
+hi PMenuThumb guifg=NONE guibg=#707070 guisp=#707070 gui=NONE ctermfg=NONE ctermbg=242 cterm=NONE
 hi Search guifg=#ffffa8 guibg=#808000 guisp=#808000 gui=NONE ctermfg=229 ctermbg=Red cterm=NONE
 hi Delimiter guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi Statement guifg=#dcdc78 guibg=NONE guisp=NONE gui=NONE ctermfg=186 ctermbg=NONE cterm=NONE
@@ -91,12 +93,10 @@ hi Type guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cte
 hi DiffChange guifg=#e03870 guibg=#601830 guisp=#601830 gui=NONE ctermfg=168 ctermbg=52 cterm=NONE
 hi Cursor guifg=#70ffc0 guibg=#8040ff guisp=#8040ff gui=NONE ctermfg=85 ctermbg=13 cterm=NONE
 hi Error guifg=#ffffff guibg=#8000ff guisp=#8000ff gui=NONE ctermfg=15 ctermbg=93 cterm=NONE
-hi PMenu guifg=#707070 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=242 ctermbg=251 cterm=NONE
 hi SpecialKey guifg=#8888ff guibg=NONE guisp=NONE gui=NONE ctermfg=105 ctermbg=NONE cterm=NONE
 hi Constant guifg=#92d4ff guibg=NONE guisp=NONE gui=NONE ctermfg=117 ctermbg=NONE cterm=NONE
 hi Tag guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi String guifg=#d1764b guibg=NONE guisp=NONE gui=NONE ctermfg=173 ctermbg=NONE cterm=NONE
-hi PMenuThumb guifg=NONE guibg=#707070 guisp=#707070 gui=NONE ctermfg=NONE ctermbg=242 cterm=NONE
 hi Repeat guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 "hi Directory guifg=#c8c8ff guibg=NONE guisp=NONE gui=NONE ctermfg=189 ctermbg=NONE cterm=NONE
 hi Directory guifg=#FF0000 guibg=NONE guisp=NONE gui=NONE ctermfg=red ctermbg=NONE cterm=NONE
