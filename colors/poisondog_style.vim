@@ -12,33 +12,31 @@ set t_Co=256
 let g:colors_name = "poisondog_style"
 
 "hi SignColumn guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-"hi CTagsMember -- no settings --
-"hi CTagsGlobalConstant -- no settings --
+"hi CTagsMember guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi CTagsGlobalConstant guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi CTagsImport guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi CTagsGlobalVariable guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi SpellRare guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi EnumerationValue guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi Float guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi CursorLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi Union guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi TabLineFill guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=LightGreen ctermbg=DarkGreen cterm=Yellow
+"hi TabLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=Blue ctermbg=Yellow cterm=NONE
+hi TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=None ctermbg=Blue cterm=NONE
+"hi CursorColumn guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi EnumerationName guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi SpellCap guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi SpellLocal guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi DefinedName guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi MatchParen guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi LocalVariable guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi SpellBad guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi CTagsClass guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi clear guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+"hi texmath guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 "hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
 hi Normal guifg=#f0f0f0 guibg=#303030 guisp=#303030 gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
-"hi CTagsImport -- no settings --
-"hi CTagsGlobalVariable -- no settings --
-"hi SpellRare -- no settings --
-"hi EnumerationValue -- no settings --
-"hi Float -- no settings --
-"hi CursorLine -- no settings --
-"hi Union -- no settings --
-"hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
-"hi TabLine ctermfg=Blue ctermbg=Yellow
-"hi TabLine guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-"hi TabLineSel ctermfg=Red ctermbg=Yellow
-hi TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=None ctermbg=Blue cterm=NONE
-"hi CursorColumn -- no settings --
-"hi EnumerationName -- no settings --
-"hi SpellCap -- no settings --
-"hi SpellLocal -- no settings --
-"hi DefinedName -- no settings --
-"hi MatchParen -- no settings --
-"hi LocalVariable -- no settings --
-"hi SpellBad -- no settings --
-"hi CTagsClass -- no settings --
-"hi clear -- no settings --
-"hi texmath -- no settings --
 hi IncSearch guifg=#80ffff guibg=#0060c0 guisp=#0060c0 gui=NONE ctermfg=123 ctermbg=4 cterm=NONE
 hi SpecialComment guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi Typedef guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
