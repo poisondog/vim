@@ -40,14 +40,12 @@ hi TabLineSel guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=None ctermbg=Blu
 "hi clear -- no settings --
 "hi texmath -- no settings --
 hi IncSearch guifg=#80ffff guibg=#0060c0 guisp=#0060c0 gui=NONE ctermfg=123 ctermbg=4 cterm=NONE
-hi WildMenu guifg=#000000 guibg=#0000c4 guisp=#0000c4 gui=NONE ctermfg=Red ctermbg=24 cterm=NONE
 hi SpecialComment guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi Typedef guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi Title guifg=#f0f0f0 guibg=NONE guisp=NONE gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE
 hi Folded guifg=#40f0f0 guibg=#006090 guisp=#006090 gui=NONE ctermfg=87 ctermbg=24 cterm=NONE
 hi PreCondit guifg=#ffa8ff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE cterm=NONE
 hi Include guifg=#ffa8ff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE cterm=NONE
-hi StatusLineNC guifg=#707070 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=242 ctermbg=251 cterm=NONE
 "hi NonText guifg=#d84070 guibg=#383838 guisp=#383838 gui=NONE ctermfg=168 ctermbg=237 cterm=NONE
 hi NonText guifg=#d84070 guibg=#383838 guisp=#383838 gui=NONE ctermfg=168 ctermbg=NONE cterm=NONE
 hi DiffText guifg=#ff78f0 guibg=#a02860 guisp=#a02860 gui=NONE ctermfg=213 ctermbg=125 cterm=NONE
@@ -61,7 +59,9 @@ hi StorageClass guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=
 hi Todo guifg=#ff80d0 guibg=NONE guisp=NONE gui=NONE ctermfg=212 ctermbg=NONE cterm=NONE
 hi Special guifg=#ffc890 guibg=NONE guisp=NONE gui=NONE ctermfg=222 ctermbg=NONE cterm=NONE
 hi LineNr guifg=#707070 guibg=NONE guisp=NONE gui=NONE ctermfg=207 ctermbg=NONE cterm=NONE
-hi StatusLine guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
+hi WildMenu guifg=#000000 guibg=#0000c4 guisp=#0000c4 gui=NONE ctermfg=Red ctermbg=24 cterm=NONE
+hi StatusLine guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=Black ctermbg=251 cterm=NONE
+hi StatusLineNC guifg=#707070 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=242 ctermbg=251 cterm=NONE
 hi Label guifg=#60f0a8 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi PMenuSbar guifg=NONE guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi PMenuSel guifg=#000000 guibg=#c4c4c4 guisp=#c4c4c4 gui=NONE ctermfg=NONE ctermbg=251 cterm=NONE
