@@ -130,6 +130,8 @@ nnoremap <M-J> <Esc>:cnext <CR>
 nnoremap <M-K> <Esc>:cprev<CR>
 
 "====================================================================
+"load session
+nnoremap <leader>l :so Session.vim
 
 "taglist setting
 nnoremap <leader>tt :TlistToggle<CR>
