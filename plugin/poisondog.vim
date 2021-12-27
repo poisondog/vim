@@ -373,7 +373,33 @@ endfunction
 " ================================================== "
 " ================================================== "
 " ================================================== "
+
+" 儲存目前使用的 Session
+function SaveSession()
+	execute 'mksession! ' . getcwd() . '/Session.vim'
+endfunction
+
+" 載入先前使用的 Session
+function LoadSession()
+if filereadable(getcwd() . '/Session.vim')
+	execute 'so ' . getcwd() . '/Session.vim'
+	if bufexists(1)
+		for l in range(1, bufnr('$'))
+			if bufwinnr(l) == -1
+				exec 'sbuffer ' . l
+			endif
+		endfor
+	endif
+endif
+endfunction
+
+" 當離開 vim 時儲存目前使用的 Session
+autocmd VimLeave * call SaveSession()
+" 當進入 vim 時讀取先前使用的 Session
+autocmd VimEnter * nested call LoadSession()
+
 " ================================================== "
+
 " 設定編輯器顏色設定
 "colorscheme default
 "colorscheme torte
@@ -385,3 +411,4 @@ endfunction
 "colorscheme molokai
 colorscheme poisondog_style
 
+" ================================================== "
