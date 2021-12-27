@@ -394,9 +394,9 @@ endif
 endfunction
 
 " 當離開 vim 時儲存目前使用的 Session
-"autocmd VimLeave * call SaveSession()
+autocmd VimLeave * call SaveSession()
 " 當進入 vim 時讀取先前使用的 Session
-"autocmd VimEnter * nested call LoadSession()
+autocmd VimEnter * nested call LoadSession()
 
 " ================================================== "
 
