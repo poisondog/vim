@@ -82,7 +82,7 @@ nnoremap <C-c> :.w! ~/.vimbuffer<CR>
 " paste from buffer
 map <C-v> :r ~/.vimbuffer<CR>
 nnoremap <F10> :call PasteToggle()<CR>
-nnoremap <leader>f :ls<CR>:b
+nnoremap <leader>d :ls<CR>:b
 
 "Replace Mapping
 "vnoremap // y/<C-R>"<CR>
