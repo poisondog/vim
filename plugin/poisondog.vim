@@ -383,13 +383,13 @@ endfunction
 function LoadSession()
 if filereadable(getcwd() . '/Session.vim')
 	execute 'so ' . getcwd() . '/Session.vim'
-	if bufexists(1)
-		for l in range(1, bufnr('$'))
-			if bufwinnr(l) == -1
-				exec 'sbuffer ' . l
-			endif
-		endfor
-	endif
+"	if bufexists(1)
+"		for l in range(1, bufnr('$'))
+"			if bufwinnr(l) == -1
+"				exec 'sbuffer ' . l
+"			endif
+"		endfor
+"	endif
 endif
 endfunction
 
