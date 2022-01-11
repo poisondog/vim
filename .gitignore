@@ -4,3 +4,4 @@ JavaImp/choices.txt
 bundle/*
 *.swp
 *.swo
+*.pyc
