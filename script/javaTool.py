@@ -1,7 +1,7 @@
 import re
 
-classPatten = r"^public\s+(final\s+)*(class|interface)\s+(\S*<classname>)(<[^>]*>*)*\s+(extends\s+([\.\w]*)(<[^>]*>*)*\s+)*(implements\s+(.*)\s+)*{"
-methodPatten = r"^\s+(public|protected|private)\s+(static\s+)*(final\s+)*((\S*)\s+(<method>\S*)\([^\)]*\))"
+classPatten = r"^\s*public\s+(final\s+)*(class|interface)\s+(\S*<classname>)(<[^>]*>*)*\s*(extends\s+([\.\w]*)(<[^>]*>*)*\s*)*(implements\s+(.*)\s*)*{"
+methodPatten = r"^\s*(public|protected|private)\s+(static\s+)*(final\s+)*((\S*)\s+(<method>\S*)\([^\)]*\))"
 
 def isJavaClassName(simpleClass, line):
 	"""docstring for isJavaClassName"""
