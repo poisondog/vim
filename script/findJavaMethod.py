@@ -1,5 +1,7 @@
 import sys
 import os
+import re
+import json
 from javaTool import *
 
 result = []
@@ -9,5 +11,11 @@ for filename in os.listdir(dictionaryPath):
 		with open(dictionaryPath + filename) as f:
 			lines = f.readlines()
 			result.extend(findJavaMethodStart(sys.argv[1], lines))
+items = []
 for fun in result:
-	print(fun)
+	item = {}
+	item['word'] = re.sub(r"\S*(<[^>]*>*)*\s(\w*)\([^\)]*\)", "\\2", fun)
+	item['menu'] = fun
+	item['kind'] = 'f'
+	items.append(item)
+print(json.dumps(items))

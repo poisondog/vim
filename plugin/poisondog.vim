@@ -370,19 +370,23 @@ function MavenBuild()
 endfunction
 
 " ================================================== "
-inoremap <C-X><C-J> <C-R>=ListMethods()<CR>
-func! ListMonths()
-	call complete(col('.'), ['January', 'February', 'March',
-				\ 'April', 'May', 'June', 'July', 'August', 'September',
-				\ 'October', 'November', 'December'])
+" My auto complete
+inoremap <C-X><C-L> <C-R>=ListMethods()<CR>
+function GetCursorWord()
+	let before_cursor = getline('.')[:col('.')-2]
+	return substitute(before_cursor, ".*\\W\\(\w*\\)\\W*", "\\1", "")
+endfunction
+func ListMethods()
+	let word = GetCursorWord()
+	let json = system("python ~/.vim/script/findJavaMethod.py '" . word . "'")
+	call complete(col('.')-len(word), json_decode(json))
 	return ''
 endfunc
-func! ListMethods()
-	let files = systemlist("python ~/.vim/script/findJavaMethod.py '" . GetCurrentWord() . "'")
-	call complete(col('.'), files)
+func ListMonths()
+	let mydict = [{'word':'abc', 'menu':'void abc(Object input)', 'kind':'v'}, 't', 'two', 'th', 'three']
+	call complete(col('.'), mydict)
 	return ''
 endfunc
-
 " ================================================== "
 " ================================================== "
 " Powerline 設定
@@ -428,4 +432,24 @@ endfunction
 "colorscheme molokai
 colorscheme poisondog_style
 
+" ================================================== "
+" TODO test it
+function TestPy() range
+	let startline = line("'<")
+	let endline = line("'>")
+	echo "vim-start:".startline . " vim-endline:".endline
+python << EOF
+import vim
+s = "I was set in python"
+vim.command("let sInVim = '%s'"% s)
+start = vim.eval("startline")
+end = vim.eval("endline")
+print "start, end in python:%s,%s"% (start, end)
+EOF
+echo sInVim
+endfunction
+
+" ================================================== "
+" ================================================== "
+" ================================================== "
 " ================================================== "
