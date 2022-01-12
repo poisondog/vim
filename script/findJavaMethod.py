@@ -14,7 +14,7 @@ for filename in os.listdir(dictionaryPath):
 items = []
 for fun in result:
 	item = {}
-	item['word'] = re.sub(r"\S*(<[^>]*>*)*\s(\w*)\([^\)]*\)", "\\2", fun)
+	item['word'] = re.sub(r"\S*(<[^>]*>*)*\s+(\w*)\([^\)]*\)", "\\2", fun)
 	item['menu'] = fun
 	item['kind'] = 'f'
 	items.append(item)

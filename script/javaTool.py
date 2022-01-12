@@ -1,8 +1,11 @@
 import re
 
+classPatten = r"^public\s+(final\s+)*(class|interface)\s+(\S*<classname>)(<[^>]*>*)*\s+(extends\s+([\.\w]*)(<[^>]*>*)*\s+)*(implements\s+(.*)\s+)*{"
+methodPatten = r"^\s+(public|protected|private)\s+(static\s+)*(final\s+)*((\S*)\s+(<method>\S*)\([^\)]*\))"
+
 def isJavaClassName(simpleClass, line):
 	"""docstring for isJavaClassName"""
-	regex = r"^public\s(final\s)*(class|interface)\s(\S*\." + simpleClass + ")(<[^>]*>*)*\s(extends\s([\.\w]*)(<[^>]*>*)*\s)*(implements\s(.*)\s)*{"
+	regex = re.sub("<classname>", "\." + simpleClass, classPatten)
 	matches = re.finditer(regex, line, re.MULTILINE)
 	for matchNum, match in enumerate(matches, start=1):
 		return True
@@ -11,7 +14,7 @@ def isJavaClassName(simpleClass, line):
 def findJavaClassName(simpleClass, lines):
 	"""docstring for findJavaClassName"""
 	result = []
-	regex = r"^public\s(final\s)*(class|interface)\s(\S*\." + simpleClass + ")(<[^>]*>*)*\s(extends\s([\.\w]*)(<[^>]*>*)*\s)*(implements\s(.*)\s)*{"
+	regex = re.sub("<classname>", "\." + simpleClass, classPatten)
 	for line in lines:
 		matches = re.finditer(regex, line, re.MULTILINE)
 		for matchNum, match in enumerate(matches, start=1):
@@ -43,7 +46,7 @@ def findJavaClassMethods(simpleClass, lines):
 def findJavaMethodStart(method, lines):
 	"""docstring for findMethods"""
 	result = []
-	regex = r"^\s\s(public|protected|private)\s(static\s)*(final\s)*((\S*)\s(" + method + "\S*)\([^\)]*\))"
+	regex = re.sub("<method>", method, methodPatten)
 	for line in lines:
 		matches = re.finditer(regex, line, re.MULTILINE)
 		for matchNum, match in enumerate(matches, start=1):
