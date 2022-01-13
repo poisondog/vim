@@ -1,7 +1,7 @@
 import re
 
 classPatten = r"^\s*public\s+(final\s+)*(class|interface)\s+(\S*<classname>)(<[^>]*>*)*\s*(extends\s+([\.\w]*)(<[^>]*>*)*\s*)*(implements\s+(.*)\s*)*{"
-methodPatten = r"^\s*(public|protected|private)\s+(static\s+)*(final\s+)*((\S*)\s+(<method>\S*)\([^\)]*\))"
+methodPatten = r"^\s*(public|protected|private)\s+(static\s+)*(final\s+)*(native\s+)*((\S*)\s+(<method>\S*)\([^\)]*\))"
 
 def isJavaClassName(simpleClass, line):
 	"""docstring for isJavaClassName"""
@@ -50,5 +50,5 @@ def findJavaMethodStart(method, lines):
 	for line in lines:
 		matches = re.finditer(regex, line, re.MULTILINE)
 		for matchNum, match in enumerate(matches, start=1):
-			result.append(match.group(4))
+			result.append(match.group(5))
 	return result
