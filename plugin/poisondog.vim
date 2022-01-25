@@ -296,6 +296,28 @@ function GetJavaImports()
 	return imports
 endfunction
 
+" Java: 取得輸入的SimpleName
+function GetClassSimpleName(line)
+	let names = split(a:line, '\.')
+	return strpart(names[-1], 0, strlen(names[-1])-1)
+endfunction
+
+" Java: 取得目前檔案的所有 Java import class simple name
+function GetJavaImportsSimple()
+	let imports = []
+	let i = 0
+	let endLine = line("$")
+	while i <= endLine
+		let line = getline(i)
+		if IsImport(line) != 0
+			let classname = substitute(substitute(line, "import\\s\\+", "", ""), ";$", "", "")
+			call add(imports, GetClassSimpleName(classname))
+		endif
+		let i = i + 1
+	endwhile
+	return imports
+endfunction
+
 " ================================================== "
 
 " Gradle: 執行目前檔案中的所有單元測試
@@ -410,6 +432,14 @@ func ListMonths()
 	let mydict = [{'word':'abc', 'menu':'void abc(Object input)', 'kind':'v'}, 't', 'two', 'th', 'three']
 	call complete(col('.'), mydict)
 	return ''
+endfunc
+" Java: 取得 simpleclassname 對應的 Dictionary 列表
+func GetJavaDictionaries(simpleclassname)
+	let pathlist = systemlist("grep -r \"[^a-zA-Z0-9]" . a:simpleclassname . ".java\" ~/.vim/dictionary.index  | awk -F':' '{print $1}' | uniq")
+"	for l in pathlist
+"		echom l
+"	endfor
+	return pathlist
 endfunc
 " ================================================== "
 " ================================================== "

@@ -4,6 +4,9 @@ import re
 import json
 from javaTool import *
 
+#filepath = sys.argv[1]
+#methodstart = sys.argv[2]
+
 result = []
 dictionaryPath = os.environ['HOME'] + "/.vim/dictionary/"
 for (dirpath, dirnames, filenames) in os.walk(dictionaryPath):
