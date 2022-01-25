@@ -272,6 +272,30 @@ function JumpToOrigin()
 	execute "tag " . StringReplace(GetCurrentWord(), "Test", "")
 endfunction
 
+" Java: 傳入內容是否為 Java import
+function IsImport(line)
+	if stridx(a:line, "import ") == 0
+		return 1
+	endif
+	return 0
+endfunction
+
+" Java: 取得目前檔案的所有 Java import class
+function GetJavaImports()
+	let imports = []
+	let i = 0
+	let endLine = line("$")
+	while i <= endLine
+		let line = getline(i)
+		if IsImport(line) != 0
+			let classname = substitute(substitute(line, "import\\s\\+", "", ""), ";$", "", "")
+			call add(imports, classname)
+		endif
+		let i = i + 1
+	endwhile
+	return imports
+endfunction
+
 " ================================================== "
 
 " Gradle: 執行目前檔案中的所有單元測試

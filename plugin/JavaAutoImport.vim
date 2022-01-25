@@ -11,13 +11,6 @@ function CreateJmplst(filename)
 	return system("jar tf " . a:filename . ".jar | sed -e 's#^src/##' > " . a:filename . ".jmplst")
 endfunction
 
-function IsImport(line)
-	if stridx(a:line, "import ") == 0
-		return 1
-	endif
-	return 0
-endfunction
-
 function GetClassSimpleName(line)
 	let names = split(a:line, '\.')
 	return strpart(names[-1], 0, strlen(names[-1])-1)
