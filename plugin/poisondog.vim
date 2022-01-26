@@ -245,6 +245,24 @@ function FindCurrentJavaFunction()
 	endwhile
 endfunction
 
+" Java: 尋找遊標之上變數的類別名稱
+function FindCurrentJavaClass()
+	let endLine = line(".")
+	let varname = system("python ~/.vim/script/findCurrentJavaVar.py '" . getline(endLine) . "'")
+	let i = endLine
+	echom varname
+	while i > 0
+		let line = getline(i)
+		echom line
+		let result = system("python ~/.vim/script/findCurrentJavaClass.py '" . varname . "' '" . line . "'")
+		echom len(result)
+		if len(result) > 1
+			return result
+		endif
+		let i = i - 1
+	endwhile
+endfunction
+
 " TODO: 待確定使用範圍
 function PathToPackage()
 	let s = GetFullCurrentFilePath()
@@ -416,15 +434,18 @@ function MavenBuild()
 endfunction
 
 " ================================================== "
-" My auto complete
+" Auto Complete: My auto complete
 inoremap <C-X><C-L> <C-R>=ListMethods()<CR>
 function GetCursorWord()
 	let before_cursor = getline('.')[:col('.')-2]
 	return substitute(before_cursor, ".*\\W\\(\w*\\)\\W*", "\\1", "")
 endfunction
 func ListMethods()
+	let endLine = line(".")
+	let path = GetCurrentFilePath()
 	let word = GetCursorWord()
-	let json = system("python ~/.vim/script/findJavaMethod.py '" . word . "'")
+"	let json = system("python ~/.vim/script/findJavaMethod.py '" . word . "'")
+	let json = system("python ~/.vim/script/findJavaClassMethod.py '" . word . "' '" . path . "' '" . endLine . "'")
 	call complete(col('.')-len(word), json_decode(json))
 	return ''
 endfunc
