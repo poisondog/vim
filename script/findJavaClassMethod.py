@@ -4,40 +4,34 @@ import re
 import json
 from javaTool import *
 
-#filepath = sys.argv[1]
-#methodstart = sys.argv[2]
-
 methodTarget = sys.argv[1]
-#paras = sys.argv[1:]
-
 path = sys.argv[2]
 linenumber = sys.argv[3]
-paras = []
+
+# 取得輸入檔案及行號前的每一行
+lines = []
 with open(path) as fp:
 	for i, line in reversed(list(enumerate(fp))):
 		if i < int(linenumber):
-			paras.append(line)
+			lines.append(line)
 
-varname = findVariableName(paras[0])
+# 搜尋變數對應的類別名稱
+varname = findVariableName(lines[0])
 classname = ""
-for line in paras:
+for line in lines:
 	classname = findDeclareClass(varname, line)
 	if len(classname) > 0:
 		break
-#print(varname)
-#print(classname)
 
-lines = []
-filepaths = findClassPath(classname)
-#print(filepaths)
-for filepath in filepaths:
+# 搜尋符合 simple class name 的所有 method
+methods = []
+for filepath in findClassPath(classname):
 	with open(filepath) as f:
-		lines.extend(findJavaClassMethods(classname, f.readlines()))
-result = []
-result.extend(findJavaMethodStart(methodTarget, lines))
+		methods.extend(findJavaClassMethods(classname, f.readlines()))
 
+# 搜尋符合 methodTarget 的 method 並轉換成 json 輸出
 items = []
-for fun in result:
+for fun in findJavaMethodStart(methodTarget, methods):
 	item = {}
 	item['word'] = re.sub(r"\S*(<[^>]*>*)*\s+(\w*)\([^\)]*\)", "\\2", fun)
 	item['menu'] = fun
