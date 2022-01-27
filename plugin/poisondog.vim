@@ -245,17 +245,19 @@ function FindCurrentJavaFunction()
 	endwhile
 endfunction
 
-" Java: 尋找遊標之上變數的類別名稱
-function FindCurrentJavaClass()
+" Java: 尋找遊標之上的變數
+function FindCurrentJavaVariable()
 	let endLine = line(".")
-	let varname = system("python ~/.vim/script/findCurrentJavaVar.py '" . getline(endLine) . "'")
+	return system("python ~/.vim/script/findCurrentJavaVar.py '" . getline(endLine) . "'")
+endfunction
+
+" Java: 尋找遊標之上變數的類別名稱
+function FindCurrentJavaClass(varname)
+	let endLine = line(".")
 	let i = endLine
-	echom varname
 	while i > 0
 		let line = getline(i)
-		echom line
-		let result = system("python ~/.vim/script/findCurrentJavaClass.py '" . varname . "' '" . line . "'")
-		echom len(result)
+		let result = system("python ~/.vim/script/findCurrentJavaClass.py '" . a:varname . "' '" . line . "'")
 		if len(result) > 1
 			return result
 		endif
@@ -443,9 +445,9 @@ endfunction
 func ListMethods()
 	execute 'w'
 	let endLine = line(".")
-	let path = GetCurrentFilePath()
+	let path = GetFullCurrentFilePath()
 	let word = GetCursorWord()
-	let json = system("python ~/.vim/script/findJavaClassMethod.py '" . word . "' '" . path . "' '" . endLine . "'")
+	let json = system("python3 ~/.vim/script/findJavaClassMethod.py '" . word . "' '" . path . "' '" . endLine . "'")
 	call complete(col('.')-len(word), json_decode(json))
 	return ''
 endfunc

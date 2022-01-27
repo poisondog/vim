@@ -16,10 +16,9 @@ with open(path) as fp:
 			lines.append(line)
 
 # 搜尋變數對應的類別名稱
-varname = findVariableName(lines[0])
 classname = ""
 for line in lines:
-	classname = findDeclareClass(varname, line)
+	classname = findDeclareClass(findVariableName(lines[0]), line)
 	if len(classname) > 0:
 		break
 
