@@ -65,6 +65,8 @@ def findVariableName(line):
 def findJavaMethodStart(method, lines):
 	"""docstring for findMethods"""
 	result = []
+	if len(method) == 0:
+		method = "\w+"
 	regex = re.sub("<method>", method, methodPatten)
 	for line in lines:
 		matches = re.finditer(regex, line, re.MULTILINE)

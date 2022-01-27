@@ -441,10 +441,10 @@ function GetCursorWord()
 	return substitute(before_cursor, ".*\\W\\(\w*\\)\\W*", "\\1", "")
 endfunction
 func ListMethods()
+	execute 'w'
 	let endLine = line(".")
 	let path = GetCurrentFilePath()
 	let word = GetCursorWord()
-"	let json = system("python ~/.vim/script/findJavaMethod.py '" . word . "'")
 	let json = system("python ~/.vim/script/findJavaClassMethod.py '" . word . "' '" . path . "' '" . endLine . "'")
 	call complete(col('.')-len(word), json_decode(json))
 	return ''
